@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
 using PokemonRPG.Configs;
+using PokemonRPG.Windows;
 
 namespace PokemonRPG
 {
@@ -29,10 +31,17 @@ namespace PokemonRPG
 
             InitializeComponent();
             LoadBaseData();
+
+#if DEBUG
+            LoadTestData();
+#endif
+            DataContext = this;
+            BindData();
         }
 
-        MasterReferenceClass ReferenceData = new MasterReferenceClass();
-
+        MasterReferenceClass ReferenceData { get; set; } = new MasterReferenceClass();
+        Player PlayerData { get; set; } = new Player();
+        
         public void LoadBaseData()
         {
             string FilePath = $"{Environment.CurrentDirectory}\\Resources\\Data\\";
@@ -143,7 +152,51 @@ namespace PokemonRPG
             }
         }
 
+        public void LoadTestData()
+        {
+            PlayerData = new Player()
+            {
+                Name = "Joe Bloggs",
+                Strength = 12,
+                Intelligence = 15,
+                Dexterity = 13,
+                Constitution = 11,
+                Wisdom = 6,
+                Charisma = 16,
+                Description = "A Partygoing mad scientist",
+                Notes = "Loves the Macarena"
+            };
+            TrainerPokemon Starter = ReferenceData.GenerateTrainerPokemon(212);
+            Starter.Nickname = "The IV Bag";
+            Starter.Level = 25;
+            Starter.Sex = new Gender() { Female = true };
 
+            PlayerData.CurrentParty.Add(Starter);
+            PlayerData.TotalOwnedPokemon = 1;
+            PlayerData.Money = 9001;
+            PlayerData.MaxHP = 10;
+            PlayerData.CurrentHP = 1;
+
+            foreach (var pkmn in PlayerData.CurrentParty)
+                PlayerData.Pkmnlist.Add(pkmn);
+        }
+
+        public void BindData()
+        {
+            DataBinding.BindThis(lbl_Str, PlayerData, "Strength");
+            DataBinding.BindThis(lbl_Dex, PlayerData, "Dexterity");
+            DataBinding.BindThis(lbl_Con, PlayerData, "Constitution");
+            DataBinding.BindThis(lbl_Int, PlayerData, "Intelligence");
+            DataBinding.BindThis(lbl_Wis, PlayerData, "Wisdom");
+            DataBinding.BindThis(lbl_Cha, PlayerData, "Charisma");
+            DataBinding.BindThis(lbl_Name, PlayerData, "Name");
+            DataBinding.BindThis(lbl_Money, PlayerData, "Money");
+            DataBinding.BindThis(lbl_MaxHP, PlayerData, "MaxHP");
+            DataBinding.BindThis(lbl_CurrentHP, PlayerData, "CurrentHP");
+            DataBinding.BindThis(tb_User_Notes, PlayerData, "Notes");
+            DataBinding.BindThis(tb_Description, PlayerData, "Description");
+            DataBinding.BindThis(Lb_PokemonTeam, PlayerData, "Pkmnlist");
+        }
         
         private void LoadCSV()
         {
@@ -263,6 +316,18 @@ namespace PokemonRPG
         private void btn_Save_MouseWork(object sender, MouseEventArgs e)
         {
             ButtonHighlightChange(btn_Save, btn_SaveHighlight);
+        }
+
+        private void btn_GM_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_GM, btn_GMHighlight);
+        }
+
+        private void btn_PokedexHighlight_Click(object sender, MouseButtonEventArgs e)
+        {
+            PokedexWindow PkWin = new PokedexWindow(ReferenceData,PlayerData);
+
+            PkWin.Show();
         }
     }
 }

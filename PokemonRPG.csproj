@@ -60,6 +60,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Configs\DataBinding.cs" />
+    <Compile Include="Windows\Bag.xaml.cs">
+      <DependentUpon>Bag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Encyclopedia.xaml.cs">
+      <DependentUpon>Encyclopedia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Party.xaml.cs">
+      <DependentUpon>Party.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PC.xaml.cs">
+      <DependentUpon>PC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PokedexWindow.xaml.cs">
+      <DependentUpon>PokedexWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Trainer.xaml.cs">
+      <DependentUpon>Trainer.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +99,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\Bag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Encyclopedia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Party.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PokedexWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Trainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -163,6 +206,16 @@
     <Resource Include="Resources\Image\Load Highlight.png" />
     <Resource Include="Resources\Image\Save Button.png" />
     <Resource Include="Resources\Image\Save Highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\GM Button.png" />
+    <Resource Include="Resources\Image\GM Highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Team Karma Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Trainer ID Old.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

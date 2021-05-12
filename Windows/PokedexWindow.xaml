@@ -1,0 +1,23 @@
+﻿<Window x:Class="PokemonRPG.Windows.PokedexWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonRPG.Windows"
+        mc:Ignorable="d"
+        Title="PokedexWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Please Enter Code:" HorizontalAlignment="Left" Margin="37,22,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_PokemonCode" HorizontalAlignment="Left" Height="23" Margin="150,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_DexSearch" Content="Search" HorizontalAlignment="Left" Margin="293,26,0,0" VerticalAlignment="Top" Width="79" Height="22" Click="btn_DexSearch_Click"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="70,88,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Type" Content="Unknown" HorizontalAlignment="Left" Margin="110,88,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Highest Stat:" HorizontalAlignment="Left" Margin="29,114,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label x:Name="lbl_Stat" Content="Unknown" HorizontalAlignment="Left" Margin="110,114,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="37,140,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label x:Name="lbl_Desc" Content="Unknown" HorizontalAlignment="Left" Margin="110,140,0,0" VerticalAlignment="Top" Width="650"/>
+        <Label Content="Pokemon:" HorizontalAlignment="Left" Margin="46,166,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label x:Name="lbl_Pokemon" Content="Unknown" HorizontalAlignment="Left" Margin="110,166,0,0" VerticalAlignment="Top" Width="86"/>
+
+    </Grid>
+</Window>

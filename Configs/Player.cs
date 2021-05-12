@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,14 @@ namespace PokemonRPG.Configs
         public List<ItemBox> ItemPC { get; set; }
         public List<PokemonBox> PokemonPC { get; set; }
         public List<TrainerPokemon> CurrentParty { get; set; }
+        
+        [NonSerialized]
+        public ObservableCollection<TrainerPokemon> Pkmnlist = new ObservableCollection<TrainerPokemon>();
+        
         public List<Item> Inventory { get; set; }
         public int Money { get; set; }
+        public int CurrentHP { get; set; }
+        public int MaxHP { get; set; }
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Constitution { get; set; }

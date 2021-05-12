@@ -1,0 +1,99 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonRPG"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="PokemonRPG.MainWindow"
+        mc:Ignorable="d"
+        Title="The Sleepless Pokemon Trainer Sheet" Height="720" Width="1280" FontFamily="OCR A Extended">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/Image/Main Background.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="165*"/>
+            <ColumnDefinition Width="390*"/>
+            <ColumnDefinition Width="438*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="326*"/>
+            <RowDefinition Height="95*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="402.667,125.333,0,0" VerticalAlignment="Top" Width="25" Click="btnTest_Click" Grid.Column="4" Height="21" Grid.Row="1"/>
+        <Grid Margin="10,0,0,-0.333" HorizontalAlignment="Left" Width="75" Height="691" VerticalAlignment="Top" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="103"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition Height="73"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="btn_Bag" HorizontalAlignment="Left" Height="53" Margin="9,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Bag Button.png" Grid.Row="3" MouseEnter="btn_Bag_MouseWork"/>
+            <Image x:Name="btn_BagHighlight" HorizontalAlignment="Left" Height="53" Margin="9,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Bag Highilight.png" Grid.Row="3" Visibility="Hidden" MouseLeave="btn_Bag_MouseWork"/>
+
+            <Image x:Name="btn_Encyclopedia" HorizontalAlignment="Left" Height="53" Margin="9,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Encyclopedia Button.png" Grid.Row="6" MouseEnter="btn_Encyclopedia_MouseWork"/>
+            <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="9,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Encyclopedia Highilight.png" Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork"/>
+
+            <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="10,10.333,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Party Button.png" Grid.Row="2" MouseEnter="btn_Party_MouseWork"/>
+            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="10,10.333,0,0" VerticalAlignment="Top" Width="56" Visibility="Hidden" Source="Resources/Image/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork"/>
+
+            <Image x:Name="btn_PC" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/PC Button.png" Grid.Row="5" MouseEnter="btn_PC_MouseWork"/>
+            <Image x:Name="btn_PCHighlight" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/PC Highilight.png" Grid.Row="5" Visibility="Hidden" MouseLeave="btn_PC_MouseWork"/>
+
+            <Image x:Name="btn_Pokedex" HorizontalAlignment="Left" Height="53" Margin="10,10.667,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Pokedex Button.png" Grid.Row="1" MouseEnter="btn_Pokedex_MouseWork"/>
+            <Image x:Name="btn_PokedexHighlight" HorizontalAlignment="Left" Height="53" Margin="10,10.667,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Pokedex Highilight.png" Grid.Row="1" Visibility="Hidden" MouseLeave="btn_Pokedex_MouseWork"/>
+
+            <Image x:Name="btn_Trainer" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Trainer Button.png" MouseEnter="btn_Trainer_MouseWork"/>
+            <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Trainer Highilight.png" MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden"/>
+
+            <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Button.png" Grid.Row="7" MouseEnter="btn_Save_MouseWork"/>
+            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Highlight.png" Grid.Row="7" Visibility="Hidden" MouseLeave="btn_Save_MouseWork"/>
+
+            <Image x:Name="btn_Load" HorizontalAlignment="Left" Height="53" Margin="9,9.667,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Button.png" Grid.Row="8" MouseEnter="btn_Load_MouseWork"/>
+            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="9,9.667,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork"/>
+        </Grid>
+        <Label Content="Character Name" HorizontalAlignment="Left" Margin="9.333,41,0,0" VerticalAlignment="Top" Height="23" Width="111" Grid.Column="1"/>
+        <TextBox x:Name="tb_CharName" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="132.333,48,0,0" TextWrapping="Wrap" Text="John Doe" VerticalAlignment="Top" Width="216" Grid.ColumnSpan="2"/>
+        <Label Content="Strength" HorizontalAlignment="Left" Margin="9.333,80,0,0" VerticalAlignment="Top" Width="95" Height="23" Grid.Column="1"/>
+        <Label Content="Dexterity" HorizontalAlignment="Left" Margin="9.333,111,0,0" VerticalAlignment="Top" Width="95" Height="23" Grid.Column="1"/>
+        <Label Content="Constitution" HorizontalAlignment="Left" Margin="9.333,142,0,0" VerticalAlignment="Top" Width="95" Height="23" Grid.Column="1"/>
+        <Label Content="Intelligence" HorizontalAlignment="Left" Margin="9.333,173,0,0" VerticalAlignment="Top" Width="95" Height="23" Grid.Column="1"/>
+        <Label Content="Wisdom" HorizontalAlignment="Left" Margin="9.333,204,0,0" VerticalAlignment="Top" Width="95" Height="23" Grid.Column="1"/>
+        <Label Content="Charisma" HorizontalAlignment="Left" Margin="9.333,235,0,0" VerticalAlignment="Top" Width="95" Height="23" Grid.Column="1"/>
+
+        <xctk:IntegerUpDown x:Name="inud_Strength" Grid.Column="1" Margin="0,78,9,0" VerticalAlignment="Top" Height="26" Minimum="6" Value="6" HorizontalAlignment="Right" Width="52"/>
+        <xctk:IntegerUpDown x:Name="inud_Dexterity" Grid.Column="1" Margin="0,109,9,0" VerticalAlignment="Top" Height="26" Minimum="6" Value="6" HorizontalAlignment="Right" Width="52"/>
+        <xctk:IntegerUpDown x:Name="inud_Constitution" Grid.Column="1" Margin="0,140,9,0" VerticalAlignment="Top" Height="26" Minimum="6" Value="6" HorizontalAlignment="Right" Width="52"/>
+        <xctk:IntegerUpDown x:Name="inud_Intelligence" Grid.Column="1" Margin="0,171,9,0" VerticalAlignment="Top" Height="26" Minimum="6" Value="6" HorizontalAlignment="Right" Width="52"/>
+        <xctk:IntegerUpDown x:Name="inud_Wisdom" Grid.Column="1" Margin="0,202,9,0" VerticalAlignment="Top" Height="26" Minimum="6" Value="6" HorizontalAlignment="Right" Width="52"/>
+        <xctk:IntegerUpDown x:Name="inud_Charisma" Grid.Column="1" Margin="0,233,9,0" VerticalAlignment="Top" Height="26" Minimum="6" Value="6" HorizontalAlignment="Right" Width="52"/>
+        <ListBox x:Name="Lb_GymBadges" HorizontalAlignment="Left" Height="178" Margin="10,293,0,0" VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}"/>
+        <Label Content="Badges" Grid.Column="2" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Width="65" Height="23"/>
+        <ListBox x:Name="Lb_Ribbons" HorizontalAlignment="Left" Height="178" Margin="90,293,0,0" VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}"/>
+        <Label Content="Ribbons" Grid.Column="2" HorizontalAlignment="Left" Margin="90,265,0,0" VerticalAlignment="Top" Width="65" Height="23"/>
+        <ListBox x:Name="Lb_TrainerFeatures" Grid.Column="3" HorizontalAlignment="Left" Height="434" Margin="9.667,37,0,0" VerticalAlignment="Top" Width="351" Background="{x:Null}"/>
+        <Label Content="Pokemon Trainer Features" Grid.Column="3" HorizontalAlignment="Left" Margin="10.667,7,0,0" VerticalAlignment="Top" Width="350" Height="23"/>
+        <ListBox x:Name="Lb_PokemonTeam" Grid.Column="4" HorizontalAlignment="Left" Height="434" Margin="9.667,37,0,0" VerticalAlignment="Top" Width="418" Background="{x:Null}"/>
+        <Label Content="Pokemon Party" Grid.Column="4" HorizontalAlignment="Left" Margin="9.667,8,0,0" VerticalAlignment="Top" Height="23" Width="418"/>
+        <TextBox x:Name="tb_User_Notes" Grid.Column="3" HorizontalAlignment="Left" Height="111" Margin="10.667,9.333,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Freetype Notes Box" VerticalAlignment="Top" Width="807" Grid.ColumnSpan="2"/>
+        <Label Content="Trainer Level:" Margin="2.333,289,0,0" VerticalAlignment="Top" Height="23" Grid.Column="1" HorizontalAlignment="Left" Width="126"/>
+        <Label Content="##" Margin="132.333,289,10,0" VerticalAlignment="Top" Height="23" Grid.Column="1"/>
+        <ListBox x:Name="lv_TrainerLevels" HorizontalAlignment="Left" Height="134" Margin="9.333,337,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1" Background="{x:Null}"/>
+        <Label Content="Player Name" HorizontalAlignment="Left" Margin="9.333,12,0,0" VerticalAlignment="Top" Height="23" Width="111" Grid.Column="1"/>
+        <TextBox x:Name="tb_PlayerName" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="132.333,19,0,0" TextWrapping="Wrap" Text="Klaus, Santa" VerticalAlignment="Top" Width="216" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>

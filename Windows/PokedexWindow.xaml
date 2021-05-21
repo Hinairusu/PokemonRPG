@@ -7,17 +7,62 @@
         mc:Ignorable="d"
         Title="PokedexWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Please Enter Code:" HorizontalAlignment="Left" Margin="37,22,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_PokemonCode" HorizontalAlignment="Left" Height="23" Margin="150,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_DexSearch" Content="Search" HorizontalAlignment="Left" Margin="293,26,0,0" VerticalAlignment="Top" Width="79" Height="22" Click="btn_DexSearch_Click"/>
-        <Label Content="Type:" HorizontalAlignment="Left" Margin="70,88,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_Type" Content="Unknown" HorizontalAlignment="Left" Margin="110,88,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Highest Stat:" HorizontalAlignment="Left" Margin="29,114,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label x:Name="lbl_Stat" Content="Unknown" HorizontalAlignment="Left" Margin="110,114,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Description:" HorizontalAlignment="Left" Margin="37,140,0,0" VerticalAlignment="Top" Width="73"/>
-        <Label x:Name="lbl_Desc" Content="Unknown" HorizontalAlignment="Left" Margin="110,140,0,0" VerticalAlignment="Top" Width="650"/>
-        <Label Content="Pokemon:" HorizontalAlignment="Left" Margin="46,166,0,0" VerticalAlignment="Top" Width="64"/>
-        <Label x:Name="lbl_Pokemon" Content="Unknown" HorizontalAlignment="Left" Margin="110,166,0,0" VerticalAlignment="Top" Width="86"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="194*"/>
+            <RowDefinition Height="180*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="182*"/>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="297*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Please Enter Code:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="108"/>
+        <TextBox x:Name="tb_PokemonCode" HorizontalAlignment="Left" Height="23" Margin="123,14,0,0" TextWrapping="Wrap" Text="0000-0000-0000" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_DexSearch" Content="Search" HorizontalAlignment="Left" Margin="106,14,0,0" VerticalAlignment="Top" Width="65" Height="22" Click="btn_DexSearch_Click" Grid.Column="1"/>
+        <Label Content="Type:"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="10,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="122"/>
+        <Label x:Name="lbl_PrimaryType" Content="Unknown" HorizontalAlignment="Left" Margin="10,10.333,0,0" VerticalAlignment="Top" Width="70" Grid.Row="1" Height="26" Grid.Column="1"/>
+        <Label x:Name="lbl_SecondaryType" Content="Unknown" HorizontalAlignment="Left" Margin="102,10.333,0,0" VerticalAlignment="Top" Width="70" Grid.Row="1" Height="26" Grid.Column="1"/>
+        <Label Content="Highest Stat:"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="10,41.333,0,0" VerticalAlignment="Top" Width="122" Grid.Row="1" Height="26"/>
+        <Label x:Name="lbl_Stat" Content="Unknown" HorizontalAlignment="Left" Margin="10,41.333,0,0" VerticalAlignment="Top" Width="162" Grid.Row="1" Height="26" Grid.Column="1"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="10,10.333,0,0" VerticalAlignment="Top" Width="73" Grid.Row="1" Height="26" Grid.Column="4"/>
+        <Label Content="Pokemon:" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="64" Height="26" Grid.Column="4"/>
+        <Label x:Name="lbl_Pokemon" Content="Unknown" HorizontalAlignment="Left" Margin="79,11,0,0" VerticalAlignment="Top" Width="209" Height="26" Grid.Column="4"/>
+        <TextBlock x:Name="tbx_Desc" Grid.Column="4" HorizontalAlignment="Left" Margin="10,41.333,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="143" Width="277"/>
+        <Label Content="Power:"  HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="10,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" Height="26"/>
+        <Label Content="Intelligence:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,103.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" Height="26"/>
+        <Label Content="Weight Class:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,134.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" Height="26"/>
+        <Label Content="Over Land:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,10.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="26" Grid.Column="2"/>
+        <Label Content="Sky:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,41.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="26" Grid.Column="2"/>
+        <Label Content="Surface:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="26" Grid.Column="2"/>
+        <Label Content="Jump:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,103.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="26" Grid.Column="2"/>
+        <Label Content="Burrow:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,134.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="26" Grid.Column="2"/>
+        <Label Content="Underwater:" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="10,165.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="26" Grid.Column="2"/>
+        <Label x:Name="lbl_Power" Content="Unknown" HorizontalAlignment="Left" Margin="10,72.333,0,0" VerticalAlignment="Top" Width="162" Grid.Row="1" Height="26" Grid.Column="1"/>
+        <Label x:Name="lbl_Intelligence" Content="Unknown" HorizontalAlignment="Left" Margin="10,103.333,0,0" VerticalAlignment="Top" Width="162" Grid.Row="1" Height="26" Grid.Column="1"/>
+        <Label x:Name="lbl_Weight" Content="Unknown" HorizontalAlignment="Left" Margin="10,134.333,0,0" VerticalAlignment="Top" Width="162" Grid.Row="1" Height="26" Grid.Column="1"/>
+        <Label x:Name="lbl_Overland" Content="00" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Label x:Name="lbl_Sky"  Content="00" Grid.Column="3" HorizontalAlignment="Left" Margin="10,41.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Label x:Name="lbl_Surface"  Content="00" Grid.Column="3" HorizontalAlignment="Left" Margin="10,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Label x:Name="lbl_Jump"  Content="00" Grid.Column="3" HorizontalAlignment="Left" Margin="10,103.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Label x:Name="lbl_Burrow"  Content="00" Grid.Column="3" HorizontalAlignment="Left" Margin="10,134.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Label x:Name="lbl_Underwater"  Content="00" Grid.Column="3" HorizontalAlignment="Left" Margin="10,165.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Grid Grid.ColumnSpan="5" Margin="10,10.333,10.333,9.667" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="487*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Habitats" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="122" Height="26"/>
+            <ListBox x:Name="lb_Habitats" HorizontalAlignment="Left" Height="104" Margin="10,46,0,0" VerticalAlignment="Top" Width="122"/>
+            <Label Content="Egg Groups" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="122" Height="26" Grid.Column="1"/>
+            <ListBox x:Name="lb_EggGroups" HorizontalAlignment="Left" Height="104" Margin="10,46,0,0" VerticalAlignment="Top" Width="122" Grid.Column="1"/>
+            <Label Content="Capabilities" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="122" Height="26" Grid.Column="2"/>
+            <ListBox x:Name="lb_Capabilities" HorizontalAlignment="Left" Height="104" Margin="7,46,0,0" VerticalAlignment="Top" Width="122" Grid.Column="2"/>
+            <Image x:Name="img_Pkmn" Grid.Column="3" HorizontalAlignment="Center" Height="140" Margin="69,10,68.333,10" VerticalAlignment="Center" Width="186" Source="/PokemonRPG;component/Resources/Image/Placeholder.png"/>
+        </Grid>
     </Grid>
 </Window>

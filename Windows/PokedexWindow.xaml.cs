@@ -25,7 +25,32 @@ namespace PokemonRPG.Windows
             InitializeComponent();
             ReferenceData = MRef;
             PlayerData = PRef;
+            ResetValues();
+        }
 
+        public void ResetValues()
+        {
+
+            lbl_PrimaryType.Content = "Unknown";
+
+            lbl_Stat.Content = "Unknown";
+            tbx_Desc.Text = "Unknown";
+
+            lbl_SecondaryType.Content = "Unknown";
+            lbl_Pokemon.Content = "Unknown";
+            lbl_Power.Content = "Unknown";
+            lbl_Intelligence.Content = "Unknown";
+            lbl_Weight.Content = "Unknown";
+
+            lbl_Overland.Content = 00;
+            lbl_Sky.Content = 00;
+            lbl_Surface.Content = 00;
+            lbl_Jump.Content = 00;
+            lbl_Burrow.Content = 00;
+            lbl_Underwater.Content = 00;
+            lb_Habitats.Items.Clear();
+            lb_EggGroups.Items.Clear();
+            lb_Capabilities.Items.Clear();
         }
 
         public MasterReferenceClass ReferenceData { get; set; }
@@ -45,16 +70,41 @@ namespace PokemonRPG.Windows
             // 1 character = show attitude
             try
             {
+                ResetValues();
                 FetchDexData();
                 if (Dex.StageOne)
-                    lbl_Type.Content = ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name;
+                    lbl_PrimaryType.Content = ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name;
                 if (Dex.StageTwo)
                 {
                     lbl_Stat.Content = FindHighestStat();
-                    lbl_Desc.Content = Dex.PokeTarget.PokedexResult.Description;
+                    tbx_Desc.Text = Dex.PokeTarget.PokedexResult.Description;
                 }
                 if (Dex.StageThree)
+                {
+                    lbl_SecondaryType.Content = ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name;
                     lbl_Pokemon.Content = Dex.PokeTarget.Name;
+                    lbl_Power.Content = Dex.PokeTarget.Power;
+                    lbl_Intelligence.Content = Dex.PokeTarget.Intellegence;
+                    lbl_Weight.Content = Dex.PokeTarget.WeightClass;
+
+                    #region Movements
+                    lbl_Overland.Content = Dex.PokeTarget.Movements.Overland;
+                    lbl_Sky.Content = Dex.PokeTarget.Movements.Sky;
+                    lbl_Surface.Content = Dex.PokeTarget.Movements.Surface;
+                    lbl_Jump.Content = Dex.PokeTarget.Movements.Jump;
+                    lbl_Burrow.Content = Dex.PokeTarget.Movements.Burrow;
+                    lbl_Underwater.Content = Dex.PokeTarget.Movements.Underwater;
+                    #endregion
+
+                    foreach (var value in Dex.PokeTarget.Habitats)
+                        lb_Habitats.Items.Add(value.Location);
+
+                    foreach (var value in Dex.PokeTarget.EggGroup)
+                        lb_EggGroups.Items.Add(value);
+
+                    foreach (var value in Dex.PokeTarget.Capability)
+                        lb_Capabilities.Items.Add(ReferenceData.AbilityDex.CapabilityList[value].Name);
+                }
 
             }
             catch (Exception ex)

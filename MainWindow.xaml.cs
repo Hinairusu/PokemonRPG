@@ -202,7 +202,7 @@ namespace PokemonRPG
         private void LoadCSV()
         {
 
-
+            // Legacy block to allow speed input of missing data when it's ready
 
             List<string> Data = new List<string>();
             using (var sr = new StreamReader("pkmnCapabilities.csv"))
@@ -289,6 +289,11 @@ namespace PokemonRPG
         private void btn_PC_MouseWork(object sender, MouseEventArgs e)
         {
             ButtonHighlightChange(btn_PC, btn_PCHighlight);
+        }
+        private void btn_PC_Click(object sender, MouseEventArgs e)
+        {
+            PC pcWindow = new PC(ReferenceData,PlayerData);
+            pcWindow.Show();
         }
 
         private void btn_Party_MouseWork(object sender, MouseEventArgs e)

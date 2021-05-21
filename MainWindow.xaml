@@ -60,10 +60,10 @@
             <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Trainer Highilight.png" MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden"/>
 
             <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Button.png" Grid.Row="7" MouseEnter="btn_Save_MouseWork"/>
-            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Highlight.png" Grid.Row="7" Visibility="Hidden" MouseLeave="btn_Save_MouseWork"/>
+            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Highlight.png" Grid.Row="7" Visibility="Hidden" MouseLeave="btn_Save_MouseWork" MouseLeftButtonDown="btn_Save_Click"/>
 
             <Image x:Name="btn_Load" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Button.png" Grid.Row="8" MouseEnter="btn_Load_MouseWork"/>
-            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork"/>
+            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork" MouseLeftButtonDown="btn_Load_Click"/>
 
             <Image x:Name="btn_GM" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/GM Button.png" Grid.Row="4" MouseEnter="btn_GM_MouseWork"/>
             <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/GM Highlight.png" Grid.Row="4" Visibility="Hidden" MouseLeave="btn_GM_MouseWork" />

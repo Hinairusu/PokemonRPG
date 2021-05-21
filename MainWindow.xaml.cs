@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
+using Microsoft.Win32;
 using PokemonRPG.Configs;
 using PokemonRPG.Windows;
 
@@ -235,20 +236,24 @@ namespace PokemonRPG
 
         private void btn_Load_Click(object sender, RoutedEventArgs e)
         {
-
+            string file;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            openFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
+            openFileDialog.DefaultExt = ".PkmnChr";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(Player));
+                StreamReader reader = new StreamReader(openFileDialog.FileName);
+                PlayerData = (Player)serializer.Deserialize(reader);
+                reader.Close();
+            }
+            BindData();
         }
-
-        public Player DoWork()
-        {
-            return null;
-        }
-
-
 
 
         private void btn_Save_Click(object sender, RoutedEventArgs e)
         {
-             var foo = DoWork();
 
             XmlSerializer xsSubmit = new XmlSerializer(typeof(Player));
             var xml = "";
@@ -257,10 +262,17 @@ namespace PokemonRPG
             {
                 using (XmlWriter writer = XmlWriter.Create(sww))
                 {
-                    xsSubmit.Serialize(writer, foo);
+                    xsSubmit.Serialize(writer, PlayerData);
                     xml = sww.ToString(); // Your XML
                 }
             }
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".PkmnChr";
+            saveFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (saveFileDialog.ShowDialog() == true)
+                File.WriteAllText(saveFileDialog.FileName, xml);
         }
 
 

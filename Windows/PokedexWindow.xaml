@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:PokemonRPG.Windows"
         mc:Ignorable="d"
         Title="PokedexWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Main Background.png"/>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="47*"/>

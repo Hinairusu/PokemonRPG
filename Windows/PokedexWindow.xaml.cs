@@ -28,7 +28,13 @@ namespace PokemonRPG.Windows
             ResetValues();
         }
 
-        public void ResetValues()
+       
+
+        public MasterReferenceClass ReferenceData { get; set; }
+        public Player PlayerData { get; set; }
+
+        public DexResults Dex { get; set; } = new DexResults();
+ public void ResetValues()
         {
 
             lbl_PrimaryType.Content = "Unknown";
@@ -52,12 +58,6 @@ namespace PokemonRPG.Windows
             lb_EggGroups.Items.Clear();
             lb_Capabilities.Items.Clear();
         }
-
-        public MasterReferenceClass ReferenceData { get; set; }
-        public Player PlayerData { get; set; }
-
-        public DexResults Dex { get; set; } = new DexResults();
-
         private void btn_DexSearch_Click(object sender, RoutedEventArgs e)
         {
             // FORMAT

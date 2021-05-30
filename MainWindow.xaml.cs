@@ -346,5 +346,12 @@ namespace PokemonRPG
 
             PkWin.Show();
         }
-    }
+
+        private void btn_Party_Click(object sender, MouseButtonEventArgs e)
+        {
+            PartyWindow party = new PartyWindow(ReferenceData, PlayerData);
+
+            party.Show();
+        }
+}
 }

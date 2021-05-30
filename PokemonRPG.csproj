@@ -67,7 +67,7 @@
     <Compile Include="Windows\Encyclopedia.xaml.cs">
       <DependentUpon>Encyclopedia.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Party.xaml.cs">
+    <Compile Include="Windows\PartyWindow.cs">
       <DependentUpon>Party.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\PC.xaml.cs">
@@ -182,6 +182,9 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper">
       <Version>10.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetProjects.WpfToolkit.DataVisualization">
+      <Version>6.0.90</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

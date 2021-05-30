@@ -48,7 +48,7 @@
             <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Encyclopedia Highilight.png" Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork"/>
 
             <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Party Button.png" Grid.Row="2" MouseEnter="btn_Party_MouseWork"/>
-            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Visibility="Hidden" Source="Resources/Image/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork"/>
+            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Visibility="Hidden" Source="Resources/Image/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork" MouseLeftButtonDown="btn_Party_Click" />
 
             <Image x:Name="btn_PC" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/PC Button.png" Grid.Row="5" MouseEnter="btn_PC_MouseWork"/>
             <Image x:Name="btn_PCHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/PC Highilight.png" Grid.Row="5" Visibility="Hidden" MouseLeave="btn_PC_MouseWork" MouseLeftButtonDown="btn_PC_Click"/>

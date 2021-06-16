@@ -1,6 +1,7 @@
 ﻿using PokemonRPG.Configs;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,30 +24,46 @@ namespace PokemonRPG.Windows
         public PokedexWindow(MasterReferenceClass MRef, Player PRef)
         {
             InitializeComponent();
+            SetAssets();
             ReferenceData = MRef;
             PlayerData = PRef;
             ResetValues();
+
+           
         }
 
-       
+       public void SetAssets()
+        {
+            this.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Pokedex Background.png")));
+            this.MainGrid.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Annotations.png")));
+            this.lb_Habitats.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Box.png")));
+            this.lb_Capabilities.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Box.png")));
+            this.lb_EggGroups.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Box.png")));
+            this.lbl_Pokemon.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Box.png")));
+            this.tb_PokemonCode.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Box.png")));
+            this.btn_DexSearch.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Search Button Highlight.png")));
+        }
 
         public MasterReferenceClass ReferenceData { get; set; }
         public Player PlayerData { get; set; }
 
         public DexResults Dex { get; set; } = new DexResults();
- public void ResetValues()
+        public void ResetValues()
         {
 
-            lbl_PrimaryType.Content = "Unknown";
-
+            string DefaultTypePath = "Resources/Image/Types/Unknown.png";
+            ImageSourceConverter c = new ImageSourceConverter();
+            img_PrimaryType.Source = (ImageSource)c.ConvertFrom(DefaultTypePath);
+            img_SecondaryType.Source = (ImageSource)c.ConvertFrom(DefaultTypePath);
+            img_Pkmn.Source = new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Whose That Pokemon.png"));
             lbl_Stat.Content = "Unknown";
             tbx_Desc.Text = "Unknown";
 
-            lbl_SecondaryType.Content = "Unknown";
-            lbl_Pokemon.Content = "Unknown";
-            lbl_Power.Content = "Unknown";
-            lbl_Intelligence.Content = "Unknown";
-            lbl_Weight.Content = "Unknown";
+            img_SecondaryType.Source = new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Types/Unknown.png"));
+            lbl_Pokemon.Content = "";
+            lbl_Power.Content = 00;
+            lbl_Intelligence.Content = 00;
+            lbl_Weight.Content = 00;
 
             lbl_Overland.Content = 00;
             lbl_Sky.Content = 00;
@@ -73,7 +90,16 @@ namespace PokemonRPG.Windows
                 ResetValues();
                 FetchDexData();
                 if (Dex.StageOne)
-                    lbl_PrimaryType.Content = ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name;
+                {
+                    if (!ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name.Equals("None", StringComparison.OrdinalIgnoreCase))
+                    {
+                        string Path = $@"Resources/Image/Types/{ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name}.png";
+                        ImageSourceConverter c = new ImageSourceConverter();
+                        img_PrimaryType.Source = (ImageSource)c.ConvertFrom(Path);
+                    }
+                    else
+                        img_PrimaryType.Source = null;
+                }
                 if (Dex.StageTwo)
                 {
                     lbl_Stat.Content = FindHighestStat();
@@ -81,7 +107,15 @@ namespace PokemonRPG.Windows
                 }
                 if (Dex.StageThree)
                 {
-                    lbl_SecondaryType.Content = ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name;
+                    if (!ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name.Equals("None", StringComparison.OrdinalIgnoreCase))
+                    {
+                        string Path = $@"{Environment.CurrentDirectory}\Resources\Image\Types\{ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name}.png";
+                        ImageSourceConverter c = new ImageSourceConverter();
+                        img_SecondaryType.Source = (ImageSource)c.ConvertFrom(Path);
+                    }
+                    else
+                        img_SecondaryType.Source = null;
+
                     lbl_Pokemon.Content = Dex.PokeTarget.Name;
                     lbl_Power.Content = Dex.PokeTarget.Power;
                     lbl_Intelligence.Content = Dex.PokeTarget.Intellegence;
@@ -135,28 +169,29 @@ namespace PokemonRPG.Windows
             List<char> PokeCode = tb_PokemonCode.Text.ToCharArray().ToList();
             PokeCode.RemoveAll(s => s.Equals('-'));
 
-            if (PokeCode.Count == 4)
+            if (PokeCode.Count >= 4)
             {
                 Dex.StageOne = true;
                 for (int i = PokeCode.Count; i < 12; i++)
                     PokeCode.Add('0');
             }
-            else if (PokeCode.Count == 8)
+            if (PokeCode.Count >= 8)
             {
-                Dex.StageOne = true;
                 Dex.StageTwo = true;
-                for (int i = PokeCode.Count; i < 12; i++)
-                    PokeCode.Add('0');
+                
             }
-            else if (PokeCode.Count == 12)
+            if (PokeCode.Count == 12)
             {
-                Dex.StageOne = true;
-                Dex.StageTwo = true;
                 Dex.StageThree = true;
             }
 
-            if (PokeCode.Count != 12)
-                throw new Exception("Invalid Code. You should enter 12 characters");
+            for (int i = PokeCode.Count; i < 12; i++)
+                    PokeCode.Add('0');
+
+            PokeTextConverter(PokeCode);
+
+            if (!Dex.StageOne)
+                throw new Exception("Invalid Code. You should enter a minimum of 4 characters");
 
             
 
@@ -215,7 +250,42 @@ namespace PokemonRPG.Windows
                 Dex.Attitude = Attitude;
         }
 
+        private void PokeTextConverter(List<char> pokeCode)
+        {
+            StringBuilder PokeText = new StringBuilder();
+            PokeText.Append($"{pokeCode[0]}");
+            PokeText.Append($"{pokeCode[1]}");
+            PokeText.Append($"{pokeCode[2]}");
+            PokeText.Append($"{pokeCode[3]}");
+            PokeText.Append($"-");
+            PokeText.Append($"{pokeCode[4]}");
+            PokeText.Append($"{pokeCode[5]}");
+            PokeText.Append($"{pokeCode[6]}");
+            PokeText.Append($"{pokeCode[7]}");
+            PokeText.Append($"-");
+            PokeText.Append($"{pokeCode[8]}");
+            PokeText.Append($"{pokeCode[9]}");
+            PokeText.Append($"{pokeCode[10]}");
+            PokeText.Append($"{pokeCode[11]}");
+            tb_PokemonCode.Text = PokeText.ToString();
+        }
 
+        private void btn_StyleToggle_Click(object sender, MouseButtonEventArgs e)
+        {
+            Style WindowStyle = new Style(typeof(Label));
+            Setter setter = new Setter(Label.ForegroundProperty, Brushes.Black);
+            WindowStyle.Setters.Add(setter);
+            //this.Style = WindowStyle;
+            this.Resources.Clear();
+            this.Resources.Add("Label", WindowStyle);
+
+            tb_PokemonCode.Foreground = Brushes.Black;
+            lb_Capabilities.Foreground = Brushes.Black;
+            lb_EggGroups.Foreground = Brushes.Black;
+            lb_Habitats.Foreground = Brushes.Black;
+            tbx_Desc.Foreground = Brushes.Black;
+            lbl_PokemonCodeRequest.Foreground = Brushes.Black;
+        }
     }
 
     public class DexResults
@@ -239,4 +309,5 @@ namespace PokemonRPG.Windows
             MoveList = new List<PokemonMove>();
         }
     }
+
 }

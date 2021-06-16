@@ -26,15 +26,20 @@ namespace PokemonRPG.Windows
             InitializeComponent();
             ReferenceData = MRef;
             PlayerData = PRef;
-            LoadChart();
+            SetAssets();
+        }
+
+       private void SetAssets()
+        {
+            string DefaultTypePath = "Resources/Image/Types/Unknown.png";
+            ImageSourceConverter c = new ImageSourceConverter();
+            Pkmn_One_Primary_Type.Source = (ImageSource)c.ConvertFrom(DefaultTypePath);
+            Pkmn_One_Secondary_Type.Source = (ImageSource)c.ConvertFrom(DefaultTypePath);
         }
 
         public MasterReferenceClass ReferenceData { get; set; }
         public Player PlayerData { get; set; }
 
-        public void LoadChart()
-        {
-            //((BarSeries)Chart_Pkmn_One.Series[0]).ItemsSource = new KeyValuePair<string, int>[] { new KeyValuePair<string, int>("Project Manager", 12) };
-        }
+ 
     }
 }

@@ -23,26 +23,57 @@
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
         <Grid x:Name="Pkmn_One_Grid" Grid.Column="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
+                <RowDefinition Height="42.667"/>
+                <RowDefinition Height="57.333"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Slider  x:Name="Pkmn_One_Slider_HP"  HorizontalAlignment="Left" Margin="42,46,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Height="18"/>
-            <Slider  x:Name="Pkmn_One_Slider_Attack"  HorizontalAlignment="Left" Margin="42,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Height="18"/>
-            <Slider  x:Name="Pkmn_One_Slider_Defence"  HorizontalAlignment="Left" Margin="42,83,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Height="18"/>
-            <Slider  x:Name="Pkmn_One_Slider_Special_Attack"  HorizontalAlignment="Left" Margin="42,101,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Height="18"/>
-            <Slider  x:Name="Pkmn_One_Slider_Special_Defence"  HorizontalAlignment="Left" Margin="42,119,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Height="18"/>
-            <Slider  x:Name="Pkmn_One_Slider_Speed"  HorizontalAlignment="Left" Margin="42,137,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Height="18"/>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Row="2"/>
-            <Label x:Name="Pkmn_One_Nickname" Content="Label" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="Pkmn_One_Species" Grid.Row="1" Content="Label" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="Pkmn_One_Level" Grid.Row="2" Content="Label" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
+            <Label x:Name="Pkmn_One_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
+            <Label x:Name="Pkmn_One_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
+            <Label x:Name="Pkmn_One_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Image x:Name="Pkmn_One_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png"/>
+            <Image x:Name="Pkmn_One_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png"/>
+            <Image x:Name="Pkmn_One_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png"/>
+            <Image x:Name="Pkmn_One_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png"/>
+            <Image x:Name="Pkmn_One_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png"/>
+            <Image x:Name="Pkmn_One_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="255" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png"/>
+            <Image x:Name="Pkmn_One_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
+            <Image x:Name="Pkmn_One_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
+            <Label x:Name="Pkmn_One_Current_HP" Content="0252" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="126,41,0,0" Grid.Row="2" VerticalAlignment="Top" Height="59" Width="50" Grid.RowSpan="2">
+                <Label.Background>
+                    <ImageBrush/>
+                </Label.Background>
+            </Label>
         </Grid>
         <Grid x:Name="Grid_Pkmn_Two" Grid.Column="2" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -51,6 +82,18 @@
             </Grid.RowDefinitions>
         </Grid>
         <Grid x:Name="Grid_Pkmn_Three" Grid.Column="3" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -59,6 +102,18 @@
             </Grid.RowDefinitions>
         </Grid>
         <Grid x:Name="Grid_Pkmn_Four" Grid.Column="4" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -67,6 +122,18 @@
             </Grid.RowDefinitions>
         </Grid>
         <Grid x:Name="Grid_Pkmn_Five" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -75,6 +142,18 @@
             </Grid.RowDefinitions>
         </Grid>
         <Grid x:Name="Grid_Pkmn_Six" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>

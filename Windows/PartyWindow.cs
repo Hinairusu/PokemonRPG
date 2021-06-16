@@ -34,7 +34,7 @@ namespace PokemonRPG.Windows
 
         public void LoadChart()
         {
-            ((BarSeries)Chart_Pkmn_One.Series[0]).ItemsSource = new KeyValuePair<string, int>[] { new KeyValuePair<string, int>("Project Manager", 12) };
+            //((BarSeries)Chart_Pkmn_One.Series[0]).ItemsSource = new KeyValuePair<string, int>[] { new KeyValuePair<string, int>("Project Manager", 12) };
         }
     }
 }

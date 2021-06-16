@@ -223,5 +223,28 @@
   <ItemGroup>
     <Resource Include="Resources\Image\Placeholder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Party Images\Bar 1.png" />
+    <Resource Include="Resources\Image\Party Images\Bar 2.png" />
+    <Resource Include="Resources\Image\Party Images\Bar 3.png" />
+    <Resource Include="Resources\Image\Party Images\Bar 4.png" />
+    <Resource Include="Resources\Image\Party Images\Bar 5.png" />
+    <Resource Include="Resources\Image\Party Images\Bar 6.png" />
+    <Resource Include="Resources\Image\Party Images\Box.png" />
+    <Resource Include="Resources\Image\Party Images\Priority 1.png" />
+    <Resource Include="Resources\Image\Party Images\Priority 2.png" />
+    <Resource Include="Resources\Image\Party Images\Priority 3.png" />
+    <Resource Include="Resources\Image\Party Images\Priority 4.png" />
+    <Resource Include="Resources\Image\Party Images\Priority 5.png" />
+    <Resource Include="Resources\Image\Party Images\Priority 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Pokedex Images\Annotations.png" />
+    <Resource Include="Resources\Image\Pokedex Images\Box.png" />
+    <Resource Include="Resources\Image\Pokedex Images\Pokedex Background.png" />
+    <Resource Include="Resources\Image\Pokedex Images\Search Button Highlight.png" />
+    <Resource Include="Resources\Image\Pokedex Images\Search Button.png" />
+    <Resource Include="Resources\Image\Pokedex Images\Whose That Pokemon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

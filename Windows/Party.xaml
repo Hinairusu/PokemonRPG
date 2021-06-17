@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:PokemonRPG.Windows"
         xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="PokemonRPG.Windows.PartyWindow"
         mc:Ignorable="d"
-        Title="Party" Height="720" Width="1280">
+        Title="Party" Height="720" Width="1280" Icon="/PokemonRPG;component/Resources/Image/Menus/Party Button.png">
     <Window.Background>
-        <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Main Background.png"/>
+        <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Menus/Main Background.png"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>

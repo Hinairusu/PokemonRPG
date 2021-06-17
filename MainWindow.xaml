@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="The Sleepless Pokemon Trainer Sheet" Height="720" Width="1280" FontFamily="OCR A Extended" Icon="Resources/Image/Team Karma Logo.png">
     <Window.Background>
-        <ImageBrush ImageSource="Resources/Image/Main Background.png" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="Resources/Image/Menus/Main Background.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -41,32 +41,32 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="btn_Bag" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Bag Button.png" Grid.Row="3" MouseEnter="btn_Bag_MouseWork"/>
-            <Image x:Name="btn_BagHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Bag Highilight.png" Grid.Row="3" Visibility="Hidden" MouseLeave="btn_Bag_MouseWork"/>
+            <Image x:Name="btn_Bag" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Bag Button.png" Grid.Row="3" MouseEnter="btn_Bag_MouseWork"/>
+            <Image x:Name="btn_BagHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Bag Highilight.png" Grid.Row="3" Visibility="Hidden" MouseLeave="btn_Bag_MouseWork"/>
 
-            <Image x:Name="btn_Encyclopedia" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Encyclopedia Button.png" Grid.Row="6" MouseEnter="btn_Encyclopedia_MouseWork"/>
-            <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Encyclopedia Highilight.png" Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork"/>
+            <Image x:Name="btn_Encyclopedia" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Button.png" Grid.Row="6" MouseEnter="btn_Encyclopedia_MouseWork"/>
+            <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Highilight.png" Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork"/>
 
-            <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Party Button.png" Grid.Row="2" MouseEnter="btn_Party_MouseWork"/>
-            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Visibility="Hidden" Source="Resources/Image/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork" MouseLeftButtonDown="btn_Party_Click" />
+            <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Party Button.png" Grid.Row="2" MouseEnter="btn_Party_MouseWork"/>
+            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Visibility="Hidden" Source="Resources/Image/Menus/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork" MouseLeftButtonDown="btn_Party_Click" />
 
-            <Image x:Name="btn_PC" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/PC Button.png" Grid.Row="5" MouseEnter="btn_PC_MouseWork"/>
-            <Image x:Name="btn_PCHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/PC Highilight.png" Grid.Row="5" Visibility="Hidden" MouseLeave="btn_PC_MouseWork" MouseLeftButtonDown="btn_PC_Click"/>
+            <Image x:Name="btn_PC" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/PC Button.png" Grid.Row="5" MouseEnter="btn_PC_MouseWork"/>
+            <Image x:Name="btn_PCHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/PC Highilight.png" Grid.Row="5" Visibility="Hidden" MouseLeave="btn_PC_MouseWork" MouseLeftButtonDown="btn_PC_Click"/>
 
-            <Image x:Name="btn_Pokedex" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Pokedex Button.png" Grid.Row="1" MouseEnter="btn_Pokedex_MouseWork"/>
-            <Image x:Name="btn_PokedexHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Pokedex Highilight.png" Grid.Row="1" Visibility="Hidden" MouseLeave="btn_Pokedex_MouseWork" MouseDown="btn_PokedexHighlight_Click"/>
+            <Image x:Name="btn_Pokedex" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Button.png" Grid.Row="1" MouseEnter="btn_Pokedex_MouseWork"/>
+            <Image x:Name="btn_PokedexHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Highilight.png" Grid.Row="1" Visibility="Hidden" MouseLeave="btn_Pokedex_MouseWork" MouseDown="btn_PokedexHighlight_Click"/>
 
-            <Image x:Name="btn_Trainer" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Trainer Button.png" MouseEnter="btn_Trainer_MouseWork"/>
-            <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Trainer Highilight.png" MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden"/>
+            <Image x:Name="btn_Trainer" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Button.png" MouseEnter="btn_Trainer_MouseWork"/>
+            <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Highilight.png" MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden"/>
 
-            <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Button.png" Grid.Row="7" MouseEnter="btn_Save_MouseWork"/>
-            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Save Highlight.png" Grid.Row="7" Visibility="Hidden" MouseLeave="btn_Save_MouseWork" MouseLeftButtonDown="btn_Save_Click"/>
+            <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Save Button.png" Grid.Row="7" MouseEnter="btn_Save_MouseWork"/>
+            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Save Highlight.png" Grid.Row="7" Visibility="Hidden" MouseLeave="btn_Save_MouseWork" MouseLeftButtonDown="btn_Save_Click"/>
 
-            <Image x:Name="btn_Load" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Button.png" Grid.Row="8" MouseEnter="btn_Load_MouseWork"/>
-            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork" MouseLeftButtonDown="btn_Load_Click"/>
+            <Image x:Name="btn_Load" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Load Button.png" Grid.Row="8" MouseEnter="btn_Load_MouseWork"/>
+            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork" MouseLeftButtonDown="btn_Load_Click"/>
 
-            <Image x:Name="btn_GM" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/GM Button.png" Grid.Row="4" MouseEnter="btn_GM_MouseWork"/>
-            <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/GM Highlight.png" Grid.Row="4" Visibility="Hidden" MouseLeave="btn_GM_MouseWork" />
+            <Image x:Name="btn_GM" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Button.png" Grid.Row="4" MouseEnter="btn_GM_MouseWork"/>
+            <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Highlight.png" Grid.Row="4" Visibility="Hidden" MouseLeave="btn_GM_MouseWork" />
         </Grid>
         <ListBox x:Name="Lb_GymBadges" HorizontalAlignment="Left" Height="178" Margin="10,65.333,0,0" VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}" Grid.Row="1"/>
         <Label Content="Badges" Grid.Column="2" HorizontalAlignment="Left" Margin="10,37.333,0,0" VerticalAlignment="Top" Width="65" Height="23" Grid.Row="1"/>
@@ -93,7 +93,7 @@
         <Label Content="Trainer Level:" Margin="2.333,61.333,0,0" VerticalAlignment="Top" Height="23" Grid.Column="1" HorizontalAlignment="Left" Width="126" Grid.Row="1"/>
         <Label Content="##" Margin="132.333,61.333,10,0" VerticalAlignment="Top" Height="23" Grid.Column="1" Grid.Row="1"/>
         <ListBox x:Name="lv_TrainerLevels" HorizontalAlignment="Left" Height="134" Margin="9.333,109.333,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1" Background="{x:Null}" Grid.Row="1"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="223" Margin="0.333,10,0,0" VerticalAlignment="Top" Width="358" Source="Resources/Image/Trainer ID.png" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="223" Margin="0.333,10,0,0" VerticalAlignment="Top" Width="358" Source="Resources/Image/Menus/Trainer ID.png" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Grid Grid.Column="1" Height="208" Margin="9.333,10,10.333,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="93*"/>

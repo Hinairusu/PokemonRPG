@@ -188,37 +188,37 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Image\Bag Button.png" />
-    <Resource Include="Resources\Image\Bag Highilight.png" />
-    <Resource Include="Resources\Image\Base Buttons.png" />
-    <Resource Include="Resources\Image\Encyclopedia Button.png" />
-    <Resource Include="Resources\Image\Encyclopedia Highilight.png" />
-    <Resource Include="Resources\Image\Main Background.png" />
-    <Resource Include="Resources\Image\Party Button.png" />
-    <Resource Include="Resources\Image\Party Highilight.png" />
-    <Resource Include="Resources\Image\PC Button.png" />
-    <Resource Include="Resources\Image\PC Highilight.png" />
-    <Resource Include="Resources\Image\Pokedex Button.png" />
-    <Resource Include="Resources\Image\Pokedex Highilight.png" />
-    <Resource Include="Resources\Image\Trainer Button.png" />
-    <Resource Include="Resources\Image\Trainer Highilight.png" />
-    <Resource Include="Resources\Image\Trainer ID.png" />
+    <Resource Include="Resources\Image\Menus\Bag Button.png" />
+    <Resource Include="Resources\Image\Menus\Bag Highilight.png" />
+    <Resource Include="Resources\Image\Menus\Base Buttons.png" />
+    <Resource Include="Resources\Image\Menus\Encyclopedia Button.png" />
+    <Resource Include="Resources\Image\Menus\Encyclopedia Highilight.png" />
+    <Resource Include="Resources\Image\Menus\Main Background.png" />
+    <Resource Include="Resources\Image\Menus\Party Button.png" />
+    <Resource Include="Resources\Image\Menus\Party Highilight.png" />
+    <Resource Include="Resources\Image\Menus\PC Button.png" />
+    <Resource Include="Resources\Image\Menus\PC Highilight.png" />
+    <Resource Include="Resources\Image\Menus\Pokedex Button.png" />
+    <Resource Include="Resources\Image\Menus\Pokedex Highilight.png" />
+    <Resource Include="Resources\Image\Menus\Trainer Button.png" />
+    <Resource Include="Resources\Image\Menus\Trainer Highilight.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Image\Load Button.png" />
-    <Resource Include="Resources\Image\Load Highlight.png" />
-    <Resource Include="Resources\Image\Save Button.png" />
-    <Resource Include="Resources\Image\Save Highlight.png" />
+    <Resource Include="Resources\Image\Menus\Load Button.png" />
+    <Resource Include="Resources\Image\Menus\Load Highlight.png" />
+    <Resource Include="Resources\Image\Menus\Save Button.png" />
+    <Resource Include="Resources\Image\Menus\Save Highlight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Image\GM Button.png" />
-    <Resource Include="Resources\Image\GM Highlight.png" />
+    <Resource Include="Resources\Image\Menus\GM Button.png" />
+    <Resource Include="Resources\Image\Menus\GM Highlight.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Team Karma Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Image\Trainer ID Old.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID Old.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Placeholder.png" />
@@ -316,6 +316,12 @@
     <EmbeddedResource Include="Resources\Image\Types\Water.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Image\Status\Companion Box.png" />
+    <Resource Include="Resources\Image\Status\Fainting Cracks.png" />
+    <Resource Include="Resources\Image\Status\Health Circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

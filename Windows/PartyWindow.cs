@@ -35,6 +35,7 @@ namespace PokemonRPG.Windows
             ImageSourceConverter c = new ImageSourceConverter();
             Pkmn_One_Primary_Type.Source = (ImageSource)c.ConvertFrom(DefaultTypePath);
             Pkmn_One_Secondary_Type.Source = (ImageSource)c.ConvertFrom(DefaultTypePath);
+            Pkmn_One_Primary_Type.Opacity = 0.01;
         }
 
         public MasterReferenceClass ReferenceData { get; set; }

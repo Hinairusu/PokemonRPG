@@ -85,6 +85,6 @@
             </Button>
             <TextBlock x:Name="tbx_Desc" HorizontalAlignment="Left" Margin="9.667,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="88" Width="166" Grid.Column="2" Grid.RowSpan="3"/>
         </Grid>
-        <Image x:Name="btn_StyleToggle" HorizontalAlignment="Left" Height="38" Margin="6,339.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/PokemonRPG;component/Resources/Image/GM Button.png" MouseLeftButtonDown="btn_StyleToggle_Click"/>
+        <Image x:Name="btn_StyleToggle" HorizontalAlignment="Left" Height="38" Margin="6,339.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/PokemonRPG;component/Resources/Image/Menus/GM Button.png" MouseLeftButtonDown="btn_StyleToggle_Click"/>
     </Grid>
 </Window>

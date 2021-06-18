@@ -61,6 +61,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Configs\DataBinding.cs" />
+    <Compile Include="Configs\StaticData.cs" />
     <Compile Include="Windows\Bag.xaml.cs">
       <DependentUpon>Bag.xaml</DependentUpon>
     </Compile>

@@ -21,11 +21,9 @@ namespace PokemonRPG.Windows
     /// </summary>
     public partial class PartyWindow : Window
     {
-        public PartyWindow(MasterReferenceClass MRef, Player PRef)
+        public PartyWindow()
         {
             InitializeComponent();
-            ReferenceData = MRef;
-            PlayerData = PRef;
             SetAssets();
         }
 
@@ -38,8 +36,6 @@ namespace PokemonRPG.Windows
             Pkmn_One_Primary_Type.Opacity = 0.01;
         }
 
-        public MasterReferenceClass ReferenceData { get; set; }
-        public Player PlayerData { get; set; }
 
  
     }

@@ -39,10 +39,6 @@ namespace PokemonRPG
             DataContext = this;
             BindData();
         }
-
-        MasterReferenceClass ReferenceData { get; set; } = new MasterReferenceClass();
-        Player PlayerData { get; set; } = new Player();
-        
         public void LoadBaseData()
         {
             string FilePath = $"{Environment.CurrentDirectory}\\Resources\\Data\\";
@@ -53,7 +49,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Pokedex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.Pokedex = (Pokedex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.Pokedex = (Pokedex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -68,7 +64,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Itemdex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.ItemDex = (Itemdex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.ItemDex = (Itemdex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -83,7 +79,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Naturedex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.NatureDex = (Naturedex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.NatureDex = (Naturedex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -98,7 +94,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Trainerdex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.TrainerDex = (Trainerdex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.TrainerDex = (Trainerdex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -113,7 +109,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Movedex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.MoveDex = (Movedex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.MoveDex = (Movedex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -128,7 +124,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Abilitydex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.AbilityDex = (Abilitydex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.AbilityDex = (Abilitydex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -144,7 +140,7 @@ namespace PokemonRPG
                 XmlSerializer serializer = new XmlSerializer(typeof(Typedex));
 
                 StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                ReferenceData.TypeDex = (Typedex)serializer.Deserialize(reader);
+                StaticData.ReferenceData.TypeDex = (Typedex)serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -155,7 +151,7 @@ namespace PokemonRPG
 
         public void LoadTestData()
         {
-            PlayerData = new Player()
+            StaticData.PlayerData = new Player()
             {
                 Name = "Joe Bloggs",
                 Strength = 12,
@@ -167,36 +163,36 @@ namespace PokemonRPG
                 Description = "A Partygoing mad scientist",
                 Notes = "Loves the Macarena"
             };
-            TrainerPokemon Starter = ReferenceData.GenerateTrainerPokemon(212);
+            TrainerPokemon Starter = StaticData.ReferenceData.GenerateTrainerPokemon(212);
             Starter.Nickname = "The IV Bag";
             Starter.Level = 25;
             Starter.Sex = new Gender() { Female = true };
 
-            PlayerData.CurrentParty.Add(Starter);
-            PlayerData.TotalOwnedPokemon = 1;
-            PlayerData.Money = 9001;
-            PlayerData.MaxHP = 10;
-            PlayerData.CurrentHP = 1;
+            StaticData.PlayerData.CurrentParty.Add(Starter);
+            StaticData.PlayerData.TotalOwnedPokemon = 1;
+            StaticData.PlayerData.Money = 9001;
+            StaticData.PlayerData.MaxHP = 10;
+            StaticData.PlayerData.CurrentHP = 1;
 
-            foreach (var pkmn in PlayerData.CurrentParty)
-                PlayerData.Pkmnlist.Add(pkmn);
+            foreach (var pkmn in StaticData.PlayerData.CurrentParty)
+                StaticData.PlayerData.Pkmnlist.Add(pkmn);
         }
 
         public void BindData()
         {
-            DataBinding.BindThis(lbl_Str, PlayerData, "Strength");
-            DataBinding.BindThis(lbl_Dex, PlayerData, "Dexterity");
-            DataBinding.BindThis(lbl_Con, PlayerData, "Constitution");
-            DataBinding.BindThis(lbl_Int, PlayerData, "Intelligence");
-            DataBinding.BindThis(lbl_Wis, PlayerData, "Wisdom");
-            DataBinding.BindThis(lbl_Cha, PlayerData, "Charisma");
-            DataBinding.BindThis(lbl_Name, PlayerData, "Name");
-            DataBinding.BindThis(lbl_Money, PlayerData, "Money");
-            DataBinding.BindThis(lbl_MaxHP, PlayerData, "MaxHP");
-            DataBinding.BindThis(lbl_CurrentHP, PlayerData, "CurrentHP");
-            DataBinding.BindThis(tb_User_Notes, PlayerData, "Notes");
-            DataBinding.BindThis(tb_Description, PlayerData, "Description");
-            DataBinding.BindThis(Lb_PokemonTeam, PlayerData, "Pkmnlist");
+            DataBinding.BindThis(lbl_Str, StaticData.PlayerData, "Strength");
+            DataBinding.BindThis(lbl_Dex, StaticData.PlayerData, "Dexterity");
+            DataBinding.BindThis(lbl_Con, StaticData.PlayerData, "Constitution");
+            DataBinding.BindThis(lbl_Int, StaticData.PlayerData, "Intelligence");
+            DataBinding.BindThis(lbl_Wis, StaticData.PlayerData, "Wisdom");
+            DataBinding.BindThis(lbl_Cha, StaticData.PlayerData, "Charisma");
+            DataBinding.BindThis(lbl_Name, StaticData.PlayerData, "Name");
+            DataBinding.BindThis(lbl_Money, StaticData.PlayerData, "Money");
+            DataBinding.BindThis(lbl_MaxHP, StaticData.PlayerData, "MaxHP");
+            DataBinding.BindThis(lbl_CurrentHP, StaticData.PlayerData, "CurrentHP");
+            DataBinding.BindThis(tb_User_Notes, StaticData.PlayerData, "Notes");
+            DataBinding.BindThis(tb_Description, StaticData.PlayerData, "Description");
+            DataBinding.BindThis(Lb_PokemonTeam, StaticData.PlayerData, "Pkmnlist");
         }
         
         private void LoadCSV()
@@ -245,7 +241,7 @@ namespace PokemonRPG
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Player));
                 StreamReader reader = new StreamReader(openFileDialog.FileName);
-                PlayerData = (Player)serializer.Deserialize(reader);
+                StaticData.PlayerData = (Player)serializer.Deserialize(reader);
                 reader.Close();
             }
             BindData();
@@ -262,7 +258,7 @@ namespace PokemonRPG
             {
                 using (XmlWriter writer = XmlWriter.Create(sww))
                 {
-                    xsSubmit.Serialize(writer, PlayerData);
+                    xsSubmit.Serialize(writer, StaticData.PlayerData);
                     xml = sww.ToString(); // Your XML
                 }
             }
@@ -292,7 +288,7 @@ namespace PokemonRPG
         }
         private void btn_PC_Click(object sender, MouseEventArgs e)
         {
-            PC pcWindow = new PC(ReferenceData,PlayerData);
+            PC pcWindow = new PC(StaticData.ReferenceData,StaticData.PlayerData);
             pcWindow.Show();
         }
 
@@ -342,14 +338,14 @@ namespace PokemonRPG
 
         private void btn_PokedexHighlight_Click(object sender, MouseButtonEventArgs e)
         {
-            PokedexWindow PkWin = new PokedexWindow(ReferenceData,PlayerData);
+            PokedexWindow PkWin = new PokedexWindow();
 
             PkWin.Show();
         }
 
         private void btn_Party_Click(object sender, MouseButtonEventArgs e)
         {
-            PartyWindow party = new PartyWindow(ReferenceData, PlayerData);
+            PartyWindow party = new PartyWindow();
 
             party.Show();
         }

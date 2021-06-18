@@ -21,12 +21,10 @@ namespace PokemonRPG.Windows
     /// </summary>
     public partial class PokedexWindow : Window
     {
-        public PokedexWindow(MasterReferenceClass MRef, Player PRef)
+        public PokedexWindow()
         {
             InitializeComponent();
             SetAssets();
-            ReferenceData = MRef;
-            PlayerData = PRef;
             ResetValues();
 
            
@@ -44,8 +42,6 @@ namespace PokemonRPG.Windows
             this.btn_DexSearch.Background = new ImageBrush(new BitmapImage(new Uri($"{Environment.CurrentDirectory}/Resources/Image/Pokedex Images/Search Button Highlight.png")));
         }
 
-        public MasterReferenceClass ReferenceData { get; set; }
-        public Player PlayerData { get; set; }
 
         public DexResults Dex { get; set; } = new DexResults();
         public void ResetValues()
@@ -91,9 +87,9 @@ namespace PokemonRPG.Windows
                 FetchDexData();
                 if (Dex.StageOne)
                 {
-                    if (!ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name.Equals("None", StringComparison.OrdinalIgnoreCase))
+                    if (!StaticData.ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name.Equals("None", StringComparison.OrdinalIgnoreCase))
                     {
-                        string Path = $@"Resources/Image/Types/{ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name}.png";
+                        string Path = $@"Resources/Image/Types/{StaticData.ReferenceData.TypeDex.TypeList[Dex.PokeTarget.PrimaryTypeID].Name}.png";
                         ImageSourceConverter c = new ImageSourceConverter();
                         img_PrimaryType.Source = (ImageSource)c.ConvertFrom(Path);
                     }
@@ -107,9 +103,9 @@ namespace PokemonRPG.Windows
                 }
                 if (Dex.StageThree)
                 {
-                    if (!ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name.Equals("None", StringComparison.OrdinalIgnoreCase))
+                    if (!StaticData.ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name.Equals("None", StringComparison.OrdinalIgnoreCase))
                     {
-                        string Path = $@"{Environment.CurrentDirectory}\Resources\Image\Types\{ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name}.png";
+                        string Path = $@"{Environment.CurrentDirectory}\Resources\Image\Types\{StaticData.ReferenceData.TypeDex.TypeList[Dex.PokeTarget.SecondaryTypeID].Name}.png";
                         ImageSourceConverter c = new ImageSourceConverter();
                         img_SecondaryType.Source = (ImageSource)c.ConvertFrom(Path);
                     }
@@ -137,7 +133,7 @@ namespace PokemonRPG.Windows
                         lb_EggGroups.Items.Add(value);
 
                     foreach (var value in Dex.PokeTarget.Capability)
-                        lb_Capabilities.Items.Add(ReferenceData.AbilityDex.CapabilityList[value].Name);
+                        lb_Capabilities.Items.Add(StaticData.ReferenceData.AbilityDex.CapabilityList[value].Name);
                 }
 
             }
@@ -197,17 +193,17 @@ namespace PokemonRPG.Windows
 
             string HexDexNo = $"{PokeCode[0]}{PokeCode[1]}{PokeCode[2]}";
             int DexNo = Convert.ToInt32(HexDexNo, 16);
-            if (DexNo > ReferenceData.Pokedex.PokemonDexList.Count)
+            if (DexNo > StaticData.ReferenceData.Pokedex.PokemonDexList.Count)
                 throw new Exception("Invalid Code");
 
-            Dex.PokeTarget = ReferenceData.Pokedex.PokemonDexList[DexNo];
+            Dex.PokeTarget = StaticData.ReferenceData.Pokedex.PokemonDexList[DexNo];
 
             string NatureDexNo = $"{PokeCode[3]}{PokeCode[4]}";
             int NatureNo = Convert.ToInt32(NatureDexNo, 16);
-            if (NatureNo > ReferenceData.NatureDex.Natures.Count)
+            if (NatureNo > StaticData.ReferenceData.NatureDex.Natures.Count)
                 throw new Exception("Invalid Code");
 
-            Dex.Nature = ReferenceData.NatureDex.Natures[NatureNo];
+            Dex.Nature = StaticData.ReferenceData.NatureDex.Natures[NatureNo];
 
             string LevelNo = $"{PokeCode[5]}{PokeCode[6]}";
             int Level = Convert.ToInt32(LevelNo, 16);
@@ -235,7 +231,7 @@ namespace PokemonRPG.Windows
                 foreach (var move in mvlist)
                 {
                     if (Dex.MoveList.Count < MoveNo)
-                        Dex.MoveList.Add(ReferenceData.MoveDex.MoveList[move.MoveID]);
+                        Dex.MoveList.Add(StaticData.ReferenceData.MoveDex.MoveList[move.MoveID]);
                 }
             }
 

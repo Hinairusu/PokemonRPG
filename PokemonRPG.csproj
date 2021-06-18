@@ -317,7 +317,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Project Plan.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Status\Companion Box.png" />
     <Resource Include="Resources\Image\Status\Fainting Cracks.png" />

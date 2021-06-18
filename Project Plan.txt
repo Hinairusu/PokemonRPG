@@ -1,0 +1,66 @@
+﻿Main Window <4/6>
+	Buttons <1>
+	Background <1>
+	Character overview <1>
+	Trainer Feature List
+	Notes <1>
+	Pokemon Quick Reference
+
+Pokedex <6/6>
+	stats <1>
+	description <1>
+	habitats <1>
+	egg groups <1>
+	generator code <1>
+		Difficult to deduce easily <1>
+
+Party <3/8>
+	Six Pokemon 
+	Two Companions
+	Name  <1>
+	Race  <1>
+	Level  <1>
+	Rough stat bars
+	HP Slider NO NUMBERS
+	Status Ailments
+
+Pokemon Sheet
+	Moves
+	Stats
+	Level Up
+	XP Tracker
+	Name
+	Vitamins
+	
+Bag
+	Item Breakdown
+	Add Item List
+	sorting
+	Costs
+	Buy/Sell Values
+
+PC
+	Pokemon List
+	Add to Party
+	Remove from Party
+
+Encyclopedia
+	Pokemon Lookup
+	Rules Lookup
+	Feature Lookup
+	FAQ
+
+
+GM Button
+	Pokemon Generator 
+		Random Pokemon based on location/egg group
+		Random Level Up Spend
+	Pokedex Code Generator
+	Random Item Generator
+
+Save
+	XML out Character Sheets
+
+Load
+	XML in Character sheets
+

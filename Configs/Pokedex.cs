@@ -150,11 +150,13 @@ namespace PokemonRPG.Configs
         public string Nickname { get; set; }
         public int Loyalty { get; set; }
         public int CurrentExperience { get; set; }
+        public bool Alive { get; set; }
         public TrainerPokemon()
         {
             IVs = new HiddenCharacteristics();
             EVs = new HiddenCharacteristics();
             ContestStats = new ContestCharacteristics();
+            Alive = true;
             RecalculateNewStats();
         }
 
@@ -217,6 +219,18 @@ namespace PokemonRPG.Configs
         public int SpecialAttack { get; set; }
         public int SpecialDefence { get; set; }
         public int Speed { get; set; }
+
+        public static BaseCharacteristics operator +(BaseCharacteristics v1, BaseCharacteristics v2)
+        {
+            BaseCharacteristics newbase = new BaseCharacteristics();
+            newbase.HP = v1.HP + v2.HP;
+            newbase.Attack = v1.Attack + v2.Attack;
+            newbase.Defence = v1.Defence + v2.Defence;
+            newbase.Speed = v1.Speed + v2.Speed;
+            newbase.SpecialDefence = v1.SpecialDefence + v2.SpecialDefence;
+            newbase.SpecialAttack = v1.SpecialAttack + v2.SpecialAttack;
+            return newbase;
+        }
 
     }
     [Serializable]

@@ -322,9 +322,15 @@
     <Resource Include="Project Plan.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Image\Status\Companion Box.png" />
+    <Resource Include="Resources\Image\Party Images\Companion Box.png" />
     <Resource Include="Resources\Image\Status\Fainting Cracks.png" />
     <Resource Include="Resources\Image\Status\Health Circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Party Images\Priority 0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Status\Skull.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

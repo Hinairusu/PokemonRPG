@@ -14,7 +14,8 @@ namespace PokemonRPG.Configs
         public List<ItemBox> ItemPC { get; set; }
         public List<PokemonBox> PokemonPC { get; set; }
         public List<TrainerPokemon> CurrentParty { get; set; }
-        
+        public List<TrainerPokemon> CompanionPokemonParty { get; set; }
+
         [NonSerialized]
         public ObservableCollection<TrainerPokemon> Pkmnlist = new ObservableCollection<TrainerPokemon>();
         
@@ -52,6 +53,7 @@ namespace PokemonRPG.Configs
             Inventory = new List<Item>();
             ContestRibbons = new List<string>();
             Regions = new List<LocationRegion>();
+            CompanionPokemonParty = new List<TrainerPokemon>();
         }
     }
     [Serializable]

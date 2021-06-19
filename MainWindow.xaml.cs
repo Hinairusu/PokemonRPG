@@ -167,6 +167,12 @@ namespace PokemonRPG
             Starter.Nickname = "The IV Bag";
             Starter.Level = 25;
             Starter.Sex = new Gender() { Female = true };
+            Starter.Enhancements.Defence = 100;
+            Starter.Enhancements.SpecialDefence = 100;
+            Starter.Enhancements.Attack = 12;
+            Starter.Enhancements.SpecialAttack = 12;
+            Starter.Enhancements.Speed = 35;
+            Starter.Enhancements.HP = 80;
 
             StaticData.PlayerData.CurrentParty.Add(Starter);
             StaticData.PlayerData.TotalOwnedPokemon = 1;
@@ -227,6 +233,7 @@ namespace PokemonRPG
             var basepk = new WildPokemon();
             var Trainerpk = new TrainerPokemon();
 
+            StaticData.PlayerData.CurrentParty[0].ActualStats = StaticData.PlayerData.CurrentParty[0].BaseStats + StaticData.PlayerData.CurrentParty[0].Enhancements + StaticData.PlayerData.CurrentParty[0].IVs + StaticData.PlayerData.CurrentParty[0].EVs;
 
         }
 

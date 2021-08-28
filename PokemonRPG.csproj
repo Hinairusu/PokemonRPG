@@ -77,8 +77,8 @@
     <Compile Include="Windows\PokedexWindow.xaml.cs">
       <DependentUpon>PokedexWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Pokemon.xaml.cs">
-      <DependentUpon>Pokemon.xaml</DependentUpon>
+    <Compile Include="Windows\PokemonPage.xaml.cs">
+      <DependentUpon>PokemonPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Trainer.xaml.cs">
       <DependentUpon>Trainer.xaml</DependentUpon>
@@ -123,7 +123,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Pokemon.xaml">
+    <Page Include="Windows\PokemonPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PokemonRPG.Windows
 {
     /// <summary>
-    /// Interaction logic for Pokemon.xaml
+    /// Interaction logic for PokemonPage.xaml
     /// </summary>
-    public partial class Pokemon : Window
+    public partial class PokemonPage : Window
     {
-        public Pokemon()
+        public PokemonPage()
         {
             InitializeComponent();
         }

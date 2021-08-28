@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokemonRPG.Configs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,15 @@ namespace PokemonRPG.Windows
     /// </summary>
     public partial class PokemonPage : Window
     {
-        public PokemonPage()
+        public int PokemonID;
+        public PokemonPage(int pkmn)
         {
             InitializeComponent();
+            PokemonID = pkmn;
+           TrainerPokemon it =  StaticData.PlayerData.Pkmnlist.Where(s => s.PokemonTID.Equals(pkmn)).First();
         }
+
+
+
     }
 }

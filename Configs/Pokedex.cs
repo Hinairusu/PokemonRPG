@@ -151,6 +151,8 @@ namespace PokemonRPG.Configs
         public int Loyalty { get; set; }
         public int CurrentExperience { get; set; }
         public bool Alive { get; set; }
+        public int TrainerID { get; set; }
+        public int PokemonTID { get; set; }
         public TrainerPokemon()
         {
             IVs = new HiddenCharacteristics();
@@ -174,7 +176,11 @@ namespace PokemonRPG.Configs
                 SpecialAttack = BaseStats.SpecialAttack + LevelUpPoints.SpecialAttack + IVs.SpecialAttack + (EVs.SpecialAttack / 4)
             };
         }
-   
+        public override string ToString()
+        {
+            return $"{PokemonTID}";
+        }
+
     }
 
 

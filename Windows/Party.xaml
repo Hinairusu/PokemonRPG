@@ -68,7 +68,7 @@
 
             <Image x:Name="Pkmn_One_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
             <Image x:Name="Pkmn_One_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_One_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
+            <Image x:Name="Pkmn_One_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" MouseUp="Pkmn_One_Current_HP_MouseUp"/>
             <Image x:Name="Pkmn_One_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
 
             <Image x:Name="Pkmn_One_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>

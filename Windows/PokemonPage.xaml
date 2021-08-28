@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PokemonRPG.Windows"
         mc:Ignorable="d"
-        Title="PokemonPage" Height="450" Width="800">
+        Title="Pokemon Window"  FontFamily="OCR A Extended" Icon="/PokemonRPG;component/Resources/Image/Menus/Pokedex Button.png" TextElement.Foreground="AntiqueWhite" Height="450" Width="800" Background="{x:Null}">
     <Grid>
         
     </Grid>

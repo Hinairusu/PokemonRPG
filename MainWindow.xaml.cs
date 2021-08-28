@@ -151,37 +151,6 @@ namespace PokemonRPG
 
         public void LoadTestData()
         {
-            StaticData.PlayerData = new Player()
-            {
-                Name = "Joe Bloggs",
-                Strength = 12,
-                Intelligence = 15,
-                Dexterity = 13,
-                Constitution = 11,
-                Wisdom = 6,
-                Charisma = 16,
-                Description = "A Partygoing mad scientist",
-                Notes = "Loves the Macarena"
-            };
-            TrainerPokemon Starter = StaticData.ReferenceData.GenerateTrainerPokemon(212);
-            Starter.Nickname = "The IV Bag";
-            Starter.Level = 25;
-            Starter.Sex = new Gender() { Female = true };
-            Starter.Enhancements.Defence = 100;
-            Starter.Enhancements.SpecialDefence = 100;
-            Starter.Enhancements.Attack = 12;
-            Starter.Enhancements.SpecialAttack = 12;
-            Starter.Enhancements.Speed = 35;
-            Starter.Enhancements.HP = 80;
-
-            StaticData.PlayerData.CurrentParty.Add(Starter);
-            StaticData.PlayerData.TotalOwnedPokemon = 1;
-            StaticData.PlayerData.Money = 9001;
-            StaticData.PlayerData.MaxHP = 10;
-            StaticData.PlayerData.CurrentHP = 1;
-
-            foreach (var pkmn in StaticData.PlayerData.CurrentParty)
-                StaticData.PlayerData.Pkmnlist.Add(pkmn);
         }
 
         public void BindData()
@@ -230,11 +199,7 @@ namespace PokemonRPG
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
-            var basepk = new WildPokemon();
-            var Trainerpk = new TrainerPokemon();
-
-            StaticData.PlayerData.CurrentParty[0].ActualStats = StaticData.PlayerData.CurrentParty[0].BaseStats + StaticData.PlayerData.CurrentParty[0].Enhancements + StaticData.PlayerData.CurrentParty[0].IVs + StaticData.PlayerData.CurrentParty[0].EVs;
-
+            
         }
 
         private void btn_Load_Click(object sender, RoutedEventArgs e)
@@ -356,5 +321,11 @@ namespace PokemonRPG
 
             party.Show();
         }
-}
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //HANDLE SAVEING HERE
+            Environment.Exit(1);
+        }
+    }
 }

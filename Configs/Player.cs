@@ -12,9 +12,8 @@ namespace PokemonRPG.Configs
     {
         public string Name { get; set; }
         public List<ItemBox> ItemPC { get; set; }
-        public List<PokemonBox> PokemonPC { get; set; }
-        public List<TrainerPokemon> CurrentParty { get; set; }
-        public List<TrainerPokemon> CompanionPokemonParty { get; set; }
+        public List<int> CurrentParty { get; set; }
+        public List<TrainerPokemon> OwnedPokemon { get; set; }
 
         [NonSerialized]
         public ObservableCollection<TrainerPokemon> Pkmnlist = new ObservableCollection<TrainerPokemon>();
@@ -46,14 +45,13 @@ namespace PokemonRPG.Configs
         public Player()
         {
             ItemPC = new List<ItemBox>();
-            PokemonPC = new List<PokemonBox>();
             Levels = new List<PlayerLevels>();
             GymBadges = new List<string>();
-            CurrentParty = new List<TrainerPokemon>();
+            CurrentParty = new List<int>();
             Inventory = new List<Item>();
             ContestRibbons = new List<string>();
             Regions = new List<LocationRegion>();
-            CompanionPokemonParty = new List<TrainerPokemon>();
+            OwnedPokemon = new List<TrainerPokemon>();
         }
     }
     [Serializable]
@@ -81,16 +79,5 @@ namespace PokemonRPG.Configs
             BoxContents = new List<Item>();
             BoxedLearningItems = new List<MoveLearningItem>();
         }    
-    }
-    [Serializable]
-    public class PokemonBox
-    {
-        public string BoxName { get; set; }
-        public int BoxNo { get; set; }
-        List<Pokemon> BoxContents { get; set; }
-        public PokemonBox()
-        {
-            BoxContents = new List<Pokemon>();
-        }
     }
 }

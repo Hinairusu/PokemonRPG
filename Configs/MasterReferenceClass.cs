@@ -10,7 +10,7 @@ namespace PokemonRPG.Configs
     public class MasterReferenceClass
     {
 
-        
+        public Random RandomGenerator { get; set; } = new Random();
         public Pokedex Pokedex { get; set; }
         public Itemdex ItemDex { get; set; }
         public Naturedex NatureDex { get; set; }
@@ -35,6 +35,7 @@ namespace PokemonRPG.Configs
         #region Generation of Pokemon
 
         MapperConfiguration PktoTrPk = new MapperConfiguration(cfg => cfg.CreateMap<Pokemon, TrainerPokemon>());
+        MapperConfiguration WiPktoTrPk = new MapperConfiguration(cfg => cfg.CreateMap<Pokemon, TrainerPokemon>());
         MapperConfiguration PktoWiPk = new MapperConfiguration(cfg => cfg.CreateMap<Pokemon, WildPokemon>());
 
         public TrainerPokemon GenerateTrainerPokemon(WildPokemon Poke)
@@ -45,23 +46,60 @@ namespace PokemonRPG.Configs
         {
             return GenerateTrainerPokemon(Poke.UID);
         }
-        public TrainerPokemon GenerateTrainerPokemon(int UID)
+
+        public TrainerPokemon GenerateTrainerPokemon(int UID, int level = 1)
         {
-            TrainerPokemon poke = new TrainerPokemon();
-            Pokemon pk = new Pokemon();
-            var mapper = PktoTrPk.CreateMapper();
-            return mapper.Map<TrainerPokemon>(Pokedex.PokemonDexList.Find(s => s.UID.Equals(UID)));
+            var mapper = WiPktoTrPk.CreateMapper();
+            TrainerPokemon poke = mapper.Map<TrainerPokemon>(GenerateWildPokemon(UID));
+            poke.Level = level;
+            for (int i = 1; i < level; i++)
+                poke.LevelUp();
+            
+            double Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
+            if (poke.Sex.FemaleRatio > decimal.Parse(Ratio.ToString()) && poke.Sex.Male)
+                poke.ActualSex = "Male";
+            else if (poke.Sex.Female)
+                poke.ActualSex = "Female";
+            else
+                poke.ActualSex = "Genderless";
+
+            poke.Nature =
+                StaticData.ReferenceData.NatureDex.Natures[
+                    StaticData.ReferenceData.RandomGenerator.Next(0, StaticData.ReferenceData.NatureDex.Natures.Count)];
+
+            return poke;
+
         }
         public WildPokemon GenerateWildPokemon(Pokemon Poke)
         {
             return GenerateWildPokemon(Poke.UID);
         }
-        public WildPokemon GenerateWildPokemon(int UID)
+
+        public WildPokemon GenerateWildPokemon(int UID, int level = 0)
         {
-            WildPokemon poke = new WildPokemon();
             Pokemon pk = new Pokemon();
             var mapper = PktoWiPk.CreateMapper();
-            return mapper.Map<WildPokemon>(Pokedex.PokemonDexList.Find(s => s.UID.Equals(UID)));
+            WildPokemon poke = mapper.Map<WildPokemon>(Pokedex.PokemonDexList.Find(s => s.UID.Equals(UID)));
+            if (level > 0)
+            {
+                poke.Level = level;
+                for (int i = 1; i < level; i++)
+                    poke.WildLevelUp();
+            }
+            
+            double Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
+            if (poke.Sex.FemaleRatio > decimal.Parse(Ratio.ToString()) && poke.Sex.Male)
+                poke.ActualSex = "Male";
+            else if (poke.Sex.Female)
+                poke.ActualSex = "Female";
+            else
+                poke.ActualSex = "Genderless";
+
+            poke.Nature =
+                StaticData.ReferenceData.NatureDex.Natures[
+                    StaticData.ReferenceData.RandomGenerator.Next(0, StaticData.ReferenceData.NatureDex.Natures.Count)];
+
+            return poke;
         }
 
         #endregion

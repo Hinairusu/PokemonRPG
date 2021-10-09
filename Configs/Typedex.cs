@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,25 +38,4 @@ namespace PokemonRPG.Configs
             }
         }
     }
-
-    [Serializable]
-    public class PokeType
-    {
-        public int UID { get; set; }
-        public string Name { get; set; }
-        public List<TypeMultiplier> TypeInteraction { get; set; }
-        public PokeType()
-        {
-            TypeInteraction = new List<TypeMultiplier>();
-        }
-    }
-
-    public class TypeMultiplier
-    {
-        public int TypeID { get; set; }
-        public decimal Multiplier { get; set; }
-    }
-
-
-
 }

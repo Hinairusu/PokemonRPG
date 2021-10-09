@@ -54,30 +54,4 @@ namespace PokemonRPG.Configs
             OwnedPokemon = new List<TrainerPokemon>();
         }
     }
-    [Serializable]
-    public class PlayerLevels
-    {
-        public int ClassUID { get; set; }
-        public int LevelCount { get; set; }
-    }
-    [Serializable]
-    public class LocationRegion
-    {
-        public string Name { get; set; }
-        public bool DefeatedEliteFour { get; set; }
-    }
-    
-    [Serializable]
-    public class ItemBox
-    {
-        public string BoxName { get; set; }
-        public int BoxNo { get; set; }
-        public List<Item> BoxContents { get; set; }
-        public List<MoveLearningItem> BoxedLearningItems { get; set; }
-        public ItemBox()
-        {
-            BoxContents = new List<Item>();
-            BoxedLearningItems = new List<MoveLearningItem>();
-        }    
-    }
 }

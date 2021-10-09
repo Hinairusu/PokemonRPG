@@ -19,32 +19,4 @@ namespace PokemonRPG.Configs
             CapabilityList = new List<Capabilities>();
         }
     }
-
-    public class Ability
-    {
-        public int UID { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string Frequency { get; set; }
-        public List<string> Keywords { get; set; }
-        public string Effect { get; set; }
-        public Ability()
-        {
-            Keywords = new List<string>();
-        }
-    }
-
-    public class Capabilities
-    {
-        public int UID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-    }
-
-    public class Keywords
-    {
-        public int UID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-    }
 }

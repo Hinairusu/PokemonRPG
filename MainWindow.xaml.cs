@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -172,11 +173,10 @@ namespace PokemonRPG
         
         private void LoadCSV()
         {
-
             // Legacy block to allow speed input of missing data when it's ready
 
             List<string> Data = new List<string>();
-            using (var sr = new StreamReader("pkmnCapabilities.csv"))
+            using (var sr = new StreamReader("tmmoves.csv"))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -189,17 +189,145 @@ namespace PokemonRPG
             foreach (string line in Data)
             {
                 string[] splitvals = line.Split(',');
+                try
+                {
 
-               
- 
+                    string PokeName = splitvals[0];
+
+                    if (PokeName.Equals("Nidoran (M)"))
+                        PokeName = "Nidoran M";
+                    else if (PokeName.Equals("Nidoran (F)"))
+                        PokeName = "Nidoran F";
+                    else if (PokeName.Equals("Mr Mime"))
+                        PokeName = "Mr. Mime";
+                    else if (PokeName.Equals("Mime Jr"))
+                        PokeName = "Mime Jr.";
+                    else if (PokeName.Equals("Ryhorn"))
+                        PokeName = "Rhyhorn";
+                    else if (PokeName.Equals("Wobuffet"))
+                        PokeName = "Wobbuffet";
+                    else if (PokeName.Equals("Apiom"))
+                        PokeName = "Aipom";
+                    else if (PokeName.Equals("Farfetche'd"))
+                        PokeName = "Farfetch'd";
+                    else if (PokeName.Equals("Proygon"))
+                        PokeName = "Porygon";
+                    else if (PokeName.Equals("Proygon2"))
+                        PokeName = "Porygon2";
+                    else if (PokeName.Equals("Proygon Z"))
+                        PokeName = "Porygon-Z";
+                    else if (PokeName.Equals("Tyrnaitar"))
+                        PokeName = "Tyranitar";
+                    else if (PokeName.Equals("Pickachu"))
+                        PokeName = "Pikachu";
+                    else if (PokeName.Equals("Slackoth"))
+                        PokeName = "Slakoth";
+
+
+
+
+                    int PokeID =
+                        StaticData.ReferenceData.Pokedex.PokemonDexList.FindIndex(s => s.Name.Equals(PokeName, StringComparison.OrdinalIgnoreCase));
+                    int MoveID = StaticData.ReferenceData.ItemDex.MoveLearningItems.FindIndex(s =>
+                        s.MoveName.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
+                        //StaticData.ReferenceData.MoveDex.MoveList.FindIndex(s => s.Name.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
+                    //LevelMoves move = new LevelMoves();
+                    //move.LevelLearned = int.Parse(splitvals[1]);
+                    //move.MoveID = MoveID;
+                    StaticData.ReferenceData.Pokedex.PokemonDexList[PokeID].PossibleTMMoves.Add(MoveID);
+                }
+                catch
+                {
+                   
+                }
+
+                Thread.Sleep(1);
+
             }
 
+            string FukedPkmn = string.Empty;
+            foreach (var pk in StaticData.ReferenceData.Pokedex.PokemonDexList)
+            {
+                if ((pk.PossibleTMMoves.Count < 1) && pk.EvolutionIDs.Count > 0 && (StaticData.ReferenceData.Pokedex.EvolutionList[pk.EvolutionIDs.First()].EvolutionStage == 1))
+                    FukedPkmn += $"{pk.Name}, ";
+
+            }
+
+            string BaseFukedPkmn = StaticData.ReferenceData.Pokedex.PokemonDexList
+                .Where(pk => pk.PossibleTMMoves.Count < 1)
+                .Aggregate(string.Empty,
+                    (current,
+                        pk) => current + $"{pk.Name}, ");
+
+            XmlSerializer xsSubmit = new XmlSerializer(typeof(Pokedex));
+            var xml = "";
+
+            using (var sww = new StringWriter())
+            {
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xsSubmit.Serialize(writer, StaticData.ReferenceData.Pokedex);
+                    xml = sww.ToString(); // Your XML
+                }
+            }
         }
 
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
-            
+            StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(1, 20));
+            PokemonPage page = new PokemonPage(0);
+            page.Show();
+        }
+
+        private void btn_GM_Click(object sender, RoutedEventArgs e)
+        {
+            //foreach (var evo in StaticData.ReferenceData.Pokedex.EvolutionList)
+            //{
+            //    if (evo.EvolutionID == 0)
+            //        evo.EvolutionID = -1;
+            //    else
+            //    {
+            //        var evopokemon = StaticData.ReferenceData.Pokedex.PokemonDexList[evo.EvolutionID];
+
+            //        foreach (var evooption in evopokemon.EvolutionIDs)
+            //        if (StaticData.ReferenceData.Pokedex.EvolutionList[evooption].EvolutionID !=
+            //            evo.EvolutionStage + 1)
+            //            StaticData.ReferenceData.Pokedex.EvolutionList[evooption].EvolutionStage =
+            //                evo.EvolutionStage + 1;
+            //    }
+            //}
+
+            //string MissingTM = String.Empty;
+            //string MissingMoves = String.Empty;
+            //string MissingEggs = String.Empty;
+            //string MissingTutors = String.Empty;
+
+
+            //foreach (var VARIABLE in StaticData.ReferenceData.Pokedex.PokemonDexList)
+            //{
+            //    if (VARIABLE.PossibleLevelupMoves.Count < 1)
+            //        MissingMoves += $"{VARIABLE.Name}, ";
+            //    if (VARIABLE.PossibleTMMoves.Count < 1)
+            //        MissingTM += $"{VARIABLE.Name}, ";
+            //    if (VARIABLE.PossibleEggMoves.Count < 1 && VARIABLE.EvolutionIDs.Count > 0 && (StaticData.ReferenceData.Pokedex.EvolutionList[VARIABLE.EvolutionIDs.First()].EvolutionStage == 1))
+            //        MissingEggs += $"{VARIABLE.Name}, ";
+            //    if (VARIABLE.PossibleTutorMoves.Count < 1)
+            //        MissingTutors += $"{VARIABLE.Name}, ";
+            //}
+
+            GenerateRandomEncounter();
+
+        }
+
+        private void GenerateRandomEncounter(int LevelLimit = 100)
+        {
+            if (StaticData.PlayerData.Pkmnlist.Count > 0)
+                StaticData.PlayerData.Pkmnlist.RemoveAt(0);
+            StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(StaticData.ReferenceData.RandomGenerator.Next(0, StaticData.ReferenceData.Pokedex.PokemonDexList.Count+1), StaticData.ReferenceData.RandomGenerator.Next(1, LevelLimit+1)));
+            StaticData.PlayerData.Pkmnlist[0].CurrentHP = StaticData.PlayerData.Pkmnlist[0].MaxHP;
+           PokemonPage page = new PokemonPage(0);
+            page.Show();
         }
 
         private void btn_Load_Click(object sender, RoutedEventArgs e)

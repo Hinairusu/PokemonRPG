@@ -66,7 +66,7 @@
             <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork" MouseLeftButtonDown="btn_Load_Click"/>
 
             <Image x:Name="btn_GM" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Button.png" Grid.Row="4" MouseEnter="btn_GM_MouseWork"/>
-            <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Highlight.png" Grid.Row="4" Visibility="Hidden" MouseLeave="btn_GM_MouseWork" />
+            <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Highlight.png" Grid.Row="4" Visibility="Hidden" MouseLeave="btn_GM_MouseWork" MouseLeftButtonDown="btn_GM_Click" />
         </Grid>
         <ListBox x:Name="Lb_GymBadges" HorizontalAlignment="Left" Height="178" Margin="10,65.333,0,0" VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}" Grid.Row="1"/>
         <Label Content="Badges" Grid.Column="2" HorizontalAlignment="Left" Margin="10,37.333,0,0" VerticalAlignment="Top" Width="65" Height="23" Grid.Row="1"/>

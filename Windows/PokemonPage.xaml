@@ -34,12 +34,13 @@
             <Label x:Name="lbl_Species" Content="MISSINGNO" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="30" Grid.Row="1" Margin="4.667,0,0,0" Grid.Column="1"/>
             <Label x:Name="lbl_Level" Content="101" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="30" Grid.Row="2" Margin="4.667,0,182,0" Grid.Column="1"/>
             <Label x:Name="lbl_Nature" Content="ADAMANT" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="30" Grid.Row="3" Margin="4.667,0,0,0" Grid.Column="1"/>
-            <Label x:Name="lbl_Gender" Content="101" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="30" Grid.Row="2" Margin="134.667,0,0,0" Grid.Column="1" RenderTransformOrigin="2.424,0.474"/>
+            <Label x:Name="lbl_Gender" Content="######" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="30" Grid.Row="2" Margin="134.667,0,0,0" Grid.Column="1" RenderTransformOrigin="2.424,0.474"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="304" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340">
             <Grid.RowDefinitions>
                 <RowDefinition Height="41*"/>
-                <RowDefinition Height="263*"/>
+                <RowDefinition Height="190*"/>
+                <RowDefinition Height="73*"/>
             </Grid.RowDefinitions>
             <Separator HorizontalAlignment="Left" Height="106" Margin="348,35,-454,0" VerticalAlignment="Top" Width="446" Grid.RowSpan="2"/>
             <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="41" Margin="20,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="310"/>
@@ -55,6 +56,54 @@
             </Separator>
             <Label x:Name="CurrentHP" Content="9999" HorizontalAlignment="Left" Margin="85,9,0,0" VerticalAlignment="Top"/>
             <Label x:Name="MaxHP" Content="9999" HorizontalAlignment="Left" Margin="211,10,0,0" VerticalAlignment="Top"/>
+            <Grid HorizontalAlignment="Left" Height="180" Margin="0,4.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="98*"/>
+                    <ColumnDefinition Width="102*"/>
+                    <ColumnDefinition Width="57*"/>
+                    <ColumnDefinition Width="27*"/>
+                    <ColumnDefinition Width="56*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Label Content="HP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Content="Attack" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1"/>
+                <Label Content="Defence" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2"/>
+                <Label Content="Sp. Attack" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="3"/>
+                <Label Content="Sp. Defence" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4"/>
+                <Label Content="Speed" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="5"/>
+                <Label x:Name="Lbl_HP" Content="####" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="0,0,4,0"/>
+                <Label x:Name="Lbl_Atk" Content="####" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="0,0,4,0" Grid.Row="1"/>
+                <Label x:Name="Lbl_Def" Content="####" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="0,0,4,0" Grid.Row="2"/>
+                <Label x:Name="Lbl_SpAtk" Content="####" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="0,0,4,0" Grid.Row="3"/>
+                <Label x:Name="Lbl_SpDef" Content="####" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="0,0,4,0" Grid.Row="4"/>
+                <Label x:Name="Lbl_Spd" Content="####" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="0,0,4,0" Grid.Row="5"/>
+                <Label x:Name="lbl_HPBuff" Content="##" Grid.Column="3" Margin="0,0,0,0"/>
+                <Label x:Name="lbl_AtkBuff" Content="##" Grid.Column="3" Grid.Row="1" Margin="0,0,0,0"/>
+                <Label x:Name="lbl_DefBuff" Content="##" Grid.Column="3" Grid.Row="2" Margin="0,0,0,0"/>
+                <Label x:Name="lbl_SpAtkBuff" Content="##" Grid.Column="3" Grid.Row="3" Margin="0,0,0,0"/>
+                <Label x:Name="lbl_SpDefBuff" Content="##" Grid.Column="3" Grid.Row="4" Margin="0,0,0,0"/>
+                <Label x:Name="lbl_SpdBuff" Content="##" Grid.Column="3" Grid.Row="5" Margin="0,0,0,0"/>
+                <Button x:Name="btn_HPUp" Content="Buff" Grid.Column="2" Grid.Row="0" Click="btn_HP_Click"/>
+                <Button x:Name="btn_AtkUp" Content="Buff" Grid.Column="2" Grid.Row="1" Click="btn_Atk_Click"/>
+                <Button x:Name="btn_DefUp" Content="Buff" Grid.Column="2" Grid.Row="2" Click="btn_Def_Click"/>
+                <Button x:Name="btn_SpAtkUp" Content="Buff" Grid.Column="2" Grid.Row="3" Click="btn_SpAtk_Click"/>
+                <Button x:Name="btn_SpDefUp" Content="Buff" Grid.Column="2" Grid.Row="4" Click="btn_SpDef_Click"/>
+                <Button x:Name="btn_SpdUp" Content="Buff" Grid.Column="2" Grid.Row="5" Click="btn_Spd_Click"/>
+                <Button x:Name="btn_HPDown" Content="DeBuff" Grid.Column="4" Grid.Row="0" Click="btn_HP_Click"/>
+                <Button x:Name="btn_AtkDown" Content="DeBuff" Grid.Column="4" Grid.Row="1" Click="btn_Atk_Click"/>
+                <Button x:Name="btn_DefDown" Content="DeBuff" Grid.Column="4" Grid.Row="2" Click="btn_Def_Click"/>
+                <Button x:Name="btn_SpAtkDown" Content="DeBuff" Grid.Column="4" Grid.Row="3" Click="btn_SpAtk_Click"/>
+                <Button x:Name="btn_SpDefDown" Content="DeBuff" Grid.Column="4" Grid.Row="4" Click="btn_SpDef_Click"/>
+                <Button x:Name="btn_SpdDown" Content="DeBuff" Grid.Column="4" Grid.Row="5" Click="btn_Spd_Click"/>
+            </Grid>
+            <TextBox x:Name="tb_Notes" HorizontalAlignment="Left" Height="53" Margin="10,9.667,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Blank Note Space" VerticalAlignment="Top" Width="320" AcceptsReturn="True" MaxLength="3500" MaxLines="3500"/>
         </Grid>
         <Grid Grid.Column="1" HorizontalAlignment="Left" Height="421" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="448">
             <Grid.RowDefinitions>

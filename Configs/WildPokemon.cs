@@ -22,10 +22,10 @@ namespace PokemonRPG.Configs
             Nature = new InherentNature();
             LevelUpPoints = new BaseCharacteristics();
             Enhancements = new BaseCharacteristics();
-            RecalculateStats();
             NaturalMoves = new List<PokemonMove>();
             CombatStats = new BaseCharacteristics();
-            CombatStats = ActualStats;
+            RecalculateStats();
+            RecalculateCombatStats();
 
             MaxHP = Level + (ActualStats.HP * 3);
             CurrentHP = MaxHP;
@@ -45,29 +45,34 @@ namespace PokemonRPG.Configs
         public void RecalculateCombatStats()
         {
             if (Enhancements.HP > 0)
-                CombatStats.HP = ActualStats.HP * (100 + (Enhancements.HP * 25));
+                CombatStats.HP = Convert.ToInt32(ActualStats.HP + (ActualStats.HP * (Enhancements.HP * 0.25)));
             else
-                CombatStats.HP = ActualStats.HP * (100 - ((Enhancements.HP * 25) / 2));
+                CombatStats.HP = Convert.ToInt32(ActualStats.HP + (ActualStats.HP * (Enhancements.HP * -0.125)));
 
             if (Enhancements.Attack > 0)
-                CombatStats.Attack = ActualStats.Attack * (100 + (Enhancements.Attack * 25));
+                CombatStats.Attack = Convert.ToInt32(ActualStats.Attack + (ActualStats.Attack * (Enhancements.Attack * 0.25)));
             else
-                CombatStats.Attack = ActualStats.Attack * (100 - ((Enhancements.Attack * 25) / 2));
+                CombatStats.Attack = Convert.ToInt32(ActualStats.Attack + (ActualStats.Attack * (Enhancements.Attack * -0.125)));
 
             if (Enhancements.Defence > 0)
-                CombatStats.Defence = ActualStats.Defence * (100 + (Enhancements.Defence * 25));
+                CombatStats.Defence = Convert.ToInt32(ActualStats.Defence + (ActualStats.Defence * (Enhancements.Defence * 0.25)));
             else
-                CombatStats.Defence = ActualStats.Defence * (100 - ((Enhancements.Defence * 25) / 2));
+                CombatStats.Defence = Convert.ToInt32(ActualStats.Defence + (ActualStats.Defence * (Enhancements.Defence * -0.125)));
 
             if (Enhancements.SpecialAttack > 0)
-                CombatStats.SpecialAttack = ActualStats.SpecialAttack * (100 + (Enhancements.SpecialAttack * 25));
+                CombatStats.SpecialAttack = Convert.ToInt32(ActualStats.SpecialAttack + (ActualStats.SpecialAttack * (Enhancements.SpecialAttack * 0.25)));
             else
-                CombatStats.SpecialAttack = ActualStats.SpecialAttack * (100 - ((Enhancements.SpecialAttack * 25) / 2));
+                CombatStats.SpecialAttack = Convert.ToInt32(ActualStats.SpecialAttack + (ActualStats.SpecialAttack * (Enhancements.SpecialAttack * -0.125)));
 
             if (Enhancements.SpecialDefence > 0)
-                CombatStats.SpecialDefence = ActualStats.SpecialDefence * (100 + (Enhancements.SpecialDefence * 25));
+                CombatStats.SpecialDefence = Convert.ToInt32(ActualStats.SpecialDefence + (ActualStats.SpecialDefence * (Enhancements.SpecialDefence * 0.25)));
             else
-                CombatStats.SpecialDefence = ActualStats.SpecialDefence * (100 - ((Enhancements.SpecialDefence * 25) / 2));
+                CombatStats.SpecialDefence = Convert.ToInt32(ActualStats.SpecialDefence + (ActualStats.SpecialDefence * (Enhancements.SpecialDefence * -0.125)));
+
+            if (Enhancements.Speed > 0)
+                CombatStats.Speed = Convert.ToInt32(ActualStats.Speed + (ActualStats.Speed * (Enhancements.Speed * 0.25)));
+            else
+                CombatStats.Speed = Convert.ToInt32(ActualStats.Speed + (ActualStats.Speed * (Enhancements.Speed * -0.125)));
         }
 
         public void WildLevelUp(int statLocation = 0)

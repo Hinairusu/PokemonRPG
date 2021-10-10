@@ -53,8 +53,14 @@ namespace PokemonRPG.Configs
             TrainerPokemon poke = mapper.Map<TrainerPokemon>(GenerateWildPokemon(UID));
             poke.Level = level;
             for (int i = 1; i < level; i++)
+            {
                 poke.LevelUp();
-            
+                if (level > 50)
+                    poke.LevelUp();
+                if (level > 75)
+                    poke.LevelUp();
+            }
+
             double Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
             if (poke.Sex.FemaleRatio > decimal.Parse(Ratio.ToString()) && poke.Sex.Male)
                 poke.ActualSex = "Male";

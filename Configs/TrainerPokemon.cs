@@ -25,11 +25,13 @@ namespace PokemonRPG.Configs
             ArtificalMoves = new List<PokemonMove>();
             Alive = true;
             RecalculateNewStats();
+            RecalculateCombatStats();
         }
 
 
         public void LevelUp(int statLocation = 0)
         {
+            
             if (statLocation == 0)
             {
                 statLocation = StaticData.ReferenceData.RandomGenerator.Next(1, 7);
@@ -61,6 +63,7 @@ namespace PokemonRPG.Configs
             }
 
             RecalculateNewStats();
+            RecalculateCombatStats();
             CheckLevelMoves();
             
         }

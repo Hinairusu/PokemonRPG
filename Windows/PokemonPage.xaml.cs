@@ -37,6 +37,7 @@ namespace PokemonRPG.Windows
            MaxHP.Content = Pkmn.MaxHP.ToString();
            SetNaturalMoves();
            SetArtificalMoves();
+           SetStats();
         }
 
 
@@ -228,12 +229,92 @@ namespace PokemonRPG.Windows
             }
         }
 
+        public void SetStats()
+        {
+            Lbl_HP.Content = Pkmn.CombatStats.HP;
+            Lbl_Atk.Content = Pkmn.CombatStats.Attack;
+            Lbl_Def.Content = Pkmn.CombatStats.Defence;
+            Lbl_SpAtk.Content = Pkmn.CombatStats.SpecialAttack;
+            Lbl_SpDef.Content = Pkmn.CombatStats.SpecialDefence;
+            Lbl_Spd.Content = Pkmn.CombatStats.Speed;
+
+            lbl_HPBuff.Content = Pkmn.Enhancements.HP;
+            lbl_AtkBuff.Content = Pkmn.Enhancements.Attack;
+            lbl_DefBuff.Content = Pkmn.Enhancements.Defence;
+            lbl_SpAtkBuff.Content = Pkmn.Enhancements.SpecialAttack;
+            lbl_SpDefBuff.Content = Pkmn.Enhancements.SpecialDefence;
+            lbl_SpdBuff.Content = Pkmn.Enhancements.Speed;
+        }
         public Label MakeLabel(string Content)
         {
             Label lbl = new Label();
             lbl.Content = Content;
             return lbl;
+
         }
 
+        private void ModStat(int Stat, int Increment)
+        {
+            if (Stat == 1)
+                Pkmn.Enhancements.HP += Increment;
+            else if (Stat == 2)
+                Pkmn.Enhancements.Attack += Increment;
+            else if (Stat == 3)
+                Pkmn.Enhancements.Defence += Increment;
+            else if (Stat == 4)
+                Pkmn.Enhancements.SpecialAttack += Increment;
+            else if (Stat == 5)
+                Pkmn.Enhancements.SpecialDefence += Increment;
+            else if (Stat == 6)
+                Pkmn.Enhancements.Speed += Increment;
+
+            Pkmn.RecalculateCombatStats();
+            SetStats();
+        }
+
+        private void btn_HP_Click(object sender, RoutedEventArgs e)
+        {
+            if((sender as Button).Content.Equals("Buff"))
+                ModStat(1, 1);
+            else
+                ModStat(1,-1);
+        }
+
+        private void btn_Atk_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content.Equals("Buff"))
+                ModStat(2, 1);
+            else
+                ModStat(2, -1);
+        }
+
+        private void btn_Def_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content.Equals("Buff"))
+                ModStat(3, 1);
+            else
+                ModStat(3, -1);
+        }
+        private void btn_SpAtk_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content.Equals("Buff"))
+                ModStat(4, 1);
+            else
+                ModStat(4, -1);
+        }
+        private void btn_SpDef_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content.Equals("Buff"))
+                ModStat(5, 1);
+            else
+                ModStat(5, -1);
+        }
+        private void btn_Spd_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content.Equals("Buff"))
+                ModStat(6, 1);
+            else
+                ModStat(6, -1);
+        }
     }
 }

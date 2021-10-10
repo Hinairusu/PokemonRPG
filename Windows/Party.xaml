@@ -1,466 +1,837 @@
 ﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PokemonRPG.Windows"
-        xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="PokemonRPG.Windows.PartyWindow"
-        mc:Ignorable="d"
-        Title="Party" Height="720" Width="1280" Icon="/PokemonRPG;component/Resources/Image/Menus/Party Button.png">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="PokemonRPG.Windows.PartyWindow"
+    mc:Ignorable="d"
+    Title="Party" Height="720" Width="1280" Icon="/PokemonRPG;component/Resources/Image/Menus/Party Button.png">
     <Window.Background>
-        <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Menus/Main Background.png"/>
+        <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Menus/Main Background.png" />
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="344*"/>
-            <RowDefinition Height="347*"/>
+            <RowDefinition Height="344*" />
+            <RowDefinition Height="347*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
-        <Grid x:Name="Grid_Pkmn_One" Grid.Column="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_One" Grid.Column="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0"
+              VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="42.667"/>
-                <RowDefinition Height="57.333"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition/>
+                <RowDefinition Height="42.667" />
+                <RowDefinition Height="57.333" />
+                <RowDefinition Height="50" />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_One_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_One_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_One_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_One_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_One_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_One_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_One_HP_Bar" HorizontalAlignment="Left" Margin="20,64,0,0" Grid.Row="3" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Height="10" VerticalAlignment="Top" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_One_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_One_HP_Bar" HorizontalAlignment="Left" Margin="20,64,0,0" Grid.Row="3" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Height="10"
+                   VerticalAlignment="Top" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_One_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_One_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_One_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_One_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_One_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_One_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_One_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_One_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_One_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_One_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_One_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_One_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_One_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_One_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_One_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_One_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_One_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_One_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_One_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_One_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_One_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_One_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_One_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_One_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" MouseUp="Pkmn_One_Current_HP_MouseUp"/>
-            <Image x:Name="Pkmn_One_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_One_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_One_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_One_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"
+                   MouseUp="Pkmn_One_Current_HP_MouseUp" />
+            <Image x:Name="Pkmn_One_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_One_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_One_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_One_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_One_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_One_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_One_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_One_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_One_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Two" Grid.Column="2" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Two" Grid.Column="2" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0"
+              VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Two_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Two_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Two_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Two_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Two_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Two_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Two_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Two_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Two_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Two_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Two_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Two_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Two_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Two_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Two_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Two_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Two_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Two_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Two_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Two_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Two_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Two_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Two_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Two_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Two_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Two_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Two_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Two_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Two_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Two_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Two_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Two_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Two_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Two_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Two_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Two_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Two_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Two_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Two_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Two_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Two_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Two_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Two_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Two_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Two_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Two_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Three" Grid.Column="3" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Three" Grid.Column="3" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0"
+              VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Three_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Three_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Three_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Three_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Three_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Three_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Three_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Three_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Three_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Three_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Three_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Three_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Three_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Three_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Three_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Three_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Three_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Three_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Three_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Three_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Three_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Three_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Three_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Three_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Three_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Three_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Three_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Three_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Three_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Three_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Three_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Three_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Three_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Three_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Three_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Three_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Three_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png"
+                   Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Three_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Three_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Three_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Three_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Three_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Three_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Three_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Three_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Three_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Four" Grid.Column="4" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Four" Grid.Column="4" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0"
+              VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Four_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Four_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Four_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Four_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Four_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Four_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Four_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Four_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Four_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Four_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Four_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Four_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Four_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Four_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Four_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Four_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Four_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Four_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Four_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Four_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Four_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Four_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Four_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Four_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Four_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Four_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Four_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Four_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Four_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Four_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Four_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Four_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Four_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Four_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Four_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Four_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Four_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Four_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Four_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Four_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Four_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Four_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Four_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Four_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Four_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Four_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Five" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Five" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="344"
+              Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Five_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Five_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Five_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Five_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Five_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Five_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Five_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Five_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Five_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Five_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Five_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Five_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Five_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Five_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Five_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Five_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Five_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Five_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Five_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Five_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Five_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Five_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Five_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Five_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Five_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Five_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Five_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Five_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Five_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Five_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Five_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Five_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Five_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Five_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Five_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Five_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Five_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Five_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Five_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Five_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Five_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Five_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Five_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Five_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Five_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Five_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Six" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Six" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Height="344"
+              Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Six_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Six_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Six_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Six_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Six_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Six_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Six_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Six_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Six_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Six_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Six_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Six_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Six_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Six_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Six_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Six_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Six_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Six_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Six_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Six_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Six_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Six_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Six_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Six_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Six_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Six_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Six_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Six_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Six_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Six_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Six_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Six_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Six_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Six_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Six_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Six_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Six_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Six_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Six_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Six_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Six_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Six_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Six_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Six_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Six_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Six_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Seven" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Seven" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Height="344"
+              Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Companion Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Seven_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Seven_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Seven_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Seven_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Seven_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Seven_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Seven_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Seven_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Seven_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Seven_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Seven_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Seven_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Seven_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Seven_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Seven_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Seven_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Seven_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Seven_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Seven_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Seven_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Seven_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Seven_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Seven_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Seven_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Seven_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Seven_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Seven_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Seven_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Seven_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Seven_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Seven_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Seven_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Seven_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Seven_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Seven_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Seven_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Seven_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png"
+                   Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Seven_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Seven_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Seven_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Seven_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Seven_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Seven_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Seven_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Seven_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Seven_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
-        <Grid x:Name="Grid_Pkmn_Eight" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" Height="344" Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
+        <Grid x:Name="Grid_Pkmn_Eight" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" Height="344"
+              Margin="0.333,0,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/PokemonRPG;component/Resources/Image/Party Images/Companion Box.png">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9" />
+                            <SkewTransform CenterY="0.5" CenterX="0.5" />
+                            <RotateTransform CenterY="0.5" CenterX="0.5" />
+                            <TranslateTransform />
                         </TransformGroup>
                     </ImageBrush.RelativeTransform>
                 </ImageBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="225*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="225*" />
             </Grid.RowDefinitions>
-            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="44"/>
-            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="52"/>
-            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="39"/>
-            <Label x:Name="Pkmn_Eight_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195"/>
-            <Label x:Name="Pkmn_Eight_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left" Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103"/>
-            <Label x:Name="Pkmn_Eight_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Height="26"
+                   Grid.RowSpan="2" Width="44" />
+            <Label Content="Species:" HorizontalAlignment="Left" Margin="23,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="52" />
+            <Label Content="Level:" HorizontalAlignment="Left" Margin="202,10.333,0,0" VerticalAlignment="Top"
+                   Grid.Row="1" Height="26" Width="39" />
+            <Label x:Name="Pkmn_Eight_Nickname" Content="Poke McPokeson" HorizontalAlignment="Left" Margin="80,17,0,0"
+                   VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="195" />
+            <Label x:Name="Pkmn_Eight_Species" Grid.Row="1" Content="Unknown Species" HorizontalAlignment="Left"
+                   Margin="80,10.333,0,0" VerticalAlignment="Top" Height="26" Width="103" />
+            <Label x:Name="Pkmn_Eight_Level" Content="000" HorizontalAlignment="Left" Margin="246,10.333,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Height="26" Width="29" />
 
-            <Image x:Name="Pkmn_Eight_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Eight_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Eight_HP_Bar" HorizontalAlignment="Left" Height="10" Margin="20,64,0,0" Grid.Row="3"
+                   VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 1.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Eight_HP_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,64,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Eight_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Eight_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Eight_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 2.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Eight_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,79,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Eight_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Eight_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Eight_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 3.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Eight_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,94,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Eight_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Eight_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Eight_Special_Attack_Bar" HorizontalAlignment="Left" Height="10" Margin="20,109,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 4.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Eight_Special_Attack_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,109,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Eight_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Eight_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Eight_Special_Defence_Bar" HorizontalAlignment="Left" Height="10" Margin="20,124,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 5.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Eight_Special_Defence_Combat_Stages" HorizontalAlignment="Left" Height="10"
+                   Margin="246,124,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Eight_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill"/>
-            <Image x:Name="Pkmn_Eight_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0" Grid.Row="3" VerticalAlignment="Top" Width="10" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png"/>
+            <Image x:Name="Pkmn_Eight_Speed_Bar" HorizontalAlignment="Left" Height="10" Margin="20,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="220"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Bar 6.png" Stretch="UniformToFill" />
+            <Image x:Name="Pkmn_Eight_Speed_Combat_Stages" HorizontalAlignment="Left" Height="10" Margin="246,139,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="10"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" />
 
-            <Image x:Name="Pkmn_Eight_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Eight_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0" VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png" Grid.Row="2"/>
-            <Image x:Name="Pkmn_Eight_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2"/>
-            <Image x:Name="Pkmn_Eight_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png" Grid.RowSpan="2" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Eight_Primary_Type" HorizontalAlignment="Left" Height="26" Margin="81,15,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Eight_Secondary_Type" HorizontalAlignment="Left" Height="26" Margin="172,14,0,0"
+                   VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
+                   Grid.Row="2" />
+            <Image x:Name="Pkmn_Eight_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png"
+                   Grid.RowSpan="2" />
+            <Image x:Name="Pkmn_Eight_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
+                   VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
+                   Grid.RowSpan="2" Visibility="Hidden" />
 
-            <Image x:Name="Pkmn_Eight_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Eight_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Eight_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
-            <Image x:Name="Pkmn_Eight_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0" Grid.Row="3" VerticalAlignment="Top" Width="20" Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden"/>
+            <Image x:Name="Pkmn_Eight_Status_Death" HorizontalAlignment="Left" Height="20" Margin="246,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Status/Skull.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Eight_Status_One" HorizontalAlignment="Left" Height="20" Margin="221,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Eight_Status_Two" HorizontalAlignment="Left" Height="20" Margin="196,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
+            <Image x:Name="Pkmn_Eight_Status_Three" HorizontalAlignment="Left" Height="20" Margin="171,154,0,0"
+                   Grid.Row="3" VerticalAlignment="Top" Width="20"
+                   Source="/PokemonRPG;component/Resources/Image/Party Images/Priority 0.png" Visibility="Hidden" />
 
         </Grid>
 

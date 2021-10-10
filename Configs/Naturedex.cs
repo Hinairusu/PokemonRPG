@@ -4,10 +4,11 @@ namespace PokemonRPG.Configs
 {
     public class Naturedex
     {
-        public List<InherentNature> Natures { get; set; }
         public Naturedex()
         {
             Natures = new List<InherentNature>();
         }
+
+        public List<InherentNature> Natures { get; set; }
     }
 }

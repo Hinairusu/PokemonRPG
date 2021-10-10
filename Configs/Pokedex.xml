@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Pokedex>
   <Pokemon>
     <DexNumber>1</DexNumber>
@@ -144,16 +145,16 @@
         <Level>15</Level>
       </Move>
       <Move>
-          <Name>Razor Leaf</Name>
-          <Level>19</Level>
+        <Name>Razor Leaf</Name>
+        <Level>19</Level>
       </Move>
       <Move>
-          <Name>Sweet Scent</Name>
-          <Level>21</Level>
+        <Name>Sweet Scent</Name>
+        <Level>21</Level>
       </Move>
       <Move>
-          <Name>Growth</Name>
-          <Level>25</Level>
+        <Name>Growth</Name>
+        <Level>25</Level>
       </Move>
       <Move>
         <Name>Double-Edge</Name>

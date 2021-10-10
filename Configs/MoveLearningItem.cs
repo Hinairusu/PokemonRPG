@@ -9,6 +9,5 @@ namespace PokemonRPG.Configs
         public string MoveName { get; set; }
         public bool IsHM { get; set; }
         public bool isTM { get; set; }
-
     }
 }

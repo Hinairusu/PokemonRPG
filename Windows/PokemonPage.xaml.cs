@@ -1,43 +1,34 @@
-﻿using PokemonRPG.Configs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using PokemonRPG.Configs;
 
 namespace PokemonRPG.Windows
 {
     /// <summary>
-    /// Interaction logic for PokemonPage.xaml
+    ///     Interaction logic for PokemonPage.xaml
     /// </summary>
     public partial class PokemonPage : Window
     {
+        private readonly TrainerPokemon Pkmn;
         public int PokemonID;
-        private TrainerPokemon Pkmn;
+
         public PokemonPage(int pkmn)
         {
             InitializeComponent();
             PokemonID = pkmn;
-           Pkmn =  StaticData.PlayerData.Pkmnlist.Where(s => s.PokemonTID.Equals(pkmn)).First();
+            Pkmn = StaticData.PlayerData.Pkmnlist.Where(s => s.PokemonTID.Equals(pkmn)).First();
 
-           lbl_Level.Content = Pkmn.Level.ToString();
-           lbl_NickName.Content = Pkmn.Nickname;
-           lbl_Nature.Content = Pkmn.Nature.Name;
-           lbl_Species.Content = Pkmn.Name;
-           lbl_Gender.Content = Pkmn.ActualSex;
-           CurrentHP.Content = Pkmn.CurrentHP.ToString();
-           MaxHP.Content = Pkmn.MaxHP.ToString();
-           SetNaturalMoves();
-           SetArtificalMoves();
-           SetStats();
+            lbl_Level.Content = Pkmn.Level.ToString();
+            lbl_NickName.Content = Pkmn.Nickname;
+            lbl_Nature.Content = Pkmn.Nature.Name;
+            lbl_Species.Content = Pkmn.Name;
+            lbl_Gender.Content = Pkmn.ActualSex;
+            CurrentHP.Content = Pkmn.CurrentHP.ToString();
+            MaxHP.Content = Pkmn.MaxHP.ToString();
+            SetNaturalMoves();
+            SetArtificalMoves();
+            SetStats();
         }
 
 
@@ -245,12 +236,12 @@ namespace PokemonRPG.Windows
             lbl_SpDefBuff.Content = Pkmn.Enhancements.SpecialDefence;
             lbl_SpdBuff.Content = Pkmn.Enhancements.Speed;
         }
+
         public Label MakeLabel(string Content)
         {
-            Label lbl = new Label();
+            var lbl = new Label();
             lbl.Content = Content;
             return lbl;
-
         }
 
         private void ModStat(int Stat, int Increment)
@@ -274,10 +265,10 @@ namespace PokemonRPG.Windows
 
         private void btn_HP_Click(object sender, RoutedEventArgs e)
         {
-            if((sender as Button).Content.Equals("Buff"))
+            if ((sender as Button).Content.Equals("Buff"))
                 ModStat(1, 1);
             else
-                ModStat(1,-1);
+                ModStat(1, -1);
         }
 
         private void btn_Atk_Click(object sender, RoutedEventArgs e)
@@ -295,6 +286,7 @@ namespace PokemonRPG.Windows
             else
                 ModStat(3, -1);
         }
+
         private void btn_SpAtk_Click(object sender, RoutedEventArgs e)
         {
             if ((sender as Button).Content.Equals("Buff"))
@@ -302,6 +294,7 @@ namespace PokemonRPG.Windows
             else
                 ModStat(4, -1);
         }
+
         private void btn_SpDef_Click(object sender, RoutedEventArgs e)
         {
             if ((sender as Button).Content.Equals("Buff"))
@@ -309,6 +302,7 @@ namespace PokemonRPG.Windows
             else
                 ModStat(5, -1);
         }
+
         private void btn_Spd_Click(object sender, RoutedEventArgs e)
         {
             if ((sender as Button).Content.Equals("Buff"))

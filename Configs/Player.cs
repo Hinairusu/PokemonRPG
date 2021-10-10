@@ -1,23 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PokemonRPG.Configs
 {
     [Serializable]
     public class Player
     {
+        [NonSerialized]
+        public ObservableCollection<TrainerPokemon> Pkmnlist = new ObservableCollection<TrainerPokemon>();
+
+        public Player()
+        {
+            ItemPC = new List<ItemBox>();
+            Levels = new List<PlayerLevels>();
+            GymBadges = new List<string>();
+            CurrentParty = new List<int>();
+            Inventory = new List<Item>();
+            ContestRibbons = new List<string>();
+            Regions = new List<LocationRegion>();
+            OwnedPokemon = new List<TrainerPokemon>();
+        }
+
         public string Name { get; set; }
         public List<ItemBox> ItemPC { get; set; }
         public List<int> CurrentParty { get; set; }
         public List<TrainerPokemon> OwnedPokemon { get; set; }
 
-        [NonSerialized]
-        public ObservableCollection<TrainerPokemon> Pkmnlist = new ObservableCollection<TrainerPokemon>();
-        
         public List<Item> Inventory { get; set; }
         public int Money { get; set; }
         public int CurrentHP { get; set; }
@@ -31,27 +40,16 @@ namespace PokemonRPG.Configs
         public int TotalOwnedPokemon { get; set; }
         public string Description { get; set; }
         public string Notes { get; set; }
-        List<PlayerLevels> Levels { get; set; }
-        List<string> GymBadges { get; set; }
-        List<string> ContestRibbons { get; set; }
-        List<LocationRegion> Regions { get; set; }
-        public int GetStatModifider (int value)
+        private List<PlayerLevels> Levels { get; set; }
+        private List<string> GymBadges { get; set; }
+        private List<string> ContestRibbons { get; set; }
+        private List<LocationRegion> Regions { get; set; }
+
+        public int GetStatModifider(int value)
         {
             if (value > 10)
                 return (value - 10) / 2;
-            else
-                return value - 10;
-        }
-        public Player()
-        {
-            ItemPC = new List<ItemBox>();
-            Levels = new List<PlayerLevels>();
-            GymBadges = new List<string>();
-            CurrentParty = new List<int>();
-            Inventory = new List<Item>();
-            ContestRibbons = new List<string>();
-            Regions = new List<LocationRegion>();
-            OwnedPokemon = new List<TrainerPokemon>();
+            return value - 10;
         }
     }
 }

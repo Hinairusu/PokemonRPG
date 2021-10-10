@@ -6,6 +6,11 @@ namespace PokemonRPG.Configs
     [Serializable]
     public class Item
     {
+        public Item()
+        {
+            Flavours = new List<string>();
+        }
+
         public int ItemID { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
@@ -16,9 +21,5 @@ namespace PokemonRPG.Configs
         public string Effect { get; set; }
         public string Notes { get; set; }
         public int Rarity { get; set; }
-        public Item()
-        {
-            Flavours = new List<string>();
-        }
     }
 }

@@ -5,6 +5,12 @@ namespace PokemonRPG.Configs
     [Serializable]
     public class PokemonMove
     {
+        public PokemonMove()
+        {
+            Damage = new Dice();
+            ContestStats = new ContestMoveStats();
+        }
+
         public int MoveID { get; set; }
         public string Name { get; set; }
         public int TypeID { get; set; }
@@ -15,11 +21,6 @@ namespace PokemonRPG.Configs
         public string Notes { get; set; }
         public string Target { get; set; }
         public string AttackStat { get; set; }
-        public ContestMoveStats ContestStats {get;set;}
-        public PokemonMove()
-        {
-            Damage = new Dice();
-            ContestStats = new ContestMoveStats();
-        }
+        public ContestMoveStats ContestStats { get; set; }
     }
 }

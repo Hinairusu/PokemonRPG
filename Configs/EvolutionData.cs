@@ -10,7 +10,5 @@ namespace PokemonRPG.Configs
         public string EvolutionConditions { get; set; }
         public int EvolutionStage { get; set; }
         public bool CanEvolve { get; set; }
-        
-
     }
 }

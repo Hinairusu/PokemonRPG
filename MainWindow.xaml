@@ -1,80 +1,124 @@
 ﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PokemonRPG"
-        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:Configs="clr-namespace:PokemonRPG.Configs" x:Class="PokemonRPG.MainWindow"
-        mc:Ignorable="d"
-        Title="The Sleepless Pokemon Trainer Sheet" Height="720" Width="1280" FontFamily="OCR A Extended" Icon="Resources/Image/Team Karma Logo.png" Closing="Window_Closing">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Configs="clr-namespace:PokemonRPG.Configs" x:Class="PokemonRPG.MainWindow"
+    mc:Ignorable="d"
+    Title="The Sleepless Pokemon Trainer Sheet" Height="720" Width="1280" FontFamily="OCR A Extended"
+    Icon="Resources/Image/Team Karma Logo.png" Closing="Window_Closing">
     <Window.Background>
-        <ImageBrush ImageSource="Resources/Image/Menus/Main Background.png" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="Resources/Image/Menus/Main Background.png" Stretch="UniformToFill" />
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
 
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="193*"/>
-            <ColumnDefinition Width="165*"/>
-            <ColumnDefinition Width="390*"/>
-            <ColumnDefinition Width="438*"/>
+            <ColumnDefinition Width="87*" />
+            <ColumnDefinition Width="193*" />
+            <ColumnDefinition Width="165*" />
+            <ColumnDefinition Width="390*" />
+            <ColumnDefinition Width="438*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="228*"/>
-            <RowDefinition Height="307*"/>
-            <RowDefinition Height="156*"/>
+            <RowDefinition Height="228*" />
+            <RowDefinition Height="307*" />
+            <RowDefinition Height="156*" />
         </Grid.RowDefinitions>
-        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="402.667,125.333,0,0" VerticalAlignment="Top" Width="25" Click="btnTest_Click" Grid.Column="4" Height="21" Grid.Row="2"/>
-        <Grid Margin="10,0,0,-0.333" HorizontalAlignment="Left" Width="75" Height="691" VerticalAlignment="Top" Grid.RowSpan="3">
+        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="402.667,125.333,0,0"
+                VerticalAlignment="Top" Width="25" Click="btnTest_Click" Grid.Column="4" Height="21" Grid.Row="2" />
+        <Grid Margin="10,0,0,-0.333" HorizontalAlignment="Left" Width="75" Height="691" VerticalAlignment="Top"
+              Grid.RowSpan="3">
             <Grid.RowDefinitions>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="103"/>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="73"/>
-                <RowDefinition Height="73"/>
+                <RowDefinition Height="73" />
+                <RowDefinition Height="73" />
+                <RowDefinition Height="73" />
+                <RowDefinition Height="73" />
+                <RowDefinition Height="103" />
+                <RowDefinition Height="73" />
+                <RowDefinition Height="73" />
+                <RowDefinition Height="73" />
+                <RowDefinition Height="73" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Image x:Name="btn_Bag" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Bag Button.png" Grid.Row="3" MouseEnter="btn_Bag_MouseWork"/>
-            <Image x:Name="btn_BagHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Bag Highilight.png" Grid.Row="3" Visibility="Hidden" MouseLeave="btn_Bag_MouseWork"/>
+            <Image x:Name="btn_Bag" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
+                   Width="56" Source="Resources/Image/Menus/Bag Button.png" Grid.Row="3" MouseEnter="btn_Bag_MouseWork" />
+            <Image x:Name="btn_BagHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Bag Highilight.png" Grid.Row="3"
+                   Visibility="Hidden" MouseLeave="btn_Bag_MouseWork" />
 
-            <Image x:Name="btn_Encyclopedia" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Button.png" Grid.Row="6" MouseEnter="btn_Encyclopedia_MouseWork"/>
-            <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Highilight.png" Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork"/>
+            <Image x:Name="btn_Encyclopedia" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Button.png"
+                   Grid.Row="6" MouseEnter="btn_Encyclopedia_MouseWork" />
+            <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Highilight.png"
+                   Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork" />
 
-            <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Party Button.png" Grid.Row="2" MouseEnter="btn_Party_MouseWork"/>
-            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Visibility="Hidden" Source="Resources/Image/Menus/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork" MouseLeftButtonDown="btn_Party_Click" />
+            <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
+                   Width="56" Source="Resources/Image/Menus/Party Button.png" Grid.Row="2"
+                   MouseEnter="btn_Party_MouseWork" />
+            <Image x:Name="btn_PartyHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Visibility="Hidden"
+                   Source="Resources/Image/Menus/Party Highilight.png" Grid.Row="2" MouseLeave="btn_Party_MouseWork"
+                   MouseLeftButtonDown="btn_Party_Click" />
 
-            <Image x:Name="btn_PC" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/PC Button.png" Grid.Row="5" MouseEnter="btn_PC_MouseWork"/>
-            <Image x:Name="btn_PCHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/PC Highilight.png" Grid.Row="5" Visibility="Hidden" MouseLeave="btn_PC_MouseWork" MouseLeftButtonDown="btn_PC_Click"/>
+            <Image x:Name="btn_PC" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
+                   Width="56" Source="Resources/Image/Menus/PC Button.png" Grid.Row="5" MouseEnter="btn_PC_MouseWork" />
+            <Image x:Name="btn_PCHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/PC Highilight.png" Grid.Row="5"
+                   Visibility="Hidden" MouseLeave="btn_PC_MouseWork" MouseLeftButtonDown="btn_PC_Click" />
 
-            <Image x:Name="btn_Pokedex" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Button.png" Grid.Row="1" MouseEnter="btn_Pokedex_MouseWork"/>
-            <Image x:Name="btn_PokedexHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Highilight.png" Grid.Row="1" Visibility="Hidden" MouseLeave="btn_Pokedex_MouseWork" MouseDown="btn_PokedexHighlight_Click"/>
+            <Image x:Name="btn_Pokedex" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Button.png" Grid.Row="1"
+                   MouseEnter="btn_Pokedex_MouseWork" />
+            <Image x:Name="btn_PokedexHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Highilight.png"
+                   Grid.Row="1" Visibility="Hidden" MouseLeave="btn_Pokedex_MouseWork"
+                   MouseDown="btn_PokedexHighlight_Click" />
 
-            <Image x:Name="btn_Trainer" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Button.png" MouseEnter="btn_Trainer_MouseWork"/>
-            <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Highilight.png" MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden"/>
+            <Image x:Name="btn_Trainer" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Button.png"
+                   MouseEnter="btn_Trainer_MouseWork" />
+            <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Highilight.png"
+                   MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden" />
 
-            <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Save Button.png" Grid.Row="7" MouseEnter="btn_Save_MouseWork"/>
-            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Save Highlight.png" Grid.Row="7" Visibility="Hidden" MouseLeave="btn_Save_MouseWork" MouseLeftButtonDown="btn_Save_Click"/>
+            <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
+                   Width="56" Source="Resources/Image/Menus/Save Button.png" Grid.Row="7"
+                   MouseEnter="btn_Save_MouseWork" />
+            <Image x:Name="btn_SaveHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Save Highlight.png" Grid.Row="7"
+                   Visibility="Hidden" MouseLeave="btn_Save_MouseWork" MouseLeftButtonDown="btn_Save_Click" />
 
-            <Image x:Name="btn_Load" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Load Button.png" Grid.Row="8" MouseEnter="btn_Load_MouseWork"/>
-            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Load Highlight.png" Grid.Row="8" Visibility="Hidden" MouseLeave="btn_Load_MouseWork" MouseLeftButtonDown="btn_Load_Click"/>
+            <Image x:Name="btn_Load" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
+                   Width="56" Source="Resources/Image/Menus/Load Button.png" Grid.Row="8"
+                   MouseEnter="btn_Load_MouseWork" />
+            <Image x:Name="btn_LoadHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Load Highlight.png" Grid.Row="8"
+                   Visibility="Hidden" MouseLeave="btn_Load_MouseWork" MouseLeftButtonDown="btn_Load_Click" />
 
-            <Image x:Name="btn_GM" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Button.png" Grid.Row="4" MouseEnter="btn_GM_MouseWork"/>
-            <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Highlight.png" Grid.Row="4" Visibility="Hidden" MouseLeave="btn_GM_MouseWork" MouseLeftButtonDown="btn_GM_Click" />
+            <Image x:Name="btn_GM" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0" VerticalAlignment="Top"
+                   Width="56" Source="Resources/Image/Menus/GM Button.png" Grid.Row="4" MouseEnter="btn_GM_MouseWork" />
+            <Image x:Name="btn_GMHighlight" HorizontalAlignment="Left" Height="67" Margin="3,27,0,0"
+                   VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/GM Highlight.png" Grid.Row="4"
+                   Visibility="Hidden" MouseLeave="btn_GM_MouseWork" MouseLeftButtonDown="btn_GM_Click" />
         </Grid>
-        <ListBox x:Name="Lb_GymBadges" HorizontalAlignment="Left" Height="178" Margin="10,65.333,0,0" VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}" Grid.Row="1"/>
-        <Label Content="Badges" Grid.Column="2" HorizontalAlignment="Left" Margin="10,37.333,0,0" VerticalAlignment="Top" Width="65" Height="23" Grid.Row="1"/>
-        <ListBox x:Name="Lb_Ribbons" HorizontalAlignment="Left" Height="178" Margin="90,65.333,0,0" VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}" Grid.Row="1"/>
-        <Label Content="Ribbons" Grid.Column="2" HorizontalAlignment="Left" Margin="90,37.333,0,0" VerticalAlignment="Top" Width="65" Height="23" Grid.Row="1"/>
-        <ListBox x:Name="Lb_TrainerFeatures" Grid.Column="3" HorizontalAlignment="Left" Height="434" Margin="9.667,37,0,0" VerticalAlignment="Top" Width="351" Background="{x:Null}" Grid.RowSpan="2"/>
-        <Label Content="Pokemon Trainer Features" Grid.Column="3" HorizontalAlignment="Left" Margin="10.667,7,0,0" VerticalAlignment="Top" Width="350" Height="23"/>
-        <ListBox x:Name="Lb_PokemonTeam" Grid.Column="4" HorizontalAlignment="Left" Height="434" Margin="9.667,37,0,0" VerticalAlignment="Top" Width="418" Background="{x:Null}" Grid.RowSpan="2">
+        <ListBox x:Name="Lb_GymBadges" HorizontalAlignment="Left" Height="178" Margin="10,65.333,0,0"
+                 VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}" Grid.Row="1" />
+        <Label Content="Badges" Grid.Column="2" HorizontalAlignment="Left" Margin="10,37.333,0,0"
+               VerticalAlignment="Top" Width="65" Height="23" Grid.Row="1" />
+        <ListBox x:Name="Lb_Ribbons" HorizontalAlignment="Left" Height="178" Margin="90,65.333,0,0"
+                 VerticalAlignment="Top" Width="65" Grid.Column="2" Background="{x:Null}" Grid.Row="1" />
+        <Label Content="Ribbons" Grid.Column="2" HorizontalAlignment="Left" Margin="90,37.333,0,0"
+               VerticalAlignment="Top" Width="65" Height="23" Grid.Row="1" />
+        <ListBox x:Name="Lb_TrainerFeatures" Grid.Column="3" HorizontalAlignment="Left" Height="434"
+                 Margin="9.667,37,0,0" VerticalAlignment="Top" Width="351" Background="{x:Null}" Grid.RowSpan="2" />
+        <Label Content="Pokemon Trainer Features" Grid.Column="3" HorizontalAlignment="Left" Margin="10.667,7,0,0"
+               VerticalAlignment="Top" Width="350" Height="23" />
+        <ListBox x:Name="Lb_PokemonTeam" Grid.Column="4" HorizontalAlignment="Left" Height="434" Margin="9.667,37,0,0"
+                 VerticalAlignment="Top" Width="418" Background="{x:Null}" Grid.RowSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -86,39 +130,58 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            <Configs:TrainerPokemon ActualSex="Female" Level="25" Nickname="The IV Bag" Name="Shuckle"/>
+            <Configs:TrainerPokemon ActualSex="Female" Level="25" Nickname="The IV Bag" Name="Shuckle" />
         </ListBox>
-        <Label Content="Pokemon Party" Grid.Column="4" HorizontalAlignment="Left" Margin="9.667,8,0,0" VerticalAlignment="Top" Height="23" Width="418"/>
-        <TextBox x:Name="tb_User_Notes" Grid.Column="3" HorizontalAlignment="Left" Height="111" Margin="10.667,9.333,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Freetype Notes Box" VerticalAlignment="Top" Width="807" Grid.ColumnSpan="2"/>
-        <Label Content="Trainer Level:" Margin="2.333,61.333,0,0" VerticalAlignment="Top" Height="23" Grid.Column="1" HorizontalAlignment="Left" Width="126" Grid.Row="1"/>
-        <Label Content="##" Margin="132.333,61.333,10,0" VerticalAlignment="Top" Height="23" Grid.Column="1" Grid.Row="1"/>
-        <ListBox x:Name="lv_TrainerLevels" HorizontalAlignment="Left" Height="134" Margin="9.333,109.333,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1" Background="{x:Null}" Grid.Row="1"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="223" Margin="0.333,10,0,0" VerticalAlignment="Top" Width="358" Source="Resources/Image/Menus/Trainer ID.png" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="Pokemon Party" Grid.Column="4" HorizontalAlignment="Left" Margin="9.667,8,0,0"
+               VerticalAlignment="Top" Height="23" Width="418" />
+        <TextBox x:Name="tb_User_Notes" Grid.Column="3" HorizontalAlignment="Left" Height="111"
+                 Margin="10.667,9.333,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Freetype Notes Box"
+                 VerticalAlignment="Top" Width="807" Grid.ColumnSpan="2" />
+        <Label Content="Trainer Level:" Margin="2.333,61.333,0,0" VerticalAlignment="Top" Height="23" Grid.Column="1"
+               HorizontalAlignment="Left" Width="126" Grid.Row="1" />
+        <Label Content="##" Margin="132.333,61.333,10,0" VerticalAlignment="Top" Height="23" Grid.Column="1"
+               Grid.Row="1" />
+        <ListBox x:Name="lv_TrainerLevels" HorizontalAlignment="Left" Height="134" Margin="9.333,109.333,0,0"
+                 VerticalAlignment="Top" Width="174" Grid.Column="1" Background="{x:Null}" Grid.Row="1" />
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="223" Margin="0.333,10,0,0" VerticalAlignment="Top"
+               Width="358" Source="Resources/Image/Menus/Trainer ID.png" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <Grid Grid.Column="1" Height="208" Margin="9.333,10,10.333,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="93*"/>
-                <ColumnDefinition Width="92*"/>
-                <ColumnDefinition Width="55*"/>
-                <ColumnDefinition Width="99*"/>
+                <ColumnDefinition Width="93*" />
+                <ColumnDefinition Width="92*" />
+                <ColumnDefinition Width="55*" />
+                <ColumnDefinition Width="99*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="29*"/>
-                <RowDefinition Height="29*"/>
-                <RowDefinition Height="24*"/>
-                <RowDefinition Height="24*"/>
-                <RowDefinition Height="102*"/>
+                <RowDefinition Height="29*" />
+                <RowDefinition Height="29*" />
+                <RowDefinition Height="24*" />
+                <RowDefinition Height="24*" />
+                <RowDefinition Height="102*" />
             </Grid.RowDefinitions>
-            <Label x:Name="lbl_Str" Content="xx" HorizontalAlignment="Left" Margin="58,5.667,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-            <Label x:Name="lbl_Dex" Content="xx" HorizontalAlignment="Left" Margin="59,1,0,0" VerticalAlignment="Top" Grid.Row="2"/>
-            <Label x:Name="lbl_Con" Content="xx" HorizontalAlignment="Left" Margin="59,23,0,0" VerticalAlignment="Top" Grid.Row="2" Grid.RowSpan="2"/>
-            <Label x:Name="lbl_Int" Content="xx" HorizontalAlignment="Left" Margin="57.667,6.667,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"/>
-            <Label x:Name="lbl_Wis" Content="xx" HorizontalAlignment="Left" Margin="57.667,0,0,0" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
-            <Label x:Name="lbl_Cha" Content="xx" HorizontalAlignment="Left" Margin="57.667,23,0,0" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2"/>
-            <Label x:Name="lbl_MaxHP" Content="xx" HorizontalAlignment="Left" Margin="15.667,1,0,0" VerticalAlignment="Top" Grid.Row="2" Grid.Column="2" Width="35"/>
-            <Label x:Name="lbl_Money" Content="xxxxx" HorizontalAlignment="Left" Margin="91.667,14,0,0" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Width="55" Grid.ColumnSpan="2"/>
-            <Label x:Name="lbl_Name" Content="xx" HorizontalAlignment="Left" Margin="9.721,11,0,0" VerticalAlignment="Top" Grid.Column="3" Grid.RowSpan="2" Width="79"/>
-            <Label x:Name="lbl_CurrentHP" Content="xx" HorizontalAlignment="Left" Margin="91.667,14.667,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2" Width="45"/>
-            <TextBox x:Name="tb_Description" HorizontalAlignment="Left" Height="44" Margin="0,100,0,-42" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="330" Grid.ColumnSpan="4" Grid.Row="4" Background="{x:Null}"/>
+            <Label x:Name="lbl_Str" Content="xx" HorizontalAlignment="Left" Margin="58,5.667,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" />
+            <Label x:Name="lbl_Dex" Content="xx" HorizontalAlignment="Left" Margin="59,1,0,0" VerticalAlignment="Top"
+                   Grid.Row="2" />
+            <Label x:Name="lbl_Con" Content="xx" HorizontalAlignment="Left" Margin="59,23,0,0" VerticalAlignment="Top"
+                   Grid.Row="2" Grid.RowSpan="2" />
+            <Label x:Name="lbl_Int" Content="xx" HorizontalAlignment="Left" Margin="57.667,6.667,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" />
+            <Label x:Name="lbl_Wis" Content="xx" HorizontalAlignment="Left" Margin="57.667,0,0,0"
+                   VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" />
+            <Label x:Name="lbl_Cha" Content="xx" HorizontalAlignment="Left" Margin="57.667,23,0,0"
+                   VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" />
+            <Label x:Name="lbl_MaxHP" Content="xx" HorizontalAlignment="Left" Margin="15.667,1,0,0"
+                   VerticalAlignment="Top" Grid.Row="2" Grid.Column="2" Width="35" />
+            <Label x:Name="lbl_Money" Content="xxxxx" HorizontalAlignment="Left" Margin="91.667,14,0,0"
+                   VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Width="55" Grid.ColumnSpan="2" />
+            <Label x:Name="lbl_Name" Content="xx" HorizontalAlignment="Left" Margin="9.721,11,0,0"
+                   VerticalAlignment="Top" Grid.Column="3" Grid.RowSpan="2" Width="79" />
+            <Label x:Name="lbl_CurrentHP" Content="xx" HorizontalAlignment="Left" Margin="91.667,14.667,0,0"
+                   VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2" Width="45" />
+            <TextBox x:Name="tb_Description" HorizontalAlignment="Left" Height="44" Margin="0,100,0,-42"
+                     TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="330" Grid.ColumnSpan="4"
+                     Grid.Row="4" Background="{x:Null}" />
         </Grid>
 
 

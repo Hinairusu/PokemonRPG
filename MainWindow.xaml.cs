@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.Win32;
@@ -24,13 +16,12 @@ using PokemonRPG.Windows;
 namespace PokemonRPG
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
-
             InitializeComponent();
             LoadBaseData();
 
@@ -40,17 +31,18 @@ namespace PokemonRPG
             DataContext = this;
             BindData();
         }
+
         public void LoadBaseData()
         {
-            string FilePath = $"{Environment.CurrentDirectory}\\Resources\\Data\\";
+            var FilePath = $"{Environment.CurrentDirectory}\\Resources\\Data\\";
             try
             {
-                string dexpath = "Pokedex.xml";
+                var dexpath = "Pokedex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Pokedex));
+                var serializer = new XmlSerializer(typeof(Pokedex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.Pokedex = (Pokedex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.Pokedex = (Pokedex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -60,12 +52,12 @@ namespace PokemonRPG
 
             try
             {
-                string dexpath = "Itemdex.xml";
+                var dexpath = "Itemdex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Itemdex));
+                var serializer = new XmlSerializer(typeof(Itemdex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.ItemDex = (Itemdex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.ItemDex = (Itemdex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -75,12 +67,12 @@ namespace PokemonRPG
 
             try
             {
-                string dexpath = "Naturedex.xml";
+                var dexpath = "Naturedex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Naturedex));
+                var serializer = new XmlSerializer(typeof(Naturedex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.NatureDex = (Naturedex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.NatureDex = (Naturedex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -90,12 +82,12 @@ namespace PokemonRPG
 
             try
             {
-                string dexpath = "Trainerdex.xml";
+                var dexpath = "Trainerdex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Trainerdex));
+                var serializer = new XmlSerializer(typeof(Trainerdex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.TrainerDex = (Trainerdex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.TrainerDex = (Trainerdex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -105,12 +97,12 @@ namespace PokemonRPG
 
             try
             {
-                string dexpath = "Movedex.xml";
+                var dexpath = "Movedex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Movedex));
+                var serializer = new XmlSerializer(typeof(Movedex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.MoveDex = (Movedex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.MoveDex = (Movedex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -120,12 +112,12 @@ namespace PokemonRPG
 
             try
             {
-                string dexpath = "Abilitydex.xml";
+                var dexpath = "Abilitydex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Abilitydex));
+                var serializer = new XmlSerializer(typeof(Abilitydex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.AbilityDex = (Abilitydex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.AbilityDex = (Abilitydex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -136,12 +128,12 @@ namespace PokemonRPG
 
             try
             {
-                string dexpath = "Typedex.xml";
+                var dexpath = "Typedex.xml";
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Typedex));
+                var serializer = new XmlSerializer(typeof(Typedex));
 
-                StreamReader reader = new StreamReader($"{FilePath}{dexpath}");
-                StaticData.ReferenceData.TypeDex = (Typedex)serializer.Deserialize(reader);
+                var reader = new StreamReader($"{FilePath}{dexpath}");
+                StaticData.ReferenceData.TypeDex = (Typedex) serializer.Deserialize(reader);
                 reader.Close();
             }
             catch (Exception ex)
@@ -170,29 +162,25 @@ namespace PokemonRPG
             DataBinding.BindThis(tb_Description, StaticData.PlayerData, "Description");
             DataBinding.BindThis(Lb_PokemonTeam, StaticData.PlayerData, "Pkmnlist");
         }
-        
+
         private void LoadCSV()
         {
             // Legacy block to allow speed input of missing data when it's ready
 
-            List<string> Data = new List<string>();
+            var Data = new List<string>();
             using (var sr = new StreamReader("tmmoves.csv"))
             {
                 string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    Data.Add(line);
-                }
+                while ((line = sr.ReadLine()) != null) Data.Add(line);
             }
 
-            int j = 0;
-            foreach (string line in Data)
+            var j = 0;
+            foreach (var line in Data)
             {
-                string[] splitvals = line.Split(',');
+                var splitvals = line.Split(',');
                 try
                 {
-
-                    string PokeName = splitvals[0];
+                    var PokeName = splitvals[0];
 
                     if (PokeName.Equals("Nidoran (M)"))
                         PokeName = "Nidoran M";
@@ -224,13 +212,12 @@ namespace PokemonRPG
                         PokeName = "Slakoth";
 
 
-
-
-                    int PokeID =
-                        StaticData.ReferenceData.Pokedex.PokemonDexList.FindIndex(s => s.Name.Equals(PokeName, StringComparison.OrdinalIgnoreCase));
-                    int MoveID = StaticData.ReferenceData.ItemDex.MoveLearningItems.FindIndex(s =>
+                    var PokeID =
+                        StaticData.ReferenceData.Pokedex.PokemonDexList.FindIndex(s =>
+                            s.Name.Equals(PokeName, StringComparison.OrdinalIgnoreCase));
+                    var MoveID = StaticData.ReferenceData.ItemDex.MoveLearningItems.FindIndex(s =>
                         s.MoveName.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
-                        //StaticData.ReferenceData.MoveDex.MoveList.FindIndex(s => s.Name.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
+                    //StaticData.ReferenceData.MoveDex.MoveList.FindIndex(s => s.Name.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
                     //LevelMoves move = new LevelMoves();
                     //move.LevelLearned = int.Parse(splitvals[1]);
                     //move.MoveID = MoveID;
@@ -238,33 +225,29 @@ namespace PokemonRPG
                 }
                 catch
                 {
-                   
                 }
 
                 Thread.Sleep(1);
-
             }
 
-            string FukedPkmn = string.Empty;
+            var FukedPkmn = string.Empty;
             foreach (var pk in StaticData.ReferenceData.Pokedex.PokemonDexList)
-            {
-                if ((pk.PossibleTMMoves.Count < 1) && pk.EvolutionIDs.Count > 0 && (StaticData.ReferenceData.Pokedex.EvolutionList[pk.EvolutionIDs.First()].EvolutionStage == 1))
+                if (pk.PossibleTMMoves.Count < 1 && pk.EvolutionIDs.Count > 0 && StaticData.ReferenceData.Pokedex
+                    .EvolutionList[pk.EvolutionIDs.First()].EvolutionStage == 1)
                     FukedPkmn += $"{pk.Name}, ";
 
-            }
-
-            string BaseFukedPkmn = StaticData.ReferenceData.Pokedex.PokemonDexList
+            var BaseFukedPkmn = StaticData.ReferenceData.Pokedex.PokemonDexList
                 .Where(pk => pk.PossibleTMMoves.Count < 1)
                 .Aggregate(string.Empty,
                     (current,
                         pk) => current + $"{pk.Name}, ");
 
-            XmlSerializer xsSubmit = new XmlSerializer(typeof(Pokedex));
+            var xsSubmit = new XmlSerializer(typeof(Pokedex));
             var xml = "";
 
             using (var sww = new StringWriter())
             {
-                using (XmlWriter writer = XmlWriter.Create(sww))
+                using (var writer = XmlWriter.Create(sww))
                 {
                     xsSubmit.Serialize(writer, StaticData.ReferenceData.Pokedex);
                     xml = sww.ToString(); // Your XML
@@ -276,7 +259,7 @@ namespace PokemonRPG
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
             StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(1, 20));
-            PokemonPage page = new PokemonPage(0);
+            var page = new PokemonPage(0);
             page.Show();
         }
 
@@ -317,53 +300,55 @@ namespace PokemonRPG
             //}
 
             GenerateRandomEncounter();
-
         }
 
         private void GenerateRandomEncounter(int LevelLimit = 100)
         {
             if (StaticData.PlayerData.Pkmnlist.Count > 0)
                 StaticData.PlayerData.Pkmnlist.RemoveAt(0);
-            StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(StaticData.ReferenceData.RandomGenerator.Next(0, StaticData.ReferenceData.Pokedex.PokemonDexList.Count+1), StaticData.ReferenceData.RandomGenerator.Next(1, LevelLimit+1)));
+            StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(
+                StaticData.ReferenceData.RandomGenerator.Next(0,
+                    StaticData.ReferenceData.Pokedex.PokemonDexList.Count + 1),
+                StaticData.ReferenceData.RandomGenerator.Next(1, LevelLimit + 1)));
             StaticData.PlayerData.Pkmnlist[0].CurrentHP = StaticData.PlayerData.Pkmnlist[0].MaxHP;
-           PokemonPage page = new PokemonPage(0);
+            var page = new PokemonPage(0);
             page.Show();
         }
 
         private void btn_Load_Click(object sender, RoutedEventArgs e)
         {
             string file;
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            var openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             openFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
             openFileDialog.DefaultExt = ".PkmnChr";
             if (openFileDialog.ShowDialog() == true)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(Player));
-                StreamReader reader = new StreamReader(openFileDialog.FileName);
-                StaticData.PlayerData = (Player)serializer.Deserialize(reader);
+                var serializer = new XmlSerializer(typeof(Player));
+                var reader = new StreamReader(openFileDialog.FileName);
+                StaticData.PlayerData = (Player) serializer.Deserialize(reader);
                 reader.Close();
             }
+
             BindData();
         }
 
 
         private void btn_Save_Click(object sender, RoutedEventArgs e)
         {
-
-            XmlSerializer xsSubmit = new XmlSerializer(typeof(Player));
+            var xsSubmit = new XmlSerializer(typeof(Player));
             var xml = "";
 
             using (var sww = new StringWriter())
             {
-                using (XmlWriter writer = XmlWriter.Create(sww))
+                using (var writer = XmlWriter.Create(sww))
                 {
                     xsSubmit.Serialize(writer, StaticData.PlayerData);
                     xml = sww.ToString(); // Your XML
                 }
             }
 
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            var saveFileDialog = new SaveFileDialog();
             saveFileDialog.DefaultExt = ".PkmnChr";
             saveFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -386,9 +371,10 @@ namespace PokemonRPG
         {
             ButtonHighlightChange(btn_PC, btn_PCHighlight);
         }
+
         private void btn_PC_Click(object sender, MouseEventArgs e)
         {
-            PC pcWindow = new PC(StaticData.ReferenceData,StaticData.PlayerData);
+            var pcWindow = new PC(StaticData.ReferenceData, StaticData.PlayerData);
             pcWindow.Show();
         }
 
@@ -397,7 +383,7 @@ namespace PokemonRPG
             ButtonHighlightChange(btn_Party, btn_PartyHighlight);
         }
 
-        private void ButtonHighlightChange (Image image, Image image1)
+        private void ButtonHighlightChange(Image image, Image image1)
         {
             if (image.Visibility == Visibility.Visible)
             {
@@ -438,19 +424,19 @@ namespace PokemonRPG
 
         private void btn_PokedexHighlight_Click(object sender, MouseButtonEventArgs e)
         {
-            PokedexWindow PkWin = new PokedexWindow();
+            var PkWin = new PokedexWindow();
 
             PkWin.Show();
         }
 
         private void btn_Party_Click(object sender, MouseButtonEventArgs e)
         {
-            PartyWindow party = new PartyWindow();
+            var party = new PartyWindow();
 
             party.Show();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             //HANDLE SAVEING HERE
             Environment.Exit(1);

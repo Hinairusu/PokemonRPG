@@ -6,6 +6,12 @@ namespace PokemonRPG.Configs
     [Serializable]
     public class TrainerClassFeature
     {
+        public TrainerClassFeature()
+        {
+            Tags = new TrainerFeatureTags();
+            Requisites = new List<TrainerFeatureRequisites>();
+        }
+
         public string Name { get; set; }
         public string FrequencyBase { get; set; }
         public string FrequenceyIncrement { get; set; }
@@ -13,10 +19,5 @@ namespace PokemonRPG.Configs
         public string Target { get; set; }
         public TrainerFeatureTags Tags { get; set; }
         public List<TrainerFeatureRequisites> Requisites { get; set; }
-        public TrainerClassFeature()
-        {
-            Tags = new TrainerFeatureTags();
-            Requisites = new List<TrainerFeatureRequisites>();
-        }
     }
 }

@@ -14,7 +14,7 @@ namespace PokemonRPG.Configs
 
         public static BaseCharacteristics operator +(BaseCharacteristics v1, BaseCharacteristics v2)
         {
-            BaseCharacteristics newbase = new BaseCharacteristics();
+            var newbase = new BaseCharacteristics();
             newbase.HP = v1.HP + v2.HP;
             newbase.Attack = v1.Attack + v2.Attack;
             newbase.Defence = v1.Defence + v2.Defence;
@@ -23,6 +23,5 @@ namespace PokemonRPG.Configs
             newbase.SpecialAttack = v1.SpecialAttack + v2.SpecialAttack;
             return newbase;
         }
-
     }
 }

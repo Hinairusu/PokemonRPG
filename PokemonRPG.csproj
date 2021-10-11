@@ -102,6 +102,9 @@
     <Compile Include="Windows\Encyclopedia.xaml.cs">
       <DependentUpon>Encyclopedia.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\GMPage.xaml.cs">
+      <DependentUpon>GMPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PartyWindow.cs">
       <DependentUpon>Party.xaml</DependentUpon>
     </Compile>
@@ -142,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Encyclopedia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GMPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

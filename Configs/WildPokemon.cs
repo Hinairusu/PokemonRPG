@@ -50,28 +50,28 @@ namespace PokemonRPG.Configs
             if (Enhancements.HP > 0)
                 CombatStats.HP = Convert.ToInt32(ActualStats.HP + ActualStats.HP * (Enhancements.HP * 0.25));
             else
-                CombatStats.HP = Convert.ToInt32(ActualStats.HP + ActualStats.HP * (Enhancements.HP * -0.125));
+                CombatStats.HP = Convert.ToInt32(ActualStats.HP - ActualStats.HP * (Enhancements.HP * -0.125));
 
             if (Enhancements.Attack > 0)
                 CombatStats.Attack =
                     Convert.ToInt32(ActualStats.Attack + ActualStats.Attack * (Enhancements.Attack * 0.25));
             else
                 CombatStats.Attack =
-                    Convert.ToInt32(ActualStats.Attack + ActualStats.Attack * (Enhancements.Attack * -0.125));
+                    Convert.ToInt32(ActualStats.Attack - ActualStats.Attack * (Enhancements.Attack * -0.125));
 
             if (Enhancements.Defence > 0)
                 CombatStats.Defence =
                     Convert.ToInt32(ActualStats.Defence + ActualStats.Defence * (Enhancements.Defence * 0.25));
             else
                 CombatStats.Defence =
-                    Convert.ToInt32(ActualStats.Defence + ActualStats.Defence * (Enhancements.Defence * -0.125));
+                    Convert.ToInt32(ActualStats.Defence - ActualStats.Defence * (Enhancements.Defence * -0.125));
 
             if (Enhancements.SpecialAttack > 0)
                 CombatStats.SpecialAttack = Convert.ToInt32(ActualStats.SpecialAttack +
                                                             ActualStats.SpecialAttack *
                                                             (Enhancements.SpecialAttack * 0.25));
             else
-                CombatStats.SpecialAttack = Convert.ToInt32(ActualStats.SpecialAttack +
+                CombatStats.SpecialAttack = Convert.ToInt32(ActualStats.SpecialAttack -
                                                             ActualStats.SpecialAttack *
                                                             (Enhancements.SpecialAttack * -0.125));
 
@@ -80,7 +80,7 @@ namespace PokemonRPG.Configs
                                                              ActualStats.SpecialDefence *
                                                              (Enhancements.SpecialDefence * 0.25));
             else
-                CombatStats.SpecialDefence = Convert.ToInt32(ActualStats.SpecialDefence +
+                CombatStats.SpecialDefence = Convert.ToInt32(ActualStats.SpecialDefence -
                                                              ActualStats.SpecialDefence *
                                                              (Enhancements.SpecialDefence * -0.125));
 
@@ -89,7 +89,7 @@ namespace PokemonRPG.Configs
                     Convert.ToInt32(ActualStats.Speed + ActualStats.Speed * (Enhancements.Speed * 0.25));
             else
                 CombatStats.Speed =
-                    Convert.ToInt32(ActualStats.Speed + ActualStats.Speed * (Enhancements.Speed * -0.125));
+                    Convert.ToInt32(ActualStats.Speed - ActualStats.Speed * (Enhancements.Speed * -0.125));
         }
 
         public void WildLevelUp(int statLocation = 0)

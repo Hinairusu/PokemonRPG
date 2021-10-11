@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -144,6 +145,46 @@ namespace PokemonRPG
 
         public void LoadTestData()
         {
+            StaticData.PlayerData = new Player()
+            {
+                Charisma = 16,
+                Constitution = 13,
+                CurrentHP = 20,
+                Description = "A Damn Fool",
+                CurrentParty = new List<int>(),
+                Dexterity = 14,
+                Intelligence = 17,
+                Inventory = new List<Item>(),
+                ItemPC = new List<ItemBox>(),
+                MaxHP = 20,
+                Strength = 10,
+                Money = 1337,
+                Name = "Joe Doe",
+                Notes = "Dear god why is he still alive",
+                OwnedPokemon = new List<TrainerPokemon>(),
+                Pkmnlist = new ObservableCollection<TrainerPokemon>(),
+                Wisdom = 6
+            };
+
+            for (int i = 0; i < 30; i++)
+            {
+                var pkmn = StaticData.ReferenceData.GenerateTrainerPokemon(
+                    StaticData.ReferenceData.RandomGenerator.Next(0,
+                        StaticData.ReferenceData.Pokedex.PokemonDexList.Count),
+                    StaticData.ReferenceData.RandomGenerator.Next(1, 101));
+                pkmn.TrainerID = i;
+                pkmn.PokemonTID = i;
+                pkmn.Nickname = $"Totally Pikachu #{i}";
+                StaticData.PlayerData.Pkmnlist.Add(pkmn);
+            }
+
+            while (StaticData.PlayerData.CurrentParty.Count < 6)
+            {
+                int Rand = StaticData.ReferenceData.RandomGenerator.Next(0, 30);
+                if(!StaticData.PlayerData.CurrentParty.Contains(Rand))
+                    StaticData.PlayerData.CurrentParty.Add(Rand);
+            }
+
         }
 
         public void BindData()
@@ -258,62 +299,15 @@ namespace PokemonRPG
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
-            StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(1, 20));
-            var page = new PokemonPage(0);
-            page.Show();
+            
         }
 
         private void btn_GM_Click(object sender, RoutedEventArgs e)
         {
-            //foreach (var evo in StaticData.ReferenceData.Pokedex.EvolutionList)
-            //{
-            //    if (evo.EvolutionID == 0)
-            //        evo.EvolutionID = -1;
-            //    else
-            //    {
-            //        var evopokemon = StaticData.ReferenceData.Pokedex.PokemonDexList[evo.EvolutionID];
-
-            //        foreach (var evooption in evopokemon.EvolutionIDs)
-            //        if (StaticData.ReferenceData.Pokedex.EvolutionList[evooption].EvolutionID !=
-            //            evo.EvolutionStage + 1)
-            //            StaticData.ReferenceData.Pokedex.EvolutionList[evooption].EvolutionStage =
-            //                evo.EvolutionStage + 1;
-            //    }
-            //}
-
-            //string MissingTM = String.Empty;
-            //string MissingMoves = String.Empty;
-            //string MissingEggs = String.Empty;
-            //string MissingTutors = String.Empty;
-
-
-            //foreach (var VARIABLE in StaticData.ReferenceData.Pokedex.PokemonDexList)
-            //{
-            //    if (VARIABLE.PossibleLevelupMoves.Count < 1)
-            //        MissingMoves += $"{VARIABLE.Name}, ";
-            //    if (VARIABLE.PossibleTMMoves.Count < 1)
-            //        MissingTM += $"{VARIABLE.Name}, ";
-            //    if (VARIABLE.PossibleEggMoves.Count < 1 && VARIABLE.EvolutionIDs.Count > 0 && (StaticData.ReferenceData.Pokedex.EvolutionList[VARIABLE.EvolutionIDs.First()].EvolutionStage == 1))
-            //        MissingEggs += $"{VARIABLE.Name}, ";
-            //    if (VARIABLE.PossibleTutorMoves.Count < 1)
-            //        MissingTutors += $"{VARIABLE.Name}, ";
-            //}
-
-            GenerateRandomEncounter();
+            GMPage gmpage = new GMPage();
+            gmpage.Show();
         }
-
-        private void GenerateRandomEncounter(int LevelLimit = 100)
-        {
-            if (StaticData.PlayerData.Pkmnlist.Count > 0)
-                StaticData.PlayerData.Pkmnlist.RemoveAt(0);
-            StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(
-                StaticData.ReferenceData.RandomGenerator.Next(0,
-                    StaticData.ReferenceData.Pokedex.PokemonDexList.Count + 1),
-                StaticData.ReferenceData.RandomGenerator.Next(1, LevelLimit + 1)));
-            StaticData.PlayerData.Pkmnlist[0].CurrentHP = StaticData.PlayerData.Pkmnlist[0].MaxHP;
-            var page = new PokemonPage(0);
-            page.Show();
-        }
+        
 
         private void btn_Load_Click(object sender, RoutedEventArgs e)
         {

@@ -37,7 +37,11 @@ namespace PokemonRPG.Configs
         public int Intelligence { get; set; }
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
-        public int TotalOwnedPokemon { get; set; }
+
+        public int TotalOwnedPokemon
+        {
+            get { return OwnedPokemon.Count; }
+        }
         public string Description { get; set; }
         public string Notes { get; set; }
         private List<PlayerLevels> Levels { get; set; }

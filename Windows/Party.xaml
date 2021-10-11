@@ -206,7 +206,7 @@
                    VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Two_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
-                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" MouseUp="Pkmn_Two_Current_HP_MouseUp"/>
             <Image x:Name="Pkmn_Two_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />
@@ -308,7 +308,7 @@
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Three_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png"
-                   Grid.RowSpan="2" />
+                   Grid.RowSpan="2" MouseUp="Pkmn_Three_Current_HP_MouseUp"/>
             <Image x:Name="Pkmn_Three_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />
@@ -409,7 +409,7 @@
                    VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Four_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
-                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" MouseUp="Pkmn_Four_Current_HP_MouseUp"/>
             <Image x:Name="Pkmn_Four_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />
@@ -510,7 +510,7 @@
                    VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Five_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
-                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" MouseUp="Pkmn_Five_Current_HP_MouseUp"/>
             <Image x:Name="Pkmn_Five_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />
@@ -611,7 +611,7 @@
                    VerticalAlignment="Top" Width="51" Source="/PokemonRPG;component/Resources/Image/Types/Unknown.png"
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Six_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2" VerticalAlignment="Top"
-                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" />
+                   Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png" Grid.RowSpan="2" MouseUp="Pkmn_Six_Current_HP_MouseUp"/>
             <Image x:Name="Pkmn_Six_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />
@@ -713,7 +713,7 @@
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Seven_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png"
-                   Grid.RowSpan="2" />
+                   Grid.RowSpan="2" MouseUp="Pkmn_Seven_Current_HP_MouseUp" />
             <Image x:Name="Pkmn_Seven_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />
@@ -815,7 +815,7 @@
                    Grid.Row="2" />
             <Image x:Name="Pkmn_Eight_Current_HP" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Health Circle.png"
-                   Grid.RowSpan="2" />
+                   Grid.RowSpan="2" MouseUp="Pkmn_Eight_Current_HP_MouseUp" />
             <Image x:Name="Pkmn_Eight_HP_Fainting_Cracks" Height="58" Margin="121,43,121,0" Grid.Row="2"
                    VerticalAlignment="Top" Source="/PokemonRPG;component/Resources/Image/Status/Fainting Cracks.png"
                    Grid.RowSpan="2" Visibility="Hidden" />

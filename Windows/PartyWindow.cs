@@ -32,7 +32,7 @@ namespace PokemonRPG.Windows
                 Pkmn_One_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[0]].SecondaryTypeID);
                 Pkmn_One_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].Name;
                 Pkmn_One_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].Level;
                 Pkmn_One_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]]
                     .ActualStats.Attack;
@@ -62,7 +62,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Two_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[1]].SecondaryTypeID);
                 Pkmn_Two_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].Name;
                 Pkmn_Two_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].Level;
                 Pkmn_Two_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]]
                     .ActualStats.Attack;
@@ -92,7 +92,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Three_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[2]].SecondaryTypeID);
                 Pkmn_Three_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].Name;
                 Pkmn_Three_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].Level;
                 Pkmn_Three_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]]
                     .ActualStats.Attack;
@@ -122,7 +122,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Four_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[3]].SecondaryTypeID);
                 Pkmn_Four_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].Name;
                 Pkmn_Four_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].Level;
                 Pkmn_Four_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]]
                     .ActualStats.Attack;
@@ -152,7 +152,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Five_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[4]].SecondaryTypeID);
                 Pkmn_Five_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].Name;
                 Pkmn_Five_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].Level;
                 Pkmn_Five_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]]
                     .ActualStats.Attack;
@@ -182,7 +182,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Six_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[5]].SecondaryTypeID);
                 Pkmn_Six_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].Name;
                 Pkmn_Six_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].Level;
                 Pkmn_Six_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]]
                     .ActualStats.Attack;
@@ -212,7 +212,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Seven_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[6]].SecondaryTypeID);
                 Pkmn_Seven_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].Name;
                 Pkmn_Seven_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].Level;
                 Pkmn_Seven_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]]
                     .ActualStats.Attack;
@@ -242,7 +242,7 @@ namespace PokemonRPG.Windows
                 Pkmn_Eight_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
                     .Pkmnlist[StaticData.PlayerData.CurrentParty[7]].SecondaryTypeID);
                 Pkmn_Eight_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].PokemonFamily;
+                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].Name;
                 Pkmn_Eight_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].Level;
                 Pkmn_Eight_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]]
                     .ActualStats.Attack;
@@ -271,20 +271,65 @@ namespace PokemonRPG.Windows
             try
             {
                 TypeName = StaticData.ReferenceData.TypeDex.TypeList[TypeID].Name;
+                var DefaultTypePath = $"Resources/Image/Types/{TypeName}.png";
+                var c = new ImageSourceConverter();
+                return (ImageSource)c.ConvertFrom(DefaultTypePath);
             }
             catch
             {
             }
 
-            var DefaultTypePath = $"Resources/Image/Types/{TypeName}.png";
-            var c = new ImageSourceConverter();
-            return (ImageSource) c.ConvertFrom(DefaultTypePath);
+            return null;
+
         }
 
         private void Pkmn_One_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].PokemonTID);
+                new PokemonPage(StaticData.PlayerData.CurrentParty[0]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Two_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[1]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Three_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[2]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Four_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[3]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Five_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[4]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Six_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[5]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Seven_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[6]);
+            pkmnpage.Show();
+        }
+        private void Pkmn_Eight_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var pkmnpage =
+                new PokemonPage(StaticData.PlayerData.CurrentParty[7]);
+            pkmnpage.Show();
         }
     }
 }

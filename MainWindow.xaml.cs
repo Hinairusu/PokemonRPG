@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -299,7 +300,78 @@ namespace PokemonRPG
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
-            
+            int FaultyCount = 0;
+            StringBuilder faultypokemon = new StringBuilder();
+            foreach (var pk in StaticData.ReferenceData.Pokedex.PokemonDexList)
+            {
+                StringBuilder SpecificFault = new StringBuilder();
+                SpecificFault.Append($"{pk.Name} {Environment.NewLine}");
+                bool Levelfault = false, TutorFault = false, EggFault = false;
+                foreach (var VARIABLE in pk.PossibleLevelupMoves)
+                {
+                    if (VARIABLE.MoveID < 0)
+                    {
+                        if (!Levelfault)
+                        {
+                            SpecificFault.Append($"Level up move fault found for level: {Environment.NewLine}");
+                            Levelfault = true;
+                        }
+
+                        SpecificFault.Append($"{VARIABLE.LevelLearned}{Environment.NewLine}");
+                    }
+                }
+
+                int TutorID = 1;
+                foreach (var VARIABLE in pk.PossibleTutorMoves)
+                {
+                    if (VARIABLE < 0)
+                    {
+                        if (!TutorFault)
+                        {
+                            SpecificFault.Append($"Tutor move fault at move number: {Environment.NewLine}");
+                            TutorFault = true;
+                        }
+
+                        SpecificFault.Append($"{TutorID}{Environment.NewLine}");
+                    }
+
+                    TutorID++;
+                }
+
+                int EggID = 1;
+                foreach (var VARIABLE in pk.PossibleEggMoves)
+                {
+                    if (VARIABLE < 0)
+                    {
+                        if (!EggFault)
+                        {
+                            SpecificFault.Append($"Egg move fault at move number: {Environment.NewLine}");
+                            EggFault = true;
+                        }
+
+                        SpecificFault.Append($"{EggID}{Environment.NewLine}");
+                    }
+
+                    EggID++;
+                }
+
+                //faultypokemon.Append($"{Environment.NewLine}TM faults: {Environment.NewLine}");
+                //int TMID = 1;
+                //foreach (var VARIABLE in pk.PossibleTMMoves)
+                //{
+                //    if (VARIABLE < 0)
+                //        faultypokemon.Append($"{pk.Name}, {TMID}{Environment.NewLine}");
+                //    TMID++;
+                //}
+
+                if (Levelfault || TutorFault || EggFault)
+                {
+                    FaultyCount++;
+                    faultypokemon.Append($"{Environment.NewLine}{SpecificFault.ToString()}==========");
+                }
+            }
+
+            string Output = faultypokemon.ToString();
         }
 
         private void btn_GM_Click(object sender, RoutedEventArgs e)

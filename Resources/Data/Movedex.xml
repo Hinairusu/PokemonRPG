@@ -96,7 +96,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Acid Spray creates a Column 1 meter wide. Acid Spray lowers all Legal Targets' Special Defense 2 Combat Stages. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -177,7 +177,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Aerial Ace cannot miss. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -204,7 +204,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Aeroblast creates a Column 2-meters wide. Aeroblast is a Critical Hit on 11-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -339,7 +339,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Choose one willing ally, shift the user's position to the ally's position and shift the ally's position to the user's position, trading places. If the ally was a target of a Move, the user is now the target. If the user was a target of a Move, the ally is now the target. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -393,7 +393,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Ancientpower creates a Column that is 2-meters wide. If you rolled 11-20 during Accuracy Check for Ancientpower, the user has each of its stats raised 1 Combat Stage. If you rolled 16-20 on the Accuracy Roll, all allies in the Column also have each of their stats raised 1 Combat Stage and are not damaged by Ancientpower. </Notes>
-      <Target>1 Target| Column| Spirit Surge</Target>
+      <Target>1 Target, Column, Spirit Surge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -420,7 +420,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Aqua Jet on their turn before they can use their Move. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -447,7 +447,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Aqua Ring covers the user in a Coat that heals the user at the beginning of each of their turns. The user is healed 1/16th of their full HP each turn. </Notes>
-      <Target>No Target| Coat</Target>
+      <Target>No Target, Coat</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -474,7 +474,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -501,7 +501,7 @@
         <DiceMod>1</DiceMod>
       </Damage>
       <Notes>Arm Thrust can hit up to 5 times. Once the user misses, they cannot attempt to make another Arm Thrust attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -717,7 +717,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Aurora Beam creates a Column 1 meter wide. Aurora Beam lowers the target's Attack 1 Combat Stage on 18-20 during Accuracy Check. *Grants: Freezer </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -771,7 +771,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Avalanche creates a Column 2-meters wide. If a target damaged Avalanche's user on their last turn during the same round of combat, deal 5d12+18 instead for Damage Dice Roll. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -798,7 +798,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Barrage can hit up to 5 times. Once the user misses, they cannot attempt to make another Barrage attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -879,7 +879,7 @@
         <DiceMod>-1</DiceMod>
       </Damage>
       <Notes>Beat Up can hit up to X time. X is the amount of pokemon on the user's roster including the user, up to a maximum of 6. Once the user misses, they cannot attempt to make another Beat Up attack on that turn. You may choose any Pokemon's Attack stat, from your roster, to calculate damage instead of using the user's Attack stat. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -960,7 +960,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>You may use Bide as an Intercept upon being targeted by a Move. After declaring the use of Bide, the user ends their turn. At the start of their next turn, end their turn. On the turn after that, add up all of the damage the user has taken in the past 2 turns, call that total X. Bide's Target loses HP equal to twice the value of X. Do not apply weakness or resistance to the HP lost as a result of Bide. Do not apply stats to the HP lost as a result of Bide. Bide cannot miss. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -987,7 +987,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Bind Traps the target and the user for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 1d12 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Bind may not trap more then one target at a time unless the User is Huge or Gigantic. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1041,7 +1041,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Blast Burn creates a 3-meter Blast. On Miss, Blast Burn deals the user's Special Attack instead to all possible targets. </Notes>
-      <Target>Target Area| Blast| Exhaust</Target>
+      <Target>Target Area, Blast, Exhaust</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1068,7 +1068,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Blaze Kick Pushes the target 2-meters. Blaze Kick Burns the target on 19-20 during Accuracy Check. Blaze Kick is a Critical Hit on 16-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1095,7 +1095,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Blizzard creates a Column that is 3-meters wide. Blizzard Freezes all legal targets on 16-20 during accuracy Check. If it is Hailing, Blizzard cannot miss. *Grants: Freezer </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1122,7 +1122,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Both the user and the target are Trapped. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -1257,7 +1257,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Bone Rush can hit up to 5 times. Once the user misses, they cannot attempt to make another Bone Rush attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1284,7 +1284,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Bonemerang can hit up to 2 times. If Bonemerang misses its first target, you may still use it a second time. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1311,7 +1311,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Bounce, the user is moved up to 10-meters into the air and then the user's turn ends. On your next turn, shift while in the air, lower your height back to the ground, and then use Bounce's damage and the rest of its Effect. Bounce creates a Burst equal half the user's Weight Class. Bounce Paralyzes all Legal Targets on 17-20 during Accuracy Check. For Pokemon users, the second turn is their Trainer's Command Action, unless the Trainer is unconscious, in which case the Pokemon acts on its own, finishing Bounce. *Grants: Jump +1 </Notes>
-      <Target>1 Target| Burst</Target>
+      <Target>1 Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1338,7 +1338,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. After Brave Bird deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Push| Recoil 1/3</Target>
+      <Target>1 Target, Dash, Push, Recoil 1/3</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1446,7 +1446,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Bubblebeam creates a Column 1 meter wide. Bubblebeam lowers the target's Speed on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1500,7 +1500,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Bug Buzz creates a 3-meter Burst. Bug Buzz lowers the target's Special Defense 1 Combat Stage on 19-20 during Accuracy Check. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1554,7 +1554,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Bulldoze creates a 3-meter Burst. All Legal Targets are lowered 1 Speed Combat Stage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1581,7 +1581,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Bullet Punch on their turn before they can use their Move. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1608,7 +1608,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Bullet Seed can hit up to 5 times. Once the user misses, they cannot attempt to make another Bullet Seed attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1743,7 +1743,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Charge Beam creates a Column 1 meter wide. Charge Beam raises the user's Special Attack 1 Combat Stage on 11-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column| Spirit Surge</Target>
+      <Target>1 Target, Column, Spirit Surge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1797,7 +1797,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Chatter creates a Column 1 meter wide. Chatter Confuses all Legal Targets. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1851,7 +1851,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>The target is Pushed 40-meters expelling them from the encounter if the terrain allows. They may still rejoin the encounter if they want to. During a trainer battle, the target's owner must recall the Pushed target and replace them. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1878,7 +1878,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Clamp Traps the target and the user for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 1d12 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Clamp may not trap more then one target at a time unless the user is Huge or Gigantic. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1932,7 +1932,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The user's Defense is lowered 1 Combat Stage and the user's Special Defense is lowered 1 Combat Stage. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -1986,7 +1986,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Comet Punch can hit up to 5 times. Once the user misses, they cannot attempt to make another Comet Punch attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2013,7 +2013,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Confuse Ray creates a Column 1 meter wide. Confuse Ray cannot miss. All targets are Confused. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2229,7 +2229,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Cotton Spore creates a 2-meter Blast. All Legal Targets have their Speed lowered 2 Combat Stages. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2256,7 +2256,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is being hit by a Move that consults Attack for damage, you may use Counter. If the user survives the hit, the target is dealt damage equal to twice the amount of damage the user received. Do not apply weakness, resistance or immunity. Do not apply stats. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2310,7 +2310,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Crabhammer Pushes the target 2-meters. Crabhammer is a Critical Hit on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2337,7 +2337,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Cross Chop is a Critical Hit on 16-20 during Accuracy Check. Cross Chop Pushes the target 1-meter. On Critical Hit, the target is Pushed 5-meters and the target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. </Notes>
-      <Target>1 Target| Dash| Push</Target>
+      <Target>1 Target, Dash, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2364,7 +2364,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Cross Poison is a Critical Hit on 18-20 during Accuracy Check. Cross Poison Poisons the target on a Critical Hit during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2418,7 +2418,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Crush Claw lowers the target's Defense 1 Combat Stage on 11-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2526,7 +2526,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Dark Pulse creates a 3-meter Burst. Dark Pulse Flinches all Legal Targets on 17-20 during Accuracy Check. *Grants: Aura </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2553,7 +2553,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Dark Void creates a 10-meter Burst. All Legal Targets fall Asleep. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2634,7 +2634,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1 minute (6 rounds), the area is considered Clear. While Clear, all hindering terrain is no longer hindering terrain and all bonuses or penalties to Accuracy Checks are ignored. All Walls, Coats and Hazards are destroyed. </Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -2661,7 +2661,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>When the user faints after taking damage from a Move, you may use Destiny Bond as an Intercept to target the Pokemon who lowered the user to 0 HP or less. Roll 1d20, on a roll of 6 or better the target is set to 0 HP. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2688,7 +2688,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is hit by a Move, instead you are not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. *Grants: Aura </Notes>
-      <Target>No Target| Intercept</Target>
+      <Target>No Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2715,7 +2715,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Dig, the user is moved underground and their turn ends. On the next turn, Dig's user may shift, using their Overland or Burrow Speed then uses Dig's damage. While underground, Dig's user may not be the target of Moves. For Pokemon users, the second turn is their Trainer's Command Action, unless the Trainer is unconscious, in which case the Pokemon acts on its own, finishing Dig. *Grants: Burrow +3 </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2769,7 +2769,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Discharge creates a 3-meter Burst. Discharge Paralyzes all legal targets on 15-20 during Accuracy Check. *Grants: Zapper </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2796,7 +2796,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Dive, the user is moved underwater and their turn ends. On the next turn, Dive's user may shift then use Dive's damage. While underwater, Dive's user may not be the target of Moves. There must be a body of water around the battlefield to use Dive. For Pokemon users, the second turn is their Trainer's Command Action, unless the Trainer is unconscious, in which case the Pokemon acts on its own, finishing Dive. *Grants: Underwater +3; Eliminates: Sinker </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2823,7 +2823,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>The target is Pushed 2-meters. Dizzy Punch Confuses the target on 17-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2850,7 +2850,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Doom Desire does nothing on the turn it is used. At the end of the second turn after Doom Desire's use, use Doom Desire's damage and effect. Doom Desire creates a Column 1 meter wide, which starts from anywhere on the field. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -2877,7 +2877,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Double Hit can hit up to 2 times. If Double Hit misses its first target, you may still use it a second time. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2904,7 +2904,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Double Kick can hit up to 2 times. If Double Kick misses its first target, you may still use it a second time. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2958,7 +2958,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. After Double-Edge deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Push| Recoil 1/3</Target>
+      <Target>1 Target, Dash, Push, Recoil 1/3</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -2985,7 +2985,7 @@
         <DiceMod>1</DiceMod>
       </Damage>
       <Notes>Doubleslap can hit up to 5 times. Once the user misses, they cannot attempt to make another Doubleslap attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3012,7 +3012,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Draco Meteor creates a 4-meter Blast. Lower the user's Special Attack 2 Combat Stages after damage. </Notes>
-      <Target>Target Area| Blast</Target>
+      <Target>Target Area, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3093,7 +3093,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Dragon Pulse creates a 3-meter Burst. *Grants: Aura </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3147,7 +3147,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>The target is Pushed 3-meters and it takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. Dragon Rush Flinches the target on 17-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash| Push</Target>
+      <Target>1 Target, Dash, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3174,7 +3174,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>The target is Pushed 40-meters expelling them from the encounter if the terrain allows. They may still rejoin the encounter if they want to. During a trainer battle, the target's owner must recall the Pushed target and replace them. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3201,7 +3201,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Dragonbreath creates a Column 1 meter wide. Dragonbreath Paralyzes all Legal Targets on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3282,7 +3282,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3336,7 +3336,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Dual Chop can hit up to 2 times. If Dual Chop misses its first target, you may still use it a second time. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3390,7 +3390,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Earth Power creates a 3-meter Blast. Earth Power lowers the Special Defense of all Legal Targets 1 Combat Stage on 16-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3417,7 +3417,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Earthquake creates a 5-meter Burst. Earthquake can hit targets using the Move Dig. *Grants: Groundshaper </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3471,7 +3471,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Egg Bomb creates a 2-meter Blast. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3525,7 +3525,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Electroweb creates a Column 2-meters wide. All Legal Targets are lowered 1 Speed Combat Stage. *Grants: Threaded </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3633,7 +3633,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>The target's HP is set to equal the user's HP if the user's current HP is less then the target's current HP. If the user's HP is equal to or greater than the target's HP nothing happens. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -3660,7 +3660,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is being hit by a damaging Move, you may use Endure. If the Move would bring Endure's user down to 0 HP or less, Endure's user instead is set to 1 HP. </Notes>
-      <Target>No Target| Intercept</Target>
+      <Target>No Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -3741,7 +3741,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Eruption creates a 10-meter Burst. Eruption may not be performed unless the user has at least 90% of its HP. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3768,7 +3768,7 @@
         <DiceMod>55</DiceMod>
       </Damage>
       <Notes>Explosion creates a 7-meter Burst. The user's HP is set to -50% of their full HP. If the user is above Loyalty 1, their Loyalty is lowered at least 1 stage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3822,7 +3822,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Extremespeed on their turn before they can use their Move. Extremespeed may not be Interrupted. After the user finishes the damage step of their turn, they may shift again. </Notes>
-      <Target>1 Target| Dash| Interrupt</Target>
+      <Target>1 Target, Dash, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3903,7 +3903,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>You may only use Fake Out at the beginning of an encounter, as an Interrupt. Fake Out Flinches the target. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3957,7 +3957,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If False Swipe would lower the target to 0 HP or less, the target is instead set to 1 HP unless the target was already below 0 HP. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -3984,7 +3984,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Feather Dance creates a 1-meter Blast. All Legal Targets in the Blast have their Attack lowered 2 Combat Stages. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -4011,7 +4011,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Feint may only Interrupt Intercepts. If used as an Interrupt, the target flips a coin, if they win the flip, they may retain the use of their Intercept for the encounter as if they did not use it during the encounter. If the target loses the flip, they use up their Intercept. Feint ignores all Intercept effects, dealing damage as if the Intercept was not used. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4038,7 +4038,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Fiery Dance raises the user's Special Attack by 1 Combat Stage on 11-20 on Accuracy Check. </Notes>
-      <Target>1 Target| Spirit Surge</Target>
+      <Target>1 Target, Spirit Surge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4092,7 +4092,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Fire Blast creates a 2-meter Blast. Fire Blast burns all Legal Targets on 19-20 during Accuracy Check. *Grants: Firestarter </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4146,7 +4146,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If used on the same turn as Water Pledge, all secondary effects of Moves are activated at a -3 during the Accuracy Check for 1d4+1 turns. If used on the same turn as Grass Pledge, all foes within 20 meters of the user lose 1/8th of their max HP at the end of each round of combat for 1d4+1 turns. </Notes>
-      <Target>1 Target| Pledge</Target>
+      <Target>1 Target, Pledge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4200,7 +4200,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Fire Spin Traps the target for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 1d12 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Fire Spin may not trap more then one target at a time. *Grants: Firestarter </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4227,7 +4227,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Fissure creates a Column that is 3-meters wide. All Legal Targets have their HP set to 0. Fissure can hit targets using the Move Dig. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -4281,7 +4281,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Flame Burst creates a 4-meter Blast. All Legal Targets, not including the central target, hit in the Blast lose 1/16th of their max HP instead of taking the Damage Dice Roll for damage. *Grants: Firestarter </Notes>
-      <Target>No Target| Blast</Target>
+      <Target>No Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4335,7 +4335,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Flame Wheel Burns the target on 19-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4362,7 +4362,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Flamethrower creates a Column 1 meter wide. Flamethrower Burns the target on 19-20 during Accuracy Check. *Grants: Firestarter </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4389,7 +4389,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. Flare Blitz Burns the target on 19-20 during Accuracy Check. After Flare Blitz deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Push| Recoil 1/3</Target>
+      <Target>1 Target, Dash, Push, Recoil 1/3</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4416,7 +4416,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Flash creates a 4-meter Burst. Flash makes all Legal Targets need +1 to hit during Accuracy Checks. *Grants: Glow </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -4524,7 +4524,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Fly, the user is shifted 25-meters into the air and then the user's turn ends. On your next turn, shift while in the air, lower the user back to the target's level on the battlefield, then use Fly's damage. For Pokemon users, the second turn is their Trainer's Command Action, unless the Trainer is unconscious, in which case the Pokemon acts on its own, finishing Fly. *Grants: Sky +3 </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4605,7 +4605,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Focus Punch the user's turn ends. If you are not hit by a damaging Move until your next turn you may use Focus Punch's damage and effects. The target is Pushed 10-meters and it takes an additional 2d12 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d12. If the user is hit by a damaging Move before it's next turn, it may not use a Move on that turn. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4632,7 +4632,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>All Foes may only target the user when using a Move until the user is knocked out or switched out. This Effect lasts for one round of combat. </Notes>
-      <Target>No Target| Intercept</Target>
+      <Target>No Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -4740,7 +4740,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Freeze Shock creates a Column 2-meters wide. All Legal Targets are pushed 10-meters and take an additional 1d6 if Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. Freeze Shock paralyzes all Legal Targets on 15-20 on Accuracy Check. </Notes>
-      <Target>1 Target| Column| Push</Target>
+      <Target>1 Target, Column, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4767,7 +4767,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Frenzy Plant creates a 3-meter Blast. On Miss, Frenzy Plant deals the user's Special Attack instead to all possible targets. </Notes>
-      <Target>Target Area| Blast| Exhaust</Target>
+      <Target>Target Area, Blast, Exhaust</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4848,7 +4848,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Fury Attack can hit up to 5 times. Once the user misses, they cannot attempt to make another Fury Attack attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4902,7 +4902,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Fury Swipes can hit up to 5 times. Once the user misses, they cannot attempt to make another Fury Swipes attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4929,7 +4929,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Fusion Bolt creates a 4-meter Column. If an opponent in this, or the last, round of the encounter used Fusion Flare, Fusion Bolt deals an additional 8d12 in Damage Dice Roll. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4956,7 +4956,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Fusion Flare creates a 4-meter Column. If an opponent in this, or the last, round of the encounter used Fusion Bolt, Fusion Flare deals an additional 8d12 in Damage Dice Roll. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -4983,7 +4983,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Future Sight does nothing on the turn it is used. At the end of the second turn after Future Sight's use, use Future Sight's damage and effect. Future Sight creates a Column 1 meter wide, which starts from anywhere on the field. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5037,7 +5037,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Gear Grind can hit up to 2 times. If Gear Grind misses its first target, you may still use it a second time. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5091,7 +5091,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Giga Impact creates a 3-meter Burst around the target. On Miss, Giga Impact deals the user's Attack instead to all possible targets. </Notes>
-      <Target>1 Target| Dash| Burst| Exhaust</Target>
+      <Target>1 Target, Dash, Burst, Exhaust</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5172,7 +5172,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the target is in Weight Class 1, use 1d10 for Damage Dice Roll. If the target is in Weight Class 2, use 1d10+5. If the target is in Weight Class 3, use 1d10+10. If the target is in Weight Class 4, use 2d10+12. If the target is in Weight Class 5, use 3d10+14. If the target is in Weight Class 6, use 5d10+16 for damage. </Notes>
-      <Target>1 Target| Weight Class</Target>
+      <Target>1 Target, Weight Class</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5199,7 +5199,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If used on the same turn as Water Pledge, all foes are treated as if at -2 Speed Combat Stages for 1d4+1 turns, if any foe has additional Speed Combat Stages, apply them as usual. If used on the same turn as Fire Pledge, all foes within 20 meters of the user lose 1/8th of their max HP at the end of each round of combat for 1d4+1 turns. </Notes>
-      <Target>1 Target| Pledge</Target>
+      <Target>1 Target, Pledge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5226,7 +5226,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Grasswhistle creates a 5-meter Burst. All Legal Targets fall Asleep. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -5253,7 +5253,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Warped. While Warped, Moves that involve the user being airborne may not be used. Flying-Types and Pokemon with the Ability Levitate are no longer immune to Ground-Type Moves. All Accuracy Checks are lowered by -2. Warped does not replace other Weather effects. </Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -5280,7 +5280,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Growl creates a 5-meter Burst. Growl lowers all Legal Targets Attack 1 Combat Stage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -5334,7 +5334,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>When the user faints, you may use Grudge as an Intercept. The Move that caused the user to drop to 0 HP or less has its Frequency changed to Center for 1 hour. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -5442,7 +5442,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Gunk Shot creates a 3-meter Blast. Gunk Shot Poisons all Legal Targets on 11-20 during Accuracy Check. On Miss, Gunk Shot deals the user's Special Attack to potential targets but cannot Poison. </Notes>
-      <Target>Target Area| Blast</Target>
+      <Target>Target Area, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5523,7 +5523,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Hailing. At the beginning of each round, all non-Ice Type Pokemon lose 1/16th of their full HP. Ice Type Pokemon are treated as if their Defense is raised 2 Combat Stages while Hailing.</Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -5604,7 +5604,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 30 seconds, the area is considered Hazy. Hazy does not replace other Weather Statuses. In Hazy Weather, all Combat Stages get set to 0. </Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -5631,7 +5631,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is Pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. After Head Charge deals damage, Recoil. </Notes>
-      <Target>1 Target| Push| Recoil</Target>
+      <Target>1 Target, Push, Recoil</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5658,7 +5658,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>The target is pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. After Head Smash deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Push| Recoil 1/2</Target>
+      <Target>1 Target, Dash, Push, Recoil 1/2</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5685,7 +5685,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Headbutt Flinches the target on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5712,7 +5712,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Heal Bell creates a 3-meter Burst. All targets are cured of any Status ailments. Heal Bell cannot miss. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -5793,7 +5793,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Heal Pulse creates a 2-meter Burst. Restores 50% of all Legal Targets max HP. Heal Pulse does not target the user. *Grants: Aura </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -5820,7 +5820,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user’s HP is lowered to 0 or less, you may use Healing Wish as an Intercept. The target is treated as if it had been healed at a Pokemon Center. Healing Wish may target a pokemon in a Poke Ball as long as they immediately join the encounter or are sent out. If the target knows Healing Wish or Lunar Dance, the user’s Healing Wish does not restore its Center Frequency.</Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -5901,7 +5901,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is in the same Weight Class as the target, use 1d10 for Damage Dice Roll; if the user is one Weight Class higher than the target, use 1d10+10; if the user is two Weight Classes higher than the target, use 2d12+12; if three classes, 3d10+14; if four classes, 5d10+16. </Notes>
-      <Target>1 Target| Dash| Weight Class</Target>
+      <Target>1 Target, Dash, Weight Class</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -5928,7 +5928,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Heat Wave creates a 3-meter burst. Heat Wave Burns all Legal Targets on 18-20 during Accuracy Check. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6036,7 +6036,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>If Hi Jump Kick misses, roll 4d10 and subtract the result from the user's HP. Do not apply weakness, resistance or stats. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6063,7 +6063,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Hidden Power makes a 3-meter Burst. When a pokemon first obtains the Move Hidden Power, roll 1d4 and 1d20. For the 1d4 roll, a result of 1 makes Hidden Power's Damage Dice Roll 1d12+6; a result of 2 makes the Damage Dice Roll 2d8+6; a result of 3 makes the Damage Dice Roll 2d10+8; a result of 4 makes the Damage Dice Roll 3d8+10. For the 1d20 roll, Hidden Power's Elemental Type will be changed from Normal to Bug on a result of 1; Dark on 2; Dragon on 3; Electric on 4; Fighting on 5; Fire on 6; Flying on 7; Ghost on 8; Grass on 9; Ground on 10; Ice on 11; Normal on 12; Poison on 13; Psychic on 14; Rock on 15; Steel on 16; Water on 17; and on a result of 18-20, reroll the d20. Those become the Hidden Power's permanent stats for that user. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6117,7 +6117,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6225,7 +6225,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Hurricane creates a 4-meter Blast. Hurricane Confuses all Legal Targets on 13-20 during Accuracy Check. All Legal Targets within the Blast's radius are Pushed outward, away from the target, 3-meters. If it is Sunny, Hurricane's Accuracy Check is 11. If it is Rainy, Hurricane cannot miss. If the target is airborne as a result of Fly or Sky Drop, Hurricane cannot miss them. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6252,7 +6252,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Hydro Cannon creates a 3-meter Blast. On Miss, Hydro Cannon deals the user's Special Attack instead to all possible targets. </Notes>
-      <Target>Target Area| Blast| Exhaust</Target>
+      <Target>Target Area, Blast, Exhaust</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6279,7 +6279,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Hydro Pump creates a Column 1 meter wide. *Grants: Fountain </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6306,7 +6306,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Hyper Beam creates a Column 1 meter wide. On Miss, Hyper Beam deals the user's Special Attack instead to all possible targets. </Notes>
-      <Target>1 Target| Column| Exhaust</Target>
+      <Target>1 Target, Column, Exhaust</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6360,7 +6360,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Hyper Voice creates a Column 4-meters wide. All Legal Targets are Pushed back 3-meters. </Notes>
-      <Target>1 Target| Column| Push</Target>
+      <Target>1 Target, Column, Push</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6414,7 +6414,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>The user must use Ice Ball until it misses, or fails to be able to shift enough to hit a target for their next 4 turns. On the second turn, Ice Ball uses 2d10+8 for its Damage Dice Roll. On the third turn, Ice Ball uses 2d10+12. On the fourth turn, Ice Ball uses 3d10+16. On the fifth and final turn, Ice Ball uses 4d10+20. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6441,7 +6441,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Ice Beam creates a Column 1 meter wide. Ice Beam Freezes all Legal Targets on 19-20 during Accuracy Check. *Grants: Freezer </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6468,7 +6468,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Ice Burn creates a Column 2-meters wide. All Legal Targets are pushed 10-meters and take an additional 1d6 if Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. Ice Burn Burns all Legal Targets on 15-20 on Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6549,7 +6549,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Ice Shard on their turn before they can use their Move. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6603,7 +6603,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Icicle Spear can hit up to 5 times. Once the user misses, they cannot attempt to make another Icicle Spear attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6630,7 +6630,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Icy Wind creates a Column 1-meter wide. All Legal Targets have their Speed lowered 1 Combat Stage. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6711,7 +6711,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Inferno creates a 2-meter Blast. Inferno Burns all Legal Targets. </Notes>
-      <Target>No Target| Blast</Target>
+      <Target>No Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6738,7 +6738,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Ingrain is a Coat with the following abilities: The user cannot be forced to switch out or flee but they can still be willingly switched out. At the beginning of each of the user's turns, the user gains 1/16th of its full HP. *Grants: Sprouter </Notes>
-      <Target>No Target| Coat</Target>
+      <Target>No Target, Coat</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -6792,7 +6792,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Iron Head Flinches the target on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6819,7 +6819,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Iron Tail lowers the target's Defense 1 Combat Stage on 19-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6846,7 +6846,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Judgement makes a 5-meter Blast. Judgment's Type can be whatever Elemental Type the user wants it to be. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6873,7 +6873,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>If Jump Kick misses, roll 2d10 and subtract the result from the user's HP. Do not apply weakness, resistance or stats. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -6927,7 +6927,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Place 5-meters of Wall that can be passed through and attacked through. If anyone's Move tries to target through a Kinesis Wall, they must roll +3 during Accuracy Check to hit. The walls remain for 10 rounds. Brick Break cannot break Kinesis' Walls. </Notes>
-      <Target>No Target| Wall</Target>
+      <Target>No Target, Wall</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -6981,7 +6981,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Last Resort can only be used after the user has performed 6 other different Moves during the same encounter. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7035,7 +7035,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Leaf Blade is a Critical Hit on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7062,7 +7062,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Leaf Storm creates a 2-meter Column. Lower the user's Special Attack 2 Combat Stages after damage. </Notes>
-      <Target>Target Area| Column</Target>
+      <Target>Target Area, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7089,7 +7089,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Leaf Tornado creates a 2-meter Burst. On 15-20 during Accuracy Check, all Legal Targets must roll 1 higher on Accuracy Checks for the remainder of the combat. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7224,7 +7224,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>The user may shift while placing Light Screen Walls if their Speed allows for the extra movement. Place 5-meters of Wall. If a foe tries to target Light Screen’s user or the user’s allies through Light Screen Walls, treat the target as if their Special Defense is raised 2 Combat Stages. This bonus cannot be awarded more then once. The walls sustain for 1d4+1 turns.</Notes>
-      <Target>No Target| Wall</Target>
+      <Target>No Target, Wall</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -7305,7 +7305,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the target is in Weight Class 1, use 1d10 for Damage Dice Roll. If the target is in Weight Class 2, use 1d10+5. If the target is in Weight Class 3, use 1d10+10. If the target is in Weight Class 4, use 2d10+12. If the target is in Weight Class 5, use 3d10+14. If the target is in Weight Class 6, use 5d10+16 for damage. </Notes>
-      <Target>1 Target| Weight Class</Target>
+      <Target>1 Target, Weight Class</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7359,7 +7359,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Lucky Chant creates a 4-meter Burst. All allies in the Burst, including the user, take damage from Critical Hits as if they are not Critical Hits for 1d4+1 turns. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -7413,7 +7413,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Luster Purge creates a Column 1 meter wide; Luster Purge creates a 5-meter Blast. Luster Purge lowers all Legal Targets Special Defense 1 Combat Stage on 11-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column| Blast</Target>
+      <Target>1 Target, Column, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7440,7 +7440,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Mach Punch on their turn before they can use their Move. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7467,7 +7467,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is about to get a hit by a Move that does not have a Damage Dice Roll, they may use Magic Coat as an Intercept. The Intercepted Move's user is treated as if they were the target of their own Move. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -7494,7 +7494,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Useless. While Useless, Pokemon may not use the effects of any Held items or activate any Held items. Useless does not replace other Weather effects. </Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -7548,7 +7548,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Magma Storm Traps the target for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 2d20 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Magma Storm may not trap more then one target at a time. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7629,7 +7629,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Magnitude creates a 2-meter Burst. Roll 1d6. On a result of 1, use 1d4 for damage. On a result of 2, use 1d8 for damage. On a result of 3, use 2d8 for damage. On a result of 4, use 2d10 for damage. On a result of 5, use 3d10 for damage. On a result of 6, use 4d10 for damage. Magnitude can hit targets using the Move Dig. *Grants: Groundshaper </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7656,7 +7656,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the target declares a Move that has a Damage Dice Roll and Me First's user has a higher Speed stat then the target, you may Interrupt with Me First. Me First will use the same Move the target was about to use on that target. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -7764,7 +7764,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is Pushed 6-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. </Notes>
-      <Target>1 Target| Dash| Push</Target>
+      <Target>1 Target, Dash, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7818,7 +7818,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is Pushed 3-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7872,7 +7872,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Metal Burst may only be used if the user didn't move first in the round and the user has taken damage from a Move this round. The Target is dealt damage equal to 1.5x the amount of damage the user received during the last Move that hit it. Do not apply weakness, resistance or immunity. Do not apply stats. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7899,7 +7899,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Raise the user's Attack 1 Combat Stage on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass| Spirit Surge</Target>
+      <Target>1 Target, Pass, Spirit Surge</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -7926,7 +7926,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Metal Sound creates a 4-meter Burst. All Legal Targets have their Special Defense lowered 2 Combat Stages. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -7953,7 +7953,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Raise the user's Attack 1 Combat Stage on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash| Spirit Surge</Target>
+      <Target>1 Target, Dash, Spirit Surge</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8142,7 +8142,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is being hit by a Move that consults Special Attack for damage, you may use Mirror Coat. If the user survives the hit, the target is dealt damage equal to twice the amount of damage the user received. Do not apply weakness, resistance or immunity. Do not apply stats. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -8196,7 +8196,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Mirror Shot creates a Column 1 meter wide. All Legal Targets must roll +2 during Accuracy Checks to hit on 16-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8223,7 +8223,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>The target with Mist's Coat may not have their Combat Stages lowered. Mist users can Target Self. </Notes>
-      <Target>1 Target| Coat</Target>
+      <Target>1 Target, Coat</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -8250,7 +8250,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Mist Ball creates a Column 1 meter wide and creates a 5-meter Blast. Mist Ball lowers all Legal Targets Special Attack 1 Combat Stage on 6-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column| Blast</Target>
+      <Target>1 Target, Column, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8331,7 +8331,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Mud Bomb creates a 1-meter Blast. All Legal Targets must roll +1 during Accuracy Checks for the remainder of the encounter on 17-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8358,7 +8358,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Mud Shot creates a Column 1 meter wide. All Legal Targets have their Speed lowered 1 Combat Stage. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8385,7 +8385,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Mud Sport makes a Coat that resists Electric Moves. Mud Sport can Target Self. </Notes>
-      <Target>1 Target| Coat</Target>
+      <Target>1 Target, Coat</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -8412,7 +8412,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Muddy Water makes a Column 4-meters wide. All Legal Targets must roll +2 during Accuracy Checks to hit on 16-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8439,7 +8439,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Mud-Slap creates a Column 1-meter wide. All Legal Targets must roll +1 during Accuracy Checks for the remainder of the encounter. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8493,7 +8493,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Refer to the Move Keywords Berry list. Natural Gift deals damage according to the Berry list and Natural Gift's Type is also defined there. The user's Berry is destroyed and is not consumed. *Grants: Sprouter </Notes>
-      <Target>1 Target| Berry</Target>
+      <Target>1 Target, Berry</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8628,7 +8628,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Night Slash is a Critical Hit on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8736,7 +8736,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Ominous Wind creates a Column that is 2-meters wide. If you rolled 11-20 during Accuracy Check for Ominous Wind, the user has each of its stats raised 1 Combat Stage. If you rolled 16-20 on the Accuracy Roll, all allies in the Column also have each of their stats raised 1 Combat Stage and are not damaged by Ominous Wind. </Notes>
-      <Target>1 Target| Column| Spirit Surge</Target>
+      <Target>1 Target, Column, Spirit Surge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8790,7 +8790,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Overheat creates a 2-meter Burst. Lower the user's Special Attack 2 Combat Stages after damage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8925,7 +8925,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Perish Song creates a 15-meter Burst. Perish Song cannot miss. Perish Song can affect only pokemon. All targets, including the user, receive a Perish Count of 3. At the beginning of each of the target's turns, their Perish count is lowered by 1. Once a Perish Count reaches 0, set the pokemon's HP to 0. A Perish Count disspears if a Pokemon returns to their Poke Ball or is knocked out. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -8952,7 +8952,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Petal Dance's user must make another Ranged attack for 1d2 more turns. The attack is identical to Petal Dance except for Petal Dance's effect. Petal Dance creates a 3-meter Burst, but only on the first round of its use. After the first use is declared, Petal Dance targets the nearest Legal Target for its second or third round of use if the original target is unconscious. If potential targets are an equal distance from the user, you may choose the target. After Petal Dance's additional use(s) end(s), the user becomes Confused. For Pokemon users, the additional 1d2 are their Trainer's Command Actions, unless the Trainer is unconscious, in which case the Pokemon acts on its own until finished. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -8979,7 +8979,7 @@
         <DiceMod>1</DiceMod>
       </Damage>
       <Notes>Pin Missile can hit up to 5 times. Once the user misses, they cannot attempt to make another Pin Missile attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9060,7 +9060,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Poison Gas makes a 4-meter Burst. Poison Gas Poisons all Legal Targets. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9141,7 +9141,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Poison Tail is a Critical Hit on 18-20 during Accuracy Check. Poison Tail Poisons the target on 19-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9168,7 +9168,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Poisonpowder creates a 1-meter Blast. Poisonpowder Poisons all Legal Targets. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9222,7 +9222,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Powder Snow creates a 1-meter wide. Powder Snow Freezes all Legal Targets on 19-20 during Accuracy Check. *Grants: Freezer </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9411,7 +9411,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the user is hit by a Move, instead you are not hit by the Move. You do not take any damage nor are you affected by any of the Move's effects. </Notes>
-      <Target>No Target| Intercept</Target>
+      <Target>No Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9438,7 +9438,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Psybeam creates a Column 1 meter wide. Psybeam Confuses all Legal Targets on 19-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9492,7 +9492,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>The target is Pushed 5-meters in any direction. Psychic lowers the target's Special Defense 1 Combat Stage on 17-20 during Accuracy Check. *Grants: Telekinetic </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9519,7 +9519,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Psycho Boost creates a 4-meter Blast. Lower the user's Special Attack 2 Combat Stages after damage. </Notes>
-      <Target>Target Area| Blast</Target>
+      <Target>Target Area, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9654,7 +9654,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Psywave creates a Column 2-meters wide. Roll 1d4; on 1 and 2 all Legal Targets lose HP equal to half the user's level; on 3, all Legal Targets lose HP equal to the user's level; on 4 all Legal Targets lose HP equal to 1.5x the user's level. Do not apply weakness, resistance or immunity. Do not apply stats. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9708,7 +9708,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If the foe is fleeing or being switched out, Pursuit may be used as an Interrupt. While being used as an Interrupt, Pursuit may shift the user adjacent to the fleeing foe, up to 25 meters, ignoring Speed Capabilities, and attack them before they escape or are switched out dealing 3d10+12 instead for Damage Dice Roll. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9735,7 +9735,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Quash will not affect a Legal Target if it has already acted that round. Quash causes the target to act as if their Speed is 0, meaning their action is last for that turn. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9762,7 +9762,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Quick Attack on their turn before they can use their Move. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9789,7 +9789,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Quick Guard prevents the user and allies from being targeted by Moves used as an Interrupt or Intercept for one round. For that round Interrupt or Intercept attacks can only target you, or other allies using Quick Guard. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9843,7 +9843,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>The user's Attack is raised 1 Combat Stage as long as they used Rage on their previous turn. If the user is damaged by an attack before it's next turn, its Attack is raised 1 Combat Stage. </Notes>
-      <Target>1 Target| Spirit Surge</Target>
+      <Target>1 Target, Spirit Surge</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -9870,7 +9870,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Rage Powder creates a Column 1 meter wide. All legal targets may only target the user when using a Move until the user is knocked out or switched out. This Effect lasts for one round of combat. </Notes>
-      <Target>No Target| Column| Intercept</Target>
+      <Target>No Target, Column, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -9897,7 +9897,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Rainy. While Rainy, Water-Type attacks deal 1.5x damage. Fire-Type attacks deal ½ the damage they normally would.</Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -9978,7 +9978,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Razor Shell lowers the Target's Defense 1 Combat Stage on 11-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10086,7 +10086,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>The user may shift while placing Reflect Walls if their Speed allows for the extra movement. Place 5-meters of Wall. If a foe tries to target Reflect’s user or the user’s allies within two meters of a Reflect Wall, treat the target as if their Defense is raised 2 Combat Stages. This bonus cannot be awarded more then once. The walls remain for 1d4+1 turns.</Notes>
-      <Target>No Target| Wall</Target>
+      <Target>No Target, Wall</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -10167,7 +10167,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Relic Song creates a 4-meter Burst. All Legal Targets fall Asleep on 16-20 during Accuracy Check. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10356,7 +10356,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Roar of Time creates a 10-meter Burst. All legal targets are Trapped until they roll a 16-20 saving throw. They may attempt to make this save at any time once per round. </Notes>
-      <Target>No Target| Burst| Trap| Exhaust</Target>
+      <Target>No Target, Burst, Trap, Exhaust</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10383,7 +10383,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Rock Blast can hit up to 5 times. Once the user misses, they cannot attempt to make another Rock Blast attack on that turn. *Grants: Materializer </Notes>
-      <Target>1 Target| Scatter| Trap</Target>
+      <Target>1 Target, Scatter, Trap</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10410,7 +10410,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Rock Climb Confuses the target on 17-20 during Accuracy Checks. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10464,7 +10464,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Rock Slide creates a Column 4-meters wide. Rock Slide Flinches all Legal Targets on 17-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10545,7 +10545,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Rock Tomb creates a 3-meter Blast. Rock Tomb lowers all Legal Targets Speed 1 Combat Stage. *Grants: Materializer </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10572,7 +10572,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>On Miss, Rock Wrecker deals the user's Attack instead to all possible targets. *Grants: Materializer </Notes>
-      <Target>1 Target| Pass| Exhaust</Target>
+      <Target>1 Target, Pass, Exhaust</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10626,7 +10626,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Rolling Kick Flinches the target on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10653,7 +10653,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>The user must use Rollout until it misses, or fails to be able to shift enough to hit a target for their next 4 turns. On the second turn, Rollout uses 2d10+8 for its Damage Dice Roll. On the third turn, Rollout uses 2d10+12. On the fourth turn, Rollout uses 3d10+16. On the fifth and final turn, Rollout uses 4d10+20. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10707,7 +10707,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Round creates a 3-meter Burst. The next Pokemon who uses Round during this round of Combat uses 3d10+16 for Round's Damage Dice Roll. The third or any use after the third use of Round during this round of Combat uses 4d10+24 for Round's Damage Dice Roll. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10734,7 +10734,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Sacred Fire creates a 7-meter Burst. Sacred Fire Burns all Legal Targets in the Burst on 11-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Burst</Target>
+      <Target>1 Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10761,7 +10761,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Sacred Sword's Accuracy Check may not be modified. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10788,7 +10788,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Place 10-meters of Wall. If the effect of a Move that targets through any Walls of Safeguard cause a Status Affliction, they cannot cause a Status Affliction. The Walls sustain for 5 rounds.</Notes>
-      <Target>No Target| Wall</Target>
+      <Target>No Target, Wall</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -10815,7 +10815,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Sand Tomb Traps the target for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 1d12 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Sand Tomb may not trap more then one target at a time. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10842,7 +10842,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Sand-Attack creates a Column 1 meter wide. All Legal Targets must roll +1 during Accuracy Checks for the remainder of the encounter. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -10869,7 +10869,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Sandstorming. At the beginning of each round, all non-Ground, Rock, or Steel Type Pokemon lose 1/16th of their full HP. Rock Type Pokemon are treated as if their Special Defense is raised 2 Combat Stages while Sandstorming.</Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -10950,7 +10950,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -10977,7 +10977,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Screech creates a 4-meter Burst. All Legal Targets have their Defense lowered 2 Combat Stages. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -11031,7 +11031,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Secret Power's effect depends on Environ. Secret Power's effect activates on 17-20 during Accuracy Check. *Grants: Sprouter </Notes>
-      <Target>1 Target| Environ</Target>
+      <Target>1 Target, Environ</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11085,7 +11085,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Seed Bomb creates a 2-meter Blast. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11112,7 +11112,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Seed Flare creates a 3-meter Blast. All Legal Targets have their Special Defense lowered 1 Combat Stage. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11166,7 +11166,7 @@
         <DiceMod>46</DiceMod>
       </Damage>
       <Notes>Selfdestruct creates a 4-meter Burst. The user's HP is set to -50% of their full HP. If the user is above Loyalty 1, their Loyalty is lowered at least 1 stage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11220,7 +11220,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Shadow Claw is a Critical Hit on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11301,7 +11301,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Shadow Sneak on their turn before they can use their Move. </Notes>
-      <Target>1 Target| Pass| Interrupt</Target>
+      <Target>1 Target, Pass, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11355,7 +11355,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Sheer Cold creates 3-meter Blast. All Legal Targets have their HP set to 0. *Grants: Freezer </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -11436,7 +11436,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Shock Wave creates a Column 2-meters wide. Shock Wave cannot miss. *Grants: Zapper </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11463,7 +11463,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Signal Beam creates a Column 1 meter wide. Signal Beam confuses the target and any Legal Targets on 19-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11490,7 +11490,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Silver Wind creates a Column that is 2-meters wide. If you rolled 11-20 during Accuracy Check for Silver Wind, the user has each of its stats raised 1 Combat Stage. If you rolled 16-20 on the Accuracy Roll, all allies in the Column also have each of their stats raised 1 Combat Stage and are not damaged by Silver Wind. </Notes>
-      <Target>1 Target| Column| Spirit Surge</Target>
+      <Target>1 Target, Column, Spirit Surge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11544,7 +11544,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Sing creates a 4-meter Burst. All Legal Targets fall Asleep. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -11625,7 +11625,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Skull Bash, the user's turn ends. On its next turn, the user may shift and use Skull Bash's damage and effect. The target is Pushed 4-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. </Notes>
-      <Target>1 Target| Dash| Push</Target>
+      <Target>1 Target, Dash, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11652,7 +11652,7 @@
         <DiceMod>22</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Sky Attack, the user is moved 10-meters into the air and then the user's turn ends. On your next turn, shift while in the air, lower your height back to the target and then use Sky Attack's damage. Sky Attack Flinches the target on 17-20 during Accuracy Check. For Pokemon users, the second turn is their Trainer's Command Action, unless the Trainer is unconscious, in which case the Pokemon acts on its own, finishing Sky Attack. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11706,7 +11706,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>The target is Pushed 2-meters. If the target is airborne, Sky Uppercut deals an additional 2d10. If the target is airborne as a result of Fly or Sky Drop, Sky Uppercut cannot miss as long as you are in a space adjacent to the airborne target. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11760,7 +11760,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11787,7 +11787,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Slash is a Critical Hit on 18-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11814,7 +11814,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Sleep Powder creates a 1-meter Blast. All Legal Targets fall Asleep. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -11868,7 +11868,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Sludge creates a Column 2-meters wide. Sludge poisons all Legal Targets on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -11895,7 +11895,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Sludge Bomb creates a 3-meter Blast. Sludge Bomb poisons all Legal Targets on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12003,7 +12003,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Smog creates a 3-meter Blast. Smog Poisons all Legal Targets on 13-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12030,7 +12030,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Place 5-meters of Wall. Smokescreen’s Walls must be placed within 3-meters of the user. If anyone’s Move tries to target through a Smokescreen wall, they must roll +3 during Accuracy Check to hit. The walls remain for 5 rounds. Brick Break cannot break Smokescreen’s Walls.</Notes>
-      <Target>No Target| Wall</Target>
+      <Target>No Target, Wall</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12057,7 +12057,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Snarl creates a 5-meter Burst. All Legal Targets have their Special Attack lowered 1 Combat Stage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12084,7 +12084,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If the target is gaining a Combat Stage, you may use Snatch. The user gains the same Combat Stages the target does. Then, the target loses all Combat Stages they gained that turn. If the target is using a No Damage - Self Move, you may use Snatch. You use the No Damage - Self Move and the target does not. </Notes>
-      <Target>1 Target| Intercept</Target>
+      <Target>1 Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12111,7 +12111,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Snore creates a 5-meter Burst. Snore Flinches all legal targets on 15-20 during Accuracy Check. Snore can only be used by a Sleeping pokemon. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12192,7 +12192,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Once you declare the use of Solarbeam, the user's turn ends. On its next turn, the user may shift and use Solarbeam's damage. If it is Sunny, Solarbeam uses its damage on the turn you declare its use. If it is Rainy or Sand Storming Solarbeam's user must end their turn immediately at the start of their second turn after declaring Solarbeam's use, only getting to use Solarbeam's damage on the third turn. If it is Hailing, Solarbeam's damage is 3d10. Solarbeam creates a Column 1 meter wide. For Pokemon users, the second turn is their Trainer's Command Action, unless the Trainer is unconscious, in which case the Pokemon acts on its own, finishing Solarbeam. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12219,7 +12219,7 @@
         <DiceMod>15</DiceMod>
       </Damage>
       <Notes>Sonicboom creates a Column 1 meter wide. Sonicboom always deals 15 points of Damage. Do not apply weakness or resistance. Do not apply stats. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12273,7 +12273,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Spark Paralyzes the target on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12300,7 +12300,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Spider Web cannot miss. *Grants: Threaded </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12327,7 +12327,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Spike Cannon can hit up to 5 times. Once the user misses, they cannot attempt to make another Spike Cannon attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12354,7 +12354,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Set 10 square meters of Spikes, all 10 meters must be adjacent with at least one other space of Spikes next to each other. Spikes cause all foes to lose 1/8th of their full HP when joining the encounter or getting sent out. If there are 2 Layers of Spikes, the foes lose 1/6th of their full HP. If there are 3 Layers of Spikes, the foes lose 1/4th of their full HP. </Notes>
-      <Target>No Target| Hazard</Target>
+      <Target>No Target, Hazard</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12489,7 +12489,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Set 5 square meters of Stealth Rock, “Rocks.” All 5 Rocks must be adjacent with at least one other space of Rocks next to each other. If a foe moves within 10 meters of a space occupied by Rocks, move at most one Rock to the offender, then destory the Rock. When that happens, Stealth Rock causes a foe to lose 1/8th of their full HP. Stealth Rock is considered to be dealing damage. Apply Weakness and Resistance. Do not apply stats. A Pokemon who has been hit by a Stealth Rock Hazard cannot get hit by another in the same encounter until it is returned to a Poke Ball and then sent back out. *Grants: Materializer </Notes>
-      <Target>No Target| Hazard</Target>
+      <Target>No Target, Hazard</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -12516,7 +12516,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Steamroller Flinches the target on 15-20 during Accuracy Check. If the target is Small, Steamroller deals an additional 1d10. </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12543,7 +12543,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Raise the user's Defense 1 Combat Stage on 15-20 during Accuracy Check </Notes>
-      <Target>1 Target| Pass| Spirit Surge</Target>
+      <Target>1 Target, Pass, Spirit Surge</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12597,7 +12597,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Stomp Flinches the target on 15-20 during Accuracy Check. If the target is Small, Stomp deals an additional 1d10. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12624,7 +12624,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Stone Edge is a Critical Hit on 17-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12705,7 +12705,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>The target is Pushed 8-meters. *Grants: +1 Power </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12732,7 +12732,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>String Shot creates a Column 2-meters wide. All Legal Targets within the Column lower their Speed 1 Combat Stage. If a target is hit by String Shot 5 times within 5 rounds of combat, they are Trapped. If a target's Speed Combat Stage has already been lowered 6 times, String Shot Traps them. *Grants: Threaded </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12759,7 +12759,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Struggle Bug creates a Column 1 meter wide. Struggle Bug lowers all Legal Targets Special Attack 1 Combat Stage. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12786,7 +12786,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Stun Spore creates a 1-meter Blast. Stun Spore paralyzes al Legal Targets. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12813,7 +12813,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>After Submission deals damage, Recoil. </Notes>
-      <Target>1 Target| Recoil 1/4</Target>
+      <Target>1 Target, Recoil 1/4</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12840,7 +12840,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>The user loses ¼ of their full HP. A Coat is made which has HP equal to the HP lost when using this Move +1. If the user would be hit by a Move, instead the Coat gets hit. Apply weakness, resistance and stats to the Coat. The Coat is immune to Status Afflictions. Substitute cannot be used if the user has less then ¼ of their full HP. </Notes>
-      <Target>No Target| Coat</Target>
+      <Target>No Target, Coat</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -12867,7 +12867,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>If something is targeting the user with a damaging Attack - Melee Move, you may use Sucker Punch on the offender as an Interrupt. </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12894,7 +12894,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Sunny. While Sunny, Fire-Type attacks deal 1.5x damage. Water-Type attacks deal ½ the damage they normally would.</Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -12948,7 +12948,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>Superpower lowers the user's Attack and Defense by 1 Combat Stage each. The target is Pushed 6-meters and it takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. </Notes>
-      <Target>1 Target| Dash| Push</Target>
+      <Target>1 Target, Dash, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -12975,7 +12975,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Supersonic creates a Column 1 meter wide. Supersonic Confuses all Legal Targets. </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -13002,7 +13002,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Surf makes a Column 4-meters wide. *Grants: Surface +3; Eliminates: Sinker </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13110,7 +13110,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Sweet Scent creates a 5-meter Burst. For the remainder of the encounter, when targeting any Legal Targets that were hit by Sweet Scent, you need -2 to hit that target during Accuracy Check. *Grants: Alluring </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -13218,7 +13218,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Synchronoise creates a 6-meter Burst. Synchronoise can only hit legal targets that share a type with Synchronoise's user. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13272,7 +13272,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13326,7 +13326,7 @@
         <DiceMod>4</DiceMod>
       </Damage>
       <Notes>Tail Slap can hit up to 5 times. Once the user misses, they cannot attempt to make another Tail Slap attack on that turn. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13380,7 +13380,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Tailwind creates a Column 5-meters wide. For 1d6+1 turns, Tailwind's user and all of the user's allies in the Column have their Speed raised 1 Combat Stage. When the user or the user's allies leave the Column or when the Column dissapears, their Speed is lowered 1 Combat Stage. Whenever you make a new Tailwind Cloumn, the last one the user made disappears. *Grants: Guster </Notes>
-      <Target>Target Area| Column</Target>
+      <Target>Target Area, Column</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -13407,7 +13407,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>After Take Down deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Recoil 1/4</Target>
+      <Target>1 Target, Dash, Recoil 1/4</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13488,7 +13488,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Teeter Dance creates a 7-meter Burst. Teeter Dance Confuses all Legal Targets. </Notes>
-      <Target>No target| Burst</Target>
+      <Target>No target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -13542,7 +13542,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Teleport can be used as an Intercept at any time. If used as an Intercept, roll 1d20 and if you don't roll 7 or higher, Teleport fails to activate. The user can shift 1d10+10 meters. They can move through blocking terrain and hindering terrain as if it is regular terrain. Moves that targeted Teleport's user continues through the desired target's space if the Move allows for it. If Teleport fails when used as an Intercept, treat it as if you did not use it for purposes of Frequency. </Notes>
-      <Target>No Target| Intercept</Target>
+      <Target>No Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -13623,7 +13623,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>A 3-meter Blast surrounds the target. Thunder Paralyzes all Legal Targets on 13-20 during Accuracy Check. All Legal Targets within the Blast's radius are Pushed outward, away from the target, 3-meters. If it is Sunny, Thunder's Accuracy Check is 11. If it is Rainy, Thunder cannot miss. If the target is airborne as a result of Fly or Sky Drop, Thunder cannot miss them </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13704,7 +13704,7 @@
         <DiceMod>16</DiceMod>
       </Damage>
       <Notes>Thunderbolt creates a Column 1 meter wide. Thunderbolt Paralyzes all Legal Targets on 19-20 during Accuracy Check. *Grants: Zapper </Notes>
-      <Target>1 Target| Column</Target>
+      <Target>1 Target, Column</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -13866,7 +13866,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Set 10 square meters of Toxic Spikes, all 10 meters must be adjacent with at least one other space of Toxic Spikes next to each other. Toxic Spikes Poisons a foe when joining the encounter or getting sent out. If there are 2 Layers of Toxic Spikes, it Deadly Poisons the foes instead. </Notes>
-      <Target>Target Area| Hazard</Target>
+      <Target>Target Area, Hazard</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -13974,7 +13974,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Rewinding. While Rewinding, the order in which combatants go during a round of Combat isn't ordered from highest Speed to lowest Speed; instead it is order from lowest Speed to Highest Speed. Rewinding does not replace other Weather effects. </Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -14001,7 +14001,7 @@
         <DiceMod>1</DiceMod>
       </Damage>
       <Notes>Triple Kick can hit up to 3 times. If Triple Kick misses its first or second target, you may still use it a second and third time. For the third use of Triple Kick, if you successfully hit the same target for the first two uses of Triple Kick use 3d10+12 for Triple Kick's Damage Dice Roll. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14055,7 +14055,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Twineedle can hit up to 2 times. If Twineedle misses its first target, you may still use it a second time. If you rolled an 18-20 on either Accuracy Check, the target is Poisoned. </Notes>
-      <Target>1 Target| Scatter</Target>
+      <Target>1 Target, Scatter</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14109,7 +14109,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>Uproar creates a 5-meter Burst that continues for 1d4+1 turns. At the beginning of the user's turn where Uproar is continuing, they may shift then must immediately use Uproar again. If the user does not continue using Uproar during the next round of combat, Uproar ends. Anyone in Uproar's Burst on any turn Uproar is continuing is cured of Sleep. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14136,7 +14136,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>If U-Turn successfully hits its target, the user deals damage and then immediately is returned to its Poke Ball in the same turn. A New Pokemon may immediately be sent out. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14163,7 +14163,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If a foe wants to declare a Move, you may instead use Vacuum Wave on their turn before they can use their Move. *Grants: Aura </Notes>
-      <Target>1 Target| Interrupt</Target>
+      <Target>1 Target, Interrupt</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14190,7 +14190,7 @@
         <DiceMod>36</DiceMod>
       </Damage>
       <Notes>V-Create creates a 10-meter Burst. Lower the user's Defense 1 Combat Stage, lower the user' Special Defense 1 Combat Stage and lower the user's Speed 1 Combat Stage. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14298,7 +14298,7 @@
         <DiceMod>10</DiceMod>
       </Damage>
       <Notes>Vital Throw may only be used if the user was targeted by a Move on a foe's last turn while the foe was adjacent. Vital Throw can only target that foe. Vital Throw cannot miss. The target is Pushed 5-meters and it takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14352,7 +14352,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. Volt Tackle Paralyzes the target on 19-20 during Accuracy Check. After Volt Tackle deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Push| Recoil 1/3</Target>
+      <Target>1 Target, Dash, Push, Recoil 1/3</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14433,7 +14433,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>If used on the same turn as Fire Pledge, all secondary effects of Moves are activated at a -3 during the Accuracy Check for 1d4+1 turns. If used on the same turn as Grass Pledge, all foes are treated as if at -2 Speed Combat Stages for 1d4+1 turns, if any foe has additional Speed Combat Stages, apply them as usual. </Notes>
-      <Target>1 Target| Pledge</Target>
+      <Target>1 Target, Pledge</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14460,7 +14460,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>Water Pulse creates a 3-meter Burst. Water Pulse Confuses all Legal Targets on 17-20 during Accuracy Check. *Grants: Fountain </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14487,7 +14487,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Water Sport makes a Coat that resists Fire Moves. Water Sport can Target Self. *Grants: Fountain </Notes>
-      <Target>1 Target| Coat</Target>
+      <Target>1 Target, Coat</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -14514,7 +14514,7 @@
         <DiceMod>28</DiceMod>
       </Damage>
       <Notes>Water Spout creates a 10-meter Burst. Water Spout may not be performed unless the user has at least 90% of its HP. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14541,7 +14541,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>The target is Pushed 2-meters. If the target is airborne, Waterfall deals an additional 1d12 during Damage Dice Roll. Waterfall Flinches the target on 17-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14595,7 +14595,7 @@
         <DiceMod>6</DiceMod>
       </Damage>
       <Notes>Whirlpool Traps the target for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 1d12 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Whirlpool may not trap more then one target at a time. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14622,7 +14622,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>The target is Pushed 40-meters expelling them from the encounter if the terrain allows. They may still rejoin the encounter if they want to. During a trainer battle, the target's owner must recall the Pushed target and replace them. </Notes>
-      <Target>1 Target| Push</Target>
+      <Target>1 Target, Push</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -14649,7 +14649,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>If a foe uses Move that hits multiple targets and Wide Guard's user is one of the targets you may use Wide Guard as an Interrupt. If a Move would hit the user and one of the user's allies, the Move only hits Wide Guard's user. If the user is hit by a Move this way, the user does not take any damage and is not affected by any other effects the Move has. This Effect lasts for one turn. </Notes>
-      <Target>No Target| Intercept</Target>
+      <Target>No Target, Intercept</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -14676,7 +14676,7 @@
         <DiceMod>14</DiceMod>
       </Damage>
       <Notes>After Wild Charge deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Recoil 1/4</Target>
+      <Target>1 Target, Dash, Recoil 1/4</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14730,7 +14730,7 @@
         <DiceMod>8</DiceMod>
       </Damage>
       <Notes>- </Notes>
-      <Target>1 Target| Pass</Target>
+      <Target>1 Target, Pass</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14811,7 +14811,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>For 1d4+1 rounds, the area is considered Wondered. While Wondered, each individual Pokemon's Defense and Special Defense are switched. Wondered does not replace other Weather effects. </Notes>
-      <Target>Target Area| Weather</Target>
+      <Target>Target Area, Weather</Target>
       <AttackStat>Field</AttackStat>
       <ContestStats>
         <Type>
@@ -14838,7 +14838,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>The target is pushed back 5-meters. The target takes an additional 1d6 if it is Pushed into Blocking Terrain. If the target is pushed into another Legal Target, instead, both take 1d6. After Wood Hammer deals damage, Recoil. </Notes>
-      <Target>1 Target| Dash| Push| Recoil 1/3</Target>
+      <Target>1 Target, Dash, Push, Recoil 1/3</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14919,7 +14919,7 @@
         <DiceMod>3</DiceMod>
       </Damage>
       <Notes>Wrap Traps the target and the user for 1d4+1 turns. At the beginning of the target's turn, if the target is Trapped, roll 1d12 and the target loses that much HP. Do not apply weakness or resistance to the HP lost. Do not apply stats to the HP lost. Wrap may not trap more then one target at a time unless the user is Huge or Gigantic. </Notes>
-      <Target>1 Target| Trap</Target>
+      <Target>1 Target, Trap</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -14973,7 +14973,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>-</Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -15000,7 +15000,7 @@
         <DiceMod>0</DiceMod>
       </Damage>
       <Notes>Yawn creates a 4-meter Burst. All targets fall Asleep at the end of their next turn. Yawn cannot miss. </Notes>
-      <Target>No Target| Burst</Target>
+      <Target>No Target, Burst</Target>
       <AttackStat>None</AttackStat>
       <ContestStats>
         <Type>
@@ -15027,7 +15027,7 @@
         <DiceMod>18</DiceMod>
       </Damage>
       <Notes>A 2-meter Blast surrounds the target, Paralyzing all Legal Targets in the Blast. </Notes>
-      <Target>1 Target| Blast</Target>
+      <Target>1 Target, Blast</Target>
       <AttackStat>Special Attack</AttackStat>
       <ContestStats>
         <Type>
@@ -15054,7 +15054,7 @@
         <DiceMod>12</DiceMod>
       </Damage>
       <Notes>Zen Headbutt Flinches the target on 15-20 during Accuracy Check. </Notes>
-      <Target>1 Target| Dash</Target>
+      <Target>1 Target, Dash</Target>
       <AttackStat>Attack</AttackStat>
       <ContestStats>
         <Type>

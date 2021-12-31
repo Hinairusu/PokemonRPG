@@ -211,14 +211,14 @@ namespace PokemonRPG.Windows
             if (DexNo > StaticData.ReferenceData.Pokedex.PokemonDexList.Count)
                 throw new Exception("Invalid Code");
 
-            Dex.PokeTarget = StaticData.ReferenceData.Pokedex.PokemonDexList[DexNo];
+            Dex.PokeTarget = StaticData.ReferenceData.Pokedex.PokemonDexList.Single( s => s.UID.Equals(DexNo));
 
             var NatureDexNo = $"{PokeCode[3]}{PokeCode[4]}";
             var NatureNo = Convert.ToInt32(NatureDexNo, 16);
             if (NatureNo > StaticData.ReferenceData.NatureDex.Natures.Count)
                 throw new Exception("Invalid Code");
 
-            Dex.Nature = StaticData.ReferenceData.NatureDex.Natures[NatureNo];
+            Dex.Nature = StaticData.ReferenceData.NatureDex.Natures.Single( s => s.UID.Equals(NatureNo));
 
             var LevelNo = $"{PokeCode[5]}{PokeCode[6]}";
             var Level = Convert.ToInt32(LevelNo, 16);

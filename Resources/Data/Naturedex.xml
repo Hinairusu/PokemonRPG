@@ -3,7 +3,8 @@
 <Naturedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Natures>
     <InherentNature>
-      <HP>0</HP>
+        <UID>0</UID>
+	    <HP>0</HP>
       <Attack>2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>-2</SpecialAttack>
@@ -14,7 +15,8 @@
       <FlavourHate>Dry</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>-2</HP>
+	    <UID>1</UID>
+	    <HP>-2</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>2</SpecialAttack>
@@ -25,7 +27,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>2</UID>
+	    <HP>0</HP>
       <Attack>-2</Attack>
       <Defence>2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -36,7 +39,8 @@
       <FlavourHate>Spicy</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>3</UID>
+	    <HP>0</HP>
       <Attack>2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -47,7 +51,8 @@
       <FlavourHate>Sweet</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>4</UID>
+	    <HP>0</HP>
       <Attack>-2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -58,7 +63,8 @@
       <FlavourHate>Spicy</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>5</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>-2</SpecialAttack>
@@ -69,7 +75,8 @@
       <FlavourHate>Dry</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>6</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -80,7 +87,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>-2</HP>
+	    <UID>7</UID>
+	    <HP>-2</HP>
       <Attack>2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -91,7 +99,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>2</HP>
+	    <UID>8</UID>
+	    <HP>2</HP>
       <Attack>0</Attack>
       <Defence>-2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -102,7 +111,8 @@
       <FlavourHate>Sour</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>9</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -113,7 +123,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>10</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>-2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -124,7 +135,8 @@
       <FlavourHate>Sour</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>2</HP>
+	    <UID>11</UID>
+	    <HP>2</HP>
       <Attack>-2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -135,7 +147,8 @@
       <FlavourHate>Spicy</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>12</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>-2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -146,7 +159,8 @@
       <FlavourHate>Sour</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>13</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>2</Defence>
       <SpecialAttack>-2</SpecialAttack>
@@ -157,7 +171,8 @@
       <FlavourHate>Dry</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>14</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>-2</SpecialAttack>
@@ -168,7 +183,8 @@
       <FlavourHate>Dry</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>15</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -179,7 +195,8 @@
       <FlavourHate>Bitter</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>2</HP>
+	    <UID>16</UID>
+	    <HP>2</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -190,7 +207,8 @@
       <FlavourHate>Sweet</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>17</UID>
+	    <HP>0</HP>
       <Attack>2</Attack>
       <Defence>-2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -201,7 +219,8 @@
       <FlavourHate>Sour</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>18</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>-2</Defence>
       <SpecialAttack>2</SpecialAttack>
@@ -212,7 +231,8 @@
       <FlavourHate>Sour</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>19</UID>
+	    <HP>0</HP>
       <Attack>-2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>2</SpecialAttack>
@@ -223,7 +243,8 @@
       <FlavourHate>Spicy</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>20</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -234,7 +255,8 @@
       <FlavourHate>Bitter</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>21</UID>
+	    <HP>0</HP>
       <Attack>2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -245,7 +267,8 @@
       <FlavourHate>Bitter</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>22</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -256,7 +279,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>23</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -267,7 +291,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>2</HP>
+	    <UID>24</UID>
+	    <HP>2</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>-2</SpecialAttack>
@@ -278,7 +303,8 @@
       <FlavourHate>Dry</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>25</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>2</SpecialAttack>
@@ -289,7 +315,8 @@
       <FlavourHate>Sweet</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>2</HP>
+	    <UID>26</UID>
+	    <HP>2</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -300,7 +327,8 @@
       <FlavourHate>Bitter</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>27</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>2</SpecialAttack>
@@ -311,7 +339,8 @@
       <FlavourHate>Bitter</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>28</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -322,7 +351,8 @@
       <FlavourHate>Sweet</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>29</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -333,7 +363,8 @@
       <FlavourHate>Sweet</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>-2</HP>
+	    <UID>30</UID>
+	    <HP>-2</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -344,7 +375,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>-2</HP>
+	    <UID>31</UID>
+	    <HP>-2</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -355,7 +387,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>-2</HP>
+	    <UID>32</UID>
+	    <HP>-2</HP>
       <Attack>0</Attack>
       <Defence>2</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -366,7 +399,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>33</UID>
+	    <HP>0</HP>
       <Attack>0</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>
@@ -377,7 +411,8 @@
       <FlavourHate>None</FlavourHate>
     </InherentNature>
     <InherentNature>
-      <HP>0</HP>
+	    <UID>34</UID>
+	    <HP>0</HP>
       <Attack>-2</Attack>
       <Defence>0</Defence>
       <SpecialAttack>0</SpecialAttack>

@@ -5,9 +5,9 @@ namespace PokemonRPG.Windows
     /// <summary>
     ///     Interaction logic for Trainer.xaml
     /// </summary>
-    public partial class Trainer : Window
+    public partial class TrainerPage : Window
     {
-        public Trainer()
+        public TrainerPage()
         {
             InitializeComponent();
         }

@@ -24,8 +24,8 @@
             <RowDefinition Height="307*" />
             <RowDefinition Height="156*" />
         </Grid.RowDefinitions>
-        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="402.667,125.333,0,0"
-                VerticalAlignment="Top" Width="25" Click="btnTest_Click" Grid.Column="4" Height="21" Grid.Row="2" />
+        <Button x:Name="btnTest" Content="Test Mode" HorizontalAlignment="Left" Margin="348,125,0,0"
+                VerticalAlignment="Top" Width="79" Click="btnTest_Click" Grid.Column="4" Height="21" Grid.Row="2" />
         <Grid Margin="10,0,0,-0.333" HorizontalAlignment="Left" Width="75" Height="691" VerticalAlignment="Top"
               Grid.RowSpan="3">
             <Grid.RowDefinitions>
@@ -47,14 +47,14 @@
                    Width="56" Source="Resources/Image/Menus/Bag Button.png" Grid.Row="3" MouseEnter="btn_Bag_MouseWork" />
             <Image x:Name="btn_BagHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
                    VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Bag Highilight.png" Grid.Row="3"
-                   Visibility="Hidden" MouseLeave="btn_Bag_MouseWork" />
+                   Visibility="Hidden" MouseLeave="btn_Bag_MouseWork" MouseLeftButtonDown="btn_Bag_Click"/>
 
             <Image x:Name="btn_Encyclopedia" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
                    VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Button.png"
                    Grid.Row="6" MouseEnter="btn_Encyclopedia_MouseWork" />
             <Image x:Name="btn_EncyclopediaHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
                    VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Encyclopedia Highilight.png"
-                   Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork" />
+                   Grid.Row="6" Visibility="Hidden" MouseLeave="btn_Encyclopedia_MouseWork" MouseLeftButtonDown="btn_Encyclopedia_Click"/>
 
             <Image x:Name="btn_Party" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
                    Width="56" Source="Resources/Image/Menus/Party Button.png" Grid.Row="2"
@@ -76,14 +76,14 @@
             <Image x:Name="btn_PokedexHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
                    VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Pokedex Highilight.png"
                    Grid.Row="1" Visibility="Hidden" MouseLeave="btn_Pokedex_MouseWork"
-                   MouseDown="btn_PokedexHighlight_Click" />
+                   MouseDown="btn_Pokedex_Click" />
 
             <Image x:Name="btn_Trainer" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
                    VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Button.png"
                    MouseEnter="btn_Trainer_MouseWork" />
             <Image x:Name="btn_TrainerHighlight" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0"
                    VerticalAlignment="Top" Width="56" Source="Resources/Image/Menus/Trainer Highilight.png"
-                   MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden" />
+                   MouseLeave="btn_Trainer_MouseWork" Visibility="Hidden" MouseLeftButtonDown="btn_Trainer_Click"/>
 
             <Image x:Name="btn_Save" HorizontalAlignment="Left" Height="53" Margin="3,10,0,0" VerticalAlignment="Top"
                    Width="56" Source="Resources/Image/Menus/Save Button.png" Grid.Row="7"

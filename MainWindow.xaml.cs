@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -22,14 +23,22 @@ namespace PokemonRPG
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool DebugMode = false;
+        private bool TrainerEnabled = false;
+        private bool PokedexEnabled = true;
+        private bool PartyEnabled = true;
+        private bool BagEnabled = false;
+        private bool GMModeEnabled = true;
+        private bool PCEnabled = false;
+        private bool EncyclopediaEnabled = false;
+        private bool SaveEnabled = false;
+        private bool LoadEnabled = false;
+
         public MainWindow()
         {
             InitializeComponent();
             LoadBaseData();
-
-#if DEBUG
             LoadTestData();
-#endif
             DataContext = this;
             BindData();
         }
@@ -144,6 +153,196 @@ namespace PokemonRPG
             }
         }
 
+        
+
+        public void BindData()
+        {
+            DataBinding.BindThis(lbl_Str, StaticData.PlayerData, "Strength");
+            DataBinding.BindThis(lbl_Dex, StaticData.PlayerData, "Dexterity");
+            DataBinding.BindThis(lbl_Con, StaticData.PlayerData, "Constitution");
+            DataBinding.BindThis(lbl_Int, StaticData.PlayerData, "Intelligence");
+            DataBinding.BindThis(lbl_Wis, StaticData.PlayerData, "Wisdom");
+            DataBinding.BindThis(lbl_Cha, StaticData.PlayerData, "Charisma");
+            DataBinding.BindThis(lbl_Name, StaticData.PlayerData, "Name");
+            DataBinding.BindThis(lbl_Money, StaticData.PlayerData, "Money");
+            DataBinding.BindThis(lbl_MaxHP, StaticData.PlayerData, "MaxHP");
+            DataBinding.BindThis(lbl_CurrentHP, StaticData.PlayerData, "CurrentHP");
+            DataBinding.BindThis(tb_User_Notes, StaticData.PlayerData, "Notes");
+            DataBinding.BindThis(tb_Description, StaticData.PlayerData, "Description");
+            DataBinding.BindThis(Lb_PokemonTeam, StaticData.PlayerData, "Pkmnlist");
+        }
+
+        private void btnTest_Click(object sender, RoutedEventArgs e)
+        {
+            DebugMode = !DebugMode;
+        }
+
+        private void btn_Trainer_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (!TrainerEnabled && !DebugMode) return;
+            var Trainer = new TrainerPage();
+
+            Trainer.Show();
+        }
+
+        private void btn_GM_Click(object sender, RoutedEventArgs e)
+        {
+            if (!GMModeEnabled && !DebugMode) return;
+            GMPage gmpage = new GMPage();
+            gmpage.Show();
+        }
+
+        private void btn_Load_Click(object sender, RoutedEventArgs e)
+        {
+            if (!LoadEnabled && !DebugMode) return;
+            string file;
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            openFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
+            openFileDialog.DefaultExt = ".PkmnChr";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var serializer = new XmlSerializer(typeof(Player));
+                var reader = new StreamReader(openFileDialog.FileName);
+                StaticData.PlayerData = (Player) serializer.Deserialize(reader);
+                reader.Close();
+            }
+
+            BindData();
+        }
+
+        private void btn_Save_Click(object sender, RoutedEventArgs e)
+        {
+            if (!SaveEnabled && !DebugMode) return;
+            var xsSubmit = new XmlSerializer(typeof(Player));
+            var xml = "";
+
+            using (var sww = new StringWriter())
+            {
+                using (var writer = XmlWriter.Create(sww))
+                {
+                    xsSubmit.Serialize(writer, StaticData.PlayerData);
+                    xml = sww.ToString(); // Your XML
+                }
+            }
+
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".PkmnChr";
+            saveFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (saveFileDialog.ShowDialog() == true)
+                File.WriteAllText(saveFileDialog.FileName, xml);
+        }
+
+        private void btn_PC_Click(object sender, MouseEventArgs e)
+        {
+            if (!PCEnabled && !DebugMode) return;
+            var pcWindow = new PC(StaticData.ReferenceData, StaticData.PlayerData);
+            pcWindow.Show();
+        }
+
+        private void btn_Pokedex_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (!PokedexEnabled && !DebugMode) return;
+            var PkWin = new PokedexWindow();
+
+            PkWin.Show();
+        }
+
+        private void btn_Party_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (!PartyEnabled && !DebugMode) return;
+            var party = new PartyWindow();
+
+            party.Show();
+        }
+
+        private void btn_Bag_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (!BagEnabled && !DebugMode) return;
+            var Inventory = new Bag();
+            
+            Inventory.Show();
+        }
+
+        private void btn_Encyclopedia_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (!EncyclopediaEnabled && !DebugMode) return;
+            var Lexicon = new Encyclopedia();
+
+            Lexicon.Show();
+        }
+
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            //HANDLE SAVEING HERE
+            Environment.Exit(1);
+        }
+
+        #region MouseHighlights
+        private void btn_Trainer_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Trainer, btn_TrainerHighlight);
+        }
+
+        private void btn_Pokedex_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Pokedex, btn_PokedexHighlight);
+        }
+
+        private void btn_PC_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_PC, btn_PCHighlight);
+        }
+
+        private void btn_Party_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Party, btn_PartyHighlight);
+        }
+
+        private void ButtonHighlightChange(Image image, Image image1)
+        {
+            if (image.Visibility == Visibility.Visible)
+            {
+                image.Visibility = Visibility.Hidden;
+                image1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                image.Visibility = Visibility.Visible;
+                image1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void btn_Encyclopedia_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Encyclopedia, btn_EncyclopediaHighlight);
+        }
+
+        private void btn_Bag_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Bag, btn_BagHighlight);
+        }
+
+        private void btn_Load_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Load, btn_LoadHighlight);
+        }
+
+        private void btn_Save_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_Save, btn_SaveHighlight);
+        }
+
+        private void btn_GM_MouseWork(object sender, MouseEventArgs e)
+        {
+            ButtonHighlightChange(btn_GM, btn_GMHighlight);
+        }
+
+        #endregion
+
+        #region TestData
         public void LoadTestData()
         {
             StaticData.PlayerData = new Player()
@@ -188,23 +387,7 @@ namespace PokemonRPG
 
         }
 
-        public void BindData()
-        {
-            DataBinding.BindThis(lbl_Str, StaticData.PlayerData, "Strength");
-            DataBinding.BindThis(lbl_Dex, StaticData.PlayerData, "Dexterity");
-            DataBinding.BindThis(lbl_Con, StaticData.PlayerData, "Constitution");
-            DataBinding.BindThis(lbl_Int, StaticData.PlayerData, "Intelligence");
-            DataBinding.BindThis(lbl_Wis, StaticData.PlayerData, "Wisdom");
-            DataBinding.BindThis(lbl_Cha, StaticData.PlayerData, "Charisma");
-            DataBinding.BindThis(lbl_Name, StaticData.PlayerData, "Name");
-            DataBinding.BindThis(lbl_Money, StaticData.PlayerData, "Money");
-            DataBinding.BindThis(lbl_MaxHP, StaticData.PlayerData, "MaxHP");
-            DataBinding.BindThis(lbl_CurrentHP, StaticData.PlayerData, "CurrentHP");
-            DataBinding.BindThis(tb_User_Notes, StaticData.PlayerData, "Notes");
-            DataBinding.BindThis(tb_Description, StaticData.PlayerData, "Description");
-            DataBinding.BindThis(Lb_PokemonTeam, StaticData.PlayerData, "Pkmnlist");
-        }
-
+        
         private void LoadCSV()
         {
             // Legacy block to allow speed input of missing data when it's ready
@@ -297,215 +480,6 @@ namespace PokemonRPG
             }
         }
 
-
-        private void btnTest_Click(object sender, RoutedEventArgs e)
-        {
-            int FaultyCount = 0;
-            StringBuilder faultypokemon = new StringBuilder();
-            foreach (var pk in StaticData.ReferenceData.Pokedex.PokemonDexList)
-            {
-                StringBuilder SpecificFault = new StringBuilder();
-                SpecificFault.Append($"{pk.Name} {Environment.NewLine}");
-                bool Levelfault = false, TutorFault = false, EggFault = false;
-                foreach (var VARIABLE in pk.PossibleLevelupMoves)
-                {
-                    if (VARIABLE.MoveID < 0)
-                    {
-                        if (!Levelfault)
-                        {
-                            SpecificFault.Append($"Level up move fault found for level: {Environment.NewLine}");
-                            Levelfault = true;
-                        }
-
-                        SpecificFault.Append($"{VARIABLE.LevelLearned}{Environment.NewLine}");
-                    }
-                }
-
-                int TutorID = 1;
-                foreach (var VARIABLE in pk.PossibleTutorMoves)
-                {
-                    if (VARIABLE < 0)
-                    {
-                        if (!TutorFault)
-                        {
-                            SpecificFault.Append($"Tutor move fault at move number: {Environment.NewLine}");
-                            TutorFault = true;
-                        }
-
-                        SpecificFault.Append($"{TutorID}{Environment.NewLine}");
-                    }
-
-                    TutorID++;
-                }
-
-                int EggID = 1;
-                foreach (var VARIABLE in pk.PossibleEggMoves)
-                {
-                    if (VARIABLE < 0)
-                    {
-                        if (!EggFault)
-                        {
-                            SpecificFault.Append($"Egg move fault at move number: {Environment.NewLine}");
-                            EggFault = true;
-                        }
-
-                        SpecificFault.Append($"{EggID}{Environment.NewLine}");
-                    }
-
-                    EggID++;
-                }
-
-                //faultypokemon.Append($"{Environment.NewLine}TM faults: {Environment.NewLine}");
-                //int TMID = 1;
-                //foreach (var VARIABLE in pk.PossibleTMMoves)
-                //{
-                //    if (VARIABLE < 0)
-                //        faultypokemon.Append($"{pk.Name}, {TMID}{Environment.NewLine}");
-                //    TMID++;
-                //}
-
-                if (Levelfault || TutorFault || EggFault)
-                {
-                    FaultyCount++;
-                    faultypokemon.Append($"{Environment.NewLine}{SpecificFault.ToString()}==========");
-                }
-            }
-
-            string Output = faultypokemon.ToString();
-        }
-
-        private void btn_GM_Click(object sender, RoutedEventArgs e)
-        {
-            GMPage gmpage = new GMPage();
-            gmpage.Show();
-        }
-        
-
-        private void btn_Load_Click(object sender, RoutedEventArgs e)
-        {
-            string file;
-            var openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            openFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
-            openFileDialog.DefaultExt = ".PkmnChr";
-            if (openFileDialog.ShowDialog() == true)
-            {
-                var serializer = new XmlSerializer(typeof(Player));
-                var reader = new StreamReader(openFileDialog.FileName);
-                StaticData.PlayerData = (Player) serializer.Deserialize(reader);
-                reader.Close();
-            }
-
-            BindData();
-        }
-
-
-        private void btn_Save_Click(object sender, RoutedEventArgs e)
-        {
-            var xsSubmit = new XmlSerializer(typeof(Player));
-            var xml = "";
-
-            using (var sww = new StringWriter())
-            {
-                using (var writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, StaticData.PlayerData);
-                    xml = sww.ToString(); // Your XML
-                }
-            }
-
-            var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = ".PkmnChr";
-            saveFileDialog.Filter = "Pkmn Characters (*.PkmnChr)|*.PkmnChr";
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            if (saveFileDialog.ShowDialog() == true)
-                File.WriteAllText(saveFileDialog.FileName, xml);
-        }
-
-
-        private void btn_Trainer_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Trainer, btn_TrainerHighlight);
-        }
-
-        private void btn_Pokedex_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Pokedex, btn_PokedexHighlight);
-        }
-
-        private void btn_PC_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_PC, btn_PCHighlight);
-        }
-
-        private void btn_PC_Click(object sender, MouseEventArgs e)
-        {
-            var pcWindow = new PC(StaticData.ReferenceData, StaticData.PlayerData);
-            pcWindow.Show();
-        }
-
-        private void btn_Party_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Party, btn_PartyHighlight);
-        }
-
-        private void ButtonHighlightChange(Image image, Image image1)
-        {
-            if (image.Visibility == Visibility.Visible)
-            {
-                image.Visibility = Visibility.Hidden;
-                image1.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                image.Visibility = Visibility.Visible;
-                image1.Visibility = Visibility.Hidden;
-            }
-        }
-
-        private void btn_Encyclopedia_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Encyclopedia, btn_EncyclopediaHighlight);
-        }
-
-        private void btn_Bag_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Bag, btn_BagHighlight);
-        }
-
-        private void btn_Load_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Load, btn_LoadHighlight);
-        }
-
-        private void btn_Save_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_Save, btn_SaveHighlight);
-        }
-
-        private void btn_GM_MouseWork(object sender, MouseEventArgs e)
-        {
-            ButtonHighlightChange(btn_GM, btn_GMHighlight);
-        }
-
-        private void btn_PokedexHighlight_Click(object sender, MouseButtonEventArgs e)
-        {
-            var PkWin = new PokedexWindow();
-
-            PkWin.Show();
-        }
-
-        private void btn_Party_Click(object sender, MouseButtonEventArgs e)
-        {
-            var party = new PartyWindow();
-
-            party.Show();
-        }
-
-        private void Window_Closing(object sender, CancelEventArgs e)
-        {
-            //HANDLE SAVEING HERE
-            Environment.Exit(1);
-        }
+        #endregion
     }
 }

@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
@@ -117,8 +118,8 @@
     <Compile Include="Windows\PokemonPage.xaml.cs">
       <DependentUpon>PokemonPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Trainer.xaml.cs">
-      <DependentUpon>Trainer.xaml</DependentUpon>
+    <Compile Include="Windows\TrainerPage.xaml.cs">
+      <DependentUpon>TrainerPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -168,7 +169,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Trainer.xaml">
+    <Page Include="Windows\TrainerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +235,9 @@
     </PackageReference>
     <PackageReference Include="DotNetProjects.WpfToolkit.DataVisualization">
       <Version>6.0.90</Version>
+    </PackageReference>
+    <PackageReference Include="Extended.Wpf.Toolkit">
+      <Version>4.2.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

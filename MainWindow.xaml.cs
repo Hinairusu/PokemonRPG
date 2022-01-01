@@ -41,6 +41,7 @@ namespace PokemonRPG
             LoadTestData();
             DataContext = this;
             BindData();
+            
         }
 
         public void LoadBaseData()
@@ -440,19 +441,19 @@ namespace PokemonRPG
                     var PokeID =
                         StaticData.ReferenceData.Pokedex.PokemonDexList.FindIndex(s =>
                             s.Name.Equals(PokeName, StringComparison.OrdinalIgnoreCase));
-                    var MoveID = StaticData.ReferenceData.ItemDex.MoveLearningItems.FindIndex(s =>
-                        s.MoveName.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
-                    //StaticData.ReferenceData.MoveDex.MoveList.FindIndex(s => s.Name.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
-                    //LevelMoves move = new LevelMoves();
-                    //move.LevelLearned = int.Parse(splitvals[1]);
-                    //move.MoveID = MoveID;
-                    StaticData.ReferenceData.Pokedex.PokemonDexList[PokeID].PossibleTMMoves.Add(MoveID);
+                    var MoveID = StaticData.ReferenceData.ItemDex.MoveLearningItems.Single(s =>
+                        s.Number.Equals(splitvals[1], StringComparison.OrdinalIgnoreCase));
+
+                    var MoveNo = StaticData.ReferenceData.MoveDex.MoveList.Single(s => s.Name.Equals(MoveID.MoveName))
+                        .MoveID;
+                  
+                    StaticData.ReferenceData.Pokedex.PokemonDexList[PokeID].PossibleTMMoves.Add(MoveNo);
                 }
                 catch
                 {
                 }
 
-                Thread.Sleep(1);
+                //Thread.Sleep(1);
             }
 
             var FukedPkmn = string.Empty;

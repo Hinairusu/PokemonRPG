@@ -150,15 +150,24 @@ namespace PokemonRPG.Windows
             try
             {
                 DataColumn col = new DataColumn();
-                col.ColumnName = "Effect";
-                col.DataType = typeof(string);
+                col.ColumnName = "Base UID";
+                col.DataType = typeof(int);
                 DT1.Columns.Add(col);
             }
             catch { }
             try
             {
                 DataColumn col = new DataColumn();
-                col.ColumnName = "DiceCount";
+                col.ColumnName = "Move UID";
+                col.DataType = typeof(int);
+                DT1.Columns.Add(col);
+            }
+            catch { }
+           
+            try
+            {
+                DataColumn col = new DataColumn();
+                col.ColumnName = "Level Learned";
                 col.DataType = typeof(int);
                 DT1.Columns.Add(col);
             }
@@ -167,7 +176,7 @@ namespace PokemonRPG.Windows
             try
             {
                 DataColumn col = new DataColumn();
-                col.ColumnName = "DiceSize";
+                col.ColumnName = "Tutor Move";
                 col.DataType = typeof(int);
                 DT1.Columns.Add(col);
             }
@@ -176,22 +185,20 @@ namespace PokemonRPG.Windows
             try
             {
                 DataColumn col = new DataColumn();
-                col.ColumnName = "DiceModifier";
+                col.ColumnName = "Egg Move";
                 col.DataType = typeof(int);
                 DT1.Columns.Add(col);
             }
             catch { }
-
 
             try
             {
                 DataColumn col = new DataColumn();
-                col.ColumnName = "Type UID";
+                col.ColumnName = "TM Move";
                 col.DataType = typeof(int);
                 DT1.Columns.Add(col);
             }
             catch { }
-
 
             #endregion
             #region DataTable 2
@@ -208,207 +215,37 @@ namespace PokemonRPG.Windows
             
 
             #endregion
-
-            List<string> Types = new List<string>();
-            foreach (var ability in StaticData.ReferenceData.MoveDex.MoveList)
-            {
-                Types.Add(ability.ContestStats.Type.Name);
-            }
-
-            Types = Types.Distinct().ToList();
-            Dictionary<string, int> Tdictionary = new Dictionary<string, int>();
-            for (int i = 0; i < Types.Count; i++)
-            {
-                Tdictionary.Add(Types[i],i);
-                DataRow row = DT2.NewRow();
-                row["Name"] = Types[i];
-                DT2.Rows.Add(row);
-            }
-
-
-
-            foreach (var ability in StaticData.ReferenceData.MoveDex.MoveList)
-            {
-                try
-                {
-                    var move = ability.ContestStats;
-                    DataRow row = DT1.NewRow();
-                    row["Effect"] = move.Effect;
-                    row["Type UID"] = Tdictionary[move.Type.Name];
-                    row["DiceCount"] = move.Appeal.DiceCount;
-                    row["DiceSize"] = move.Appeal.DiceSize;
-                    row["DiceModifier"] = move.Appeal.DiceMod;
-                    DT1.Rows.Add(row); }
-                catch { }
-                
-                
-            }
             
-            DataView view = new DataView(DT1);
-            DataTable distinctValues = view.ToTable(true, "Effect", "Type UID", "DiceCount","DiceSize","DiceModifier"); 
 
 
-            #region DataTable 3
-
-            DataTable DT3 = new DataTable();
-            try
+            foreach (var pkmn in StaticData.ReferenceData.Pokedex.PokemonDexList)
             {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Name";
-                col.DataType = typeof(string);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-            
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Type UID";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
 
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Frequency";
-                col.DataType = typeof(string);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Range";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Accuracy";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Notes";
-                col.DataType = typeof(string);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Name";
-                col.DataType = typeof(string);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Target";
-                col.DataType = typeof(string);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "AttackStat";
-                col.DataType = typeof(string);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "Contest UID";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "DiceCount";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "DiceSize";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-            try
-            {
-                DataColumn col = new DataColumn();
-                col.ColumnName = "DiceModifier";
-                col.DataType = typeof(int);
-                DT3.Columns.Add(col);
-            }
-            catch { }
-
-
-            #endregion
-
-            foreach (var move in StaticData.ReferenceData.MoveDex.MoveList)
-            {
-                DataRow row = DT3.NewRow();
-
-                row["Name"] = move.Name;
-                row["Type UID"] = move.TypeID;
-                row["Frequency"] = move.Frequency;
-                row["Range"] = move.Range;
-                row["Accuracy"] = move.Accuracy;
-                row["Notes"] = move.Notes;
-                row["Target"] = move.Target;
-                row["AttackStat"] = move.AttackStat;
                 
-                row["DiceCount"] = move.Damage.DiceCount;
-                row["DiceSize"] = move.Damage.DiceSize;
-                row["DiceModifier"] = move.Damage.DiceMod;
-
-                for (var i = 0; i < distinctValues.Rows.Count; i++)
+                foreach (var value in pkmn.PossibleTMMoves)
                 {
-                    if (!distinctValues.Rows[i]["Effect"].Equals(move.ContestStats.Effect) ||
-                        !distinctValues.Rows[i]["Type UID"].Equals(Tdictionary[move.ContestStats.Type.Name]) ||
-                        !distinctValues.Rows[i]["DiceCount"].Equals(move.ContestStats.Appeal.DiceCount) ||
-                        !distinctValues.Rows[i]["DiceSize"].Equals(move.ContestStats.Appeal.DiceSize) ||
-                        !distinctValues.Rows[i]["DiceModifier"].Equals(move.ContestStats.Appeal.DiceMod)) continue;
-                    row["Contest UID"] = i;
-                    break;
+                    try
+                    {
+                        if (value == -1)
+                            continue;
+                        DataRow row = DT1.NewRow();
+                        row["Base UID"] = pkmn.UID;
+                        row["Move UID"] = value;
+                        row["TM Move"] = 1;
+                        row["Egg Move"] = 0;
+                        row["Tutor Move"] = 0;
+                        DT1.Rows.Add(row);
+                    }
+                    catch { }
                 }
 
-                DT3.Rows.Add(row);
             }
 
-
-            //if(DT2.Rows.Count > 0)
-            //    SQLData.SQLInsert(DT2, ConfigurationManager.AppSettings["PokemonDatabase"], "ContestTypes", cnxn);
-            //if(DT1.Rows.Count > 0)
-            //    SQLData.SQLInsert(distinctValues, ConfigurationManager.AppSettings["PokemonDatabase"], "ContestMoves", cnxn);
-            if(DT3.Rows.Count > 0)
-               SQLData.SQLInsert(DT3, ConfigurationManager.AppSettings["PokemonDatabase"], "MoveList", cnxn);
+                //if(DT2.Rows.Count > 0)
+                //    SQLData.SQLInsert(DT2, ConfigurationManager.AppSettings["PokemonDatabase"], "ContestTypes", cnxn);
+                if (DT1.Rows.Count > 0)
+                SQLData.SQLInsert(DT1, ConfigurationManager.AppSettings["PokemonDatabase"], "Moves", cnxn);
+            
 
 
             MessageBox.Show("Done!");

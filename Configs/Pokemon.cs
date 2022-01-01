@@ -48,6 +48,7 @@ namespace PokemonRPG.Configs
         public List<int> PossibleEggMoves { get; set; }
         public BaseCharacteristics BaseStats { get; set; }
         public List<int> EvolutionIDs { get; set; }
+        public string PokemonFamily { get; set; }
 
         #region Overrides
 

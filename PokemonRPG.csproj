@@ -95,7 +95,6 @@
     <Compile Include="Configs\TrainerFeatureTags.cs" />
     <Compile Include="Configs\TrainerPokemon.cs" />
     <Compile Include="Configs\TypeMultiplier.cs" />
-    <Compile Include="Configs\WildPokemon.cs" />
     <Compile Include="Windows\Bag.xaml.cs">
       <DependentUpon>Bag.xaml</DependentUpon>
     </Compile>

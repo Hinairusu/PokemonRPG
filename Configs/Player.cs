@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 namespace PokemonRPG.Configs
 {
     [Serializable]
-    public class Player
+    public class Player : PlayerStub
     {
         [NonSerialized]
         public ObservableCollection<TrainerPokemon> Pkmnlist = new ObservableCollection<TrainerPokemon>();
@@ -15,35 +15,41 @@ namespace PokemonRPG.Configs
             ItemPC = new List<ItemBox>();
             Levels = new List<PlayerLevels>();
             GymBadges = new List<string>();
-            CurrentParty = new List<int>();
+            CurrentParty = new List<PartyPokemon>();
             Inventory = new List<Item>();
             ContestRibbons = new List<string>();
             Regions = new List<LocationRegion>();
             OwnedPokemon = new List<TrainerPokemon>();
         }
 
-        public string Name { get; set; }
+        public Player(PlayerStub stub) : this()
+        {
+            UID = stub.UID;
+            FirstName = stub.FirstName;
+            LastName = stub.LastName;
+            PlayerName = stub.PlayerName;
+            Strength = stub.Strength;
+            Dexterity = stub.Dexterity;
+            Constitution = stub.Constitution;
+            Intelligence = stub.Intelligence;
+            Wisdom = stub.Wisdom;
+            Charisma = stub.Charisma;
+            Money = stub.Money;
+            CurrentHP = stub.CurrentHP;
+            MaxHP = stub.MaxHP;
+            Description = stub.Description;
+            Notes = stub.Notes;
+        }
+
         public List<ItemBox> ItemPC { get; set; }
-        public List<int> CurrentParty { get; set; }
+        public List<PartyPokemon> CurrentParty { get; set; }
         public List<TrainerPokemon> OwnedPokemon { get; set; }
-
         public List<Item> Inventory { get; set; }
-        public int Money { get; set; }
-        public int CurrentHP { get; set; }
-        public int MaxHP { get; set; }
-        public int Strength { get; set; }
-        public int Dexterity { get; set; }
-        public int Constitution { get; set; }
-        public int Intelligence { get; set; }
-        public int Wisdom { get; set; }
-        public int Charisma { get; set; }
-
+        
         public int TotalOwnedPokemon
         {
             get { return OwnedPokemon.Count; }
         }
-        public string Description { get; set; }
-        public string Notes { get; set; }
         private List<PlayerLevels> Levels { get; set; }
         private List<string> GymBadges { get; set; }
         private List<string> ContestRibbons { get; set; }
@@ -55,5 +61,16 @@ namespace PokemonRPG.Configs
                 return (value - 10) / 2;
             return value - 10;
         }
+
+        public override string ToString()
+        {
+            return $"{FirstName}";
+        }
+    }
+
+    public class PartyPokemon
+    {
+        public int Slot { get; set; }
+        public int PokemonUID { get; set; }
     }
 }

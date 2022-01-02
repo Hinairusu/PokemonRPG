@@ -42,10 +42,10 @@ namespace PokemonRPG.Windows
             {
                 if (StaticData.PlayerData.Pkmnlist.Count > 0)
                     StaticData.PlayerData.Pkmnlist.RemoveAt(0);
-                StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateTrainerPokemon(
+                StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateRandomTrainerPokemon(
                     StaticData.ReferenceData.RandomGenerator.Next(0,
                         StaticData.ReferenceData.Pokedex.PokemonDexList.Count),
-                    StaticData.ReferenceData.RandomGenerator.Next(1, PkmnLevel + 1)));
+                    PkmnLevel));
                 StaticData.PlayerData.Pkmnlist[0].CurrentHP = StaticData.PlayerData.Pkmnlist[0].MaxHP;
                 var page = new PokemonPage(0);
                 page.Show();
@@ -243,8 +243,8 @@ namespace PokemonRPG.Windows
 
                 //if(DT2.Rows.Count > 0)
                 //    SQLData.SQLInsert(DT2, ConfigurationManager.AppSettings["PokemonDatabase"], "ContestTypes", cnxn);
-                if (DT1.Rows.Count > 0)
-                SQLData.SQLInsert(DT1, ConfigurationManager.AppSettings["PokemonDatabase"], "Moves", cnxn);
+                //if (DT1.Rows.Count > 0)
+                //SQLData.SQLInsert(DT1, ConfigurationManager.AppSettings["PokemonDatabase"], "Moves", cnxn);
             
 
 

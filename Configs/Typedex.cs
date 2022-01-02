@@ -7,9 +7,11 @@ namespace PokemonRPG.Configs
         public Typedex()
         {
             TypeList = new List<PokeType>();
+            ContestTypeList = new List<ContestType>();
         }
 
         public List<PokeType> TypeList { get; set; }
+        public List<ContestType> ContestTypeList { get; set; }
 
         public decimal CheckTypeOutcome(int MoveType, int PkmnPrimaryType, int PkmnSecondaryType)
         {

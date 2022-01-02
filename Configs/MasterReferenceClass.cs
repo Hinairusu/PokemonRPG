@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Windows;
+using System.Windows.Documents;
 using System.Xml;
 using AutoMapper;
 
@@ -35,36 +37,52 @@ namespace PokemonRPG.Configs
 
         #region Generation of Pokemon
 
-        private MapperConfiguration PktoTrPk = new MapperConfiguration(cfg => cfg.CreateMap<Pokemon, TrainerPokemon>());
 
-        private readonly MapperConfiguration WiPktoTrPk =
+
+        private readonly MapperConfiguration BasePktoTrainterPk =
             new MapperConfiguration(cfg => cfg.CreateMap<Pokemon, TrainerPokemon>());
-
-        private readonly MapperConfiguration PktoWiPk =
-            new MapperConfiguration(cfg => cfg.CreateMap<Pokemon, WildPokemon>());
-
-        public TrainerPokemon GenerateTrainerPokemon(WildPokemon Poke)
-        {
-            return GenerateTrainerPokemon(Poke.UID);
-        }
-
+        
+        
         public TrainerPokemon GenerateTrainerPokemon(Pokemon Poke)
         {
-            return GenerateTrainerPokemon(Poke.UID);
+            return GenerateRandomTrainerPokemon(Poke.UID);
+        }
+        public TrainerPokemon GenerateTrainerPokemon(int UID)
+        {
+            var mapper = BasePktoTrainterPk.CreateMapper();
+            var poke = mapper.Map<TrainerPokemon>(GenerateWildPokemon(UID));
+            poke.Level = 1;
+
+            return poke;
         }
 
-        public TrainerPokemon GenerateTrainerPokemon(int UID, int level = 1)
+        public Advancements GenerateRandomAdvancement()
         {
-            var mapper = WiPktoTrPk.CreateMapper();
+            Advancements advance = new Advancements();
+            advance.LevelUpUID = StaticData.ReferenceData.RandomGenerator.Next(2,7);
+            advance.Modifier = 1;
+            advance.ValueAdd = true;
+            advance.DateAdded = DateTime.Now;
+            advance.Notes = "Random Advance Generated";
+
+            return advance;
+
+        }
+        public TrainerPokemon GenerateRandomTrainerPokemon(int UID, int level = 1)
+        {
+            var mapper = BasePktoTrainterPk.CreateMapper();
             var poke = mapper.Map<TrainerPokemon>(GenerateWildPokemon(UID));
+
             poke.Level = level;
+
+
             for (var i = 1; i < level; i++)
             {
-                poke.LevelUp();
+                poke.LevelUps.Add(GenerateRandomAdvancement());
                 if (level > 50)
-                    poke.LevelUp();
+                    poke.LevelUps.Add(GenerateRandomAdvancement());
                 if (level > 75)
-                    poke.LevelUp();
+                    poke.LevelUps.Add(GenerateRandomAdvancement());
             }
 
             var Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
@@ -78,25 +96,21 @@ namespace PokemonRPG.Configs
             poke.Nature =
                 StaticData.ReferenceData.NatureDex.Natures[
                     StaticData.ReferenceData.RandomGenerator.Next(0, StaticData.ReferenceData.NatureDex.Natures.Count)];
-
+            poke.Advance();
             return poke;
         }
+        
 
-        public WildPokemon GenerateWildPokemon(Pokemon Poke)
-        {
-            return GenerateWildPokemon(Poke.UID);
-        }
-
-        public WildPokemon GenerateWildPokemon(int UID, int level = 0)
+        public TrainerPokemon GenerateWildPokemon(int UID, int level = 0)
         {
             var pk = new Pokemon();
-            var mapper = PktoWiPk.CreateMapper();
-            var poke = mapper.Map<WildPokemon>(Pokedex.PokemonDexList.Find(s => s.UID.Equals(UID)));
+            var mapper = BasePktoTrainterPk.CreateMapper();
+            var poke = mapper.Map<TrainerPokemon>(Pokedex.PokemonDexList.Find(s => s.UID.Equals(UID)));
             if (level > 0)
             {
                 poke.Level = level;
                 for (var i = 1; i < level; i++)
-                    poke.WildLevelUp();
+                    poke.LevelUps.Add(GenerateRandomAdvancement());
             }
 
             var Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
@@ -110,10 +124,15 @@ namespace PokemonRPG.Configs
             poke.Nature =
                 StaticData.ReferenceData.NatureDex.Natures[
                     StaticData.ReferenceData.RandomGenerator.Next(0, StaticData.ReferenceData.NatureDex.Natures.Count)];
-
+            poke.Advance();
             return poke;
         }
 
+
+        public void AdvancePokemon(int PokemonUID, List<Advancements> Advances)
+        {
+
+        }
         #endregion
     }
 
@@ -138,7 +157,7 @@ namespace PokemonRPG.Configs
                 // Make MySQL COmmand
                 string query = $"SELECT * FROM [{DatabaseName}].[dbo].[{TableName}]"; // +" WHERE HERE IF NEEDED";
                 if (!string.IsNullOrWhiteSpace(Where))
-                    query += Where;
+                    query += $" WHERE {Where}";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 //from this point the connection to the DB is live

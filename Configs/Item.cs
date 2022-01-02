@@ -8,18 +8,26 @@ namespace PokemonRPG.Configs
     {
         public Item()
         {
-            Flavours = new List<string>();
+            Flavours = new List<int>();
         }
 
-        public int ItemID { get; set; }
+        public int UID { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
-        public string UnitValue { get; set; }
-        public string Category { get; set; }
-        public List<string> Flavours { get; set; }
+        public int UnitValue { get; set; }
+        public int Category { get; set; }
+        public List<int> Flavours { get; set; }
         public string Frequency { get; set; }
         public string Effect { get; set; }
         public string Notes { get; set; }
         public int Rarity { get; set; }
     }
+
+    public class ItemCategory
+    {
+        public int UID { get; set; }
+        public string Name { get; set; }
+    }
+
+    
 }

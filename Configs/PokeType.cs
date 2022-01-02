@@ -14,5 +14,9 @@ namespace PokemonRPG.Configs
         public int UID { get; set; }
         public string Name { get; set; }
         public List<TypeMultiplier> TypeInteraction { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

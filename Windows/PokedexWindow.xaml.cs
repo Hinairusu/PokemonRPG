@@ -150,10 +150,10 @@ namespace PokemonRPG.Windows
                     #endregion
 
                     foreach (var value in Dex.PokeTarget.Habitats)
-                        lb_Habitats.Items.Add(value.Location);
+                        lb_Habitats.Items.Add(value);
 
                     foreach (var value in Dex.PokeTarget.EggGroup)
-                        lb_EggGroups.Items.Add(value);
+                        lb_EggGroups.Items.Add(StaticData.ReferenceData.NatureDex.EggGroups.Single(s => s.UID.Equals(value)));
 
                     foreach (var value in Dex.PokeTarget.Capability)
                         lb_Capabilities.Items.Add(StaticData.ReferenceData.AbilityDex.CapabilityList[value].Name);

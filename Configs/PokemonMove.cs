@@ -8,7 +8,6 @@ namespace PokemonRPG.Configs
         public PokemonMove()
         {
             Damage = new Dice();
-            ContestStats = new ContestMoveStats();
         }
 
         public int MoveID { get; set; }
@@ -21,6 +20,11 @@ namespace PokemonRPG.Configs
         public string Notes { get; set; }
         public string Target { get; set; }
         public string AttackStat { get; set; }
-        public ContestMoveStats ContestStats { get; set; }
+        public int ContestStats { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Damage}";
+        }
     }
 }

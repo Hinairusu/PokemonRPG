@@ -9,8 +9,11 @@ namespace PokemonRPG.Configs
         public Movedex()
         {
             MoveList = new List<PokemonMove>();
+            ContestMoveList = new List<ContestMoveStats>();
         }
 
         public List<PokemonMove> MoveList { get; set; }
+
+        public List<ContestMoveStats> ContestMoveList { get; set; }
     }
 }

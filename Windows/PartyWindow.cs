@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using PokemonRPG.Configs;
@@ -23,242 +24,222 @@ namespace PokemonRPG.Windows
 
         public void BindStats()
         {
-            if (StaticData.PlayerData.CurrentParty.Count > 0)
-            {
-                Pkmn_One_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].Nickname;
-                Pkmn_One_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[0]].PrimaryTypeID);
-                Pkmn_One_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[0]].SecondaryTypeID);
-                Pkmn_One_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].Name;
-                Pkmn_One_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].Level;
-                Pkmn_One_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]]
-                    .ActualStats.Attack;
-                Pkmn_One_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]]
-                    .ActualStats.Defence;
-                Pkmn_One_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]].ActualStats.HP;
-                Pkmn_One_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[0]]
-                    .ActualStats.Speed;
-                Pkmn_One_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[0]].ActualStats.SpecialAttack;
-                Pkmn_One_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[0]].ActualStats.SpecialDefence;
-                Grid_Pkmn_One.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Grid_Pkmn_One.Visibility = Visibility.Hidden;
-            }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 1)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(0))));
+               
+                    Pkmn_One_Nickname.Content = pk.Nickname;
+                    Pkmn_One_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                    Pkmn_One_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
+                    Pkmn_One_Species.Content = pk.Name;
+                    Pkmn_One_Level.Content = pk.Level;
+                    Pkmn_One_Attack_Bar.Width = pk.ActualStats.Attack;
+                    Pkmn_One_Defence_Bar.Width = pk.ActualStats.Defence;
+                    Pkmn_One_HP_Bar.Width = pk.ActualStats.HP;
+                    Pkmn_One_Speed_Bar.Width = pk.ActualStats.Speed;
+                    Pkmn_One_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                    Pkmn_One_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
+                    Grid_Pkmn_One.Visibility = Visibility.Visible;
+               
+                    Grid_Pkmn_One.Visibility = Visibility.Hidden;
+                
+            }
+            catch{Grid_Pkmn_One.Visibility = Visibility.Hidden;}
+
+            try{
+            
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(1))));
                 Pkmn_Two_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].Nickname;
-                Pkmn_Two_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[1]].PrimaryTypeID);
-                Pkmn_Two_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[1]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Two_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Two_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Two_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].Name;
-                Pkmn_Two_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].Level;
-                Pkmn_Two_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]]
+                    pk.Name;
+                Pkmn_Two_Level.Content = pk.Level;
+                Pkmn_Two_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Two_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]]
+                Pkmn_Two_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Two_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]].ActualStats.HP;
-                Pkmn_Two_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[1]]
+                    pk.ActualStats.HP;
+                Pkmn_Two_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Two_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[1]].ActualStats.SpecialAttack;
-                Pkmn_Two_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[1]].ActualStats.SpecialDefence;
+                Pkmn_Two_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Two_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Two.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Two.Visibility = Visibility.Hidden;
             }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 2)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(2))));
                 Pkmn_Three_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].Nickname;
-                Pkmn_Three_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[2]].PrimaryTypeID);
-                Pkmn_Three_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[2]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Three_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Three_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Three_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].Name;
-                Pkmn_Three_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].Level;
-                Pkmn_Three_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]]
+                    pk.Name;
+                Pkmn_Three_Level.Content = pk.Level;
+                Pkmn_Three_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Three_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]]
+                Pkmn_Three_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Three_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]].ActualStats.HP;
-                Pkmn_Three_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[2]]
+                    pk.ActualStats.HP;
+                Pkmn_Three_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Three_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[2]].ActualStats.SpecialAttack;
-                Pkmn_Three_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[2]].ActualStats.SpecialDefence;
+                Pkmn_Three_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Three_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Three.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Three.Visibility = Visibility.Hidden;
             }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 3)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(3))));
                 Pkmn_Four_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].Nickname;
-                Pkmn_Four_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[3]].PrimaryTypeID);
-                Pkmn_Four_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[3]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Four_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Four_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Four_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].Name;
-                Pkmn_Four_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].Level;
-                Pkmn_Four_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]]
+                    pk.Name;
+                Pkmn_Four_Level.Content = pk.Level;
+                Pkmn_Four_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Four_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]]
+                Pkmn_Four_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Four_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]].ActualStats.HP;
-                Pkmn_Four_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[3]]
+                    pk.ActualStats.HP;
+                Pkmn_Four_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Four_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[3]].ActualStats.SpecialAttack;
-                Pkmn_Four_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[3]].ActualStats.SpecialDefence;
+                Pkmn_Four_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Four_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Four.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Four.Visibility = Visibility.Hidden;
             }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 4)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(4))));
                 Pkmn_Five_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].Nickname;
-                Pkmn_Five_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[4]].PrimaryTypeID);
-                Pkmn_Five_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[4]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Five_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Five_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Five_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].Name;
-                Pkmn_Five_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].Level;
-                Pkmn_Five_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]]
+                    pk.Name;
+                Pkmn_Five_Level.Content = pk.Level;
+                Pkmn_Five_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Five_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]]
+                Pkmn_Five_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Five_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]].ActualStats.HP;
-                Pkmn_Five_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[4]]
+                    pk.ActualStats.HP;
+                Pkmn_Five_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Five_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[4]].ActualStats.SpecialAttack;
-                Pkmn_Five_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[4]].ActualStats.SpecialDefence;
+                Pkmn_Five_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Five_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Five.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Five.Visibility = Visibility.Hidden;
             }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 5)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(5))));
                 Pkmn_Six_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].Nickname;
-                Pkmn_Six_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[5]].PrimaryTypeID);
-                Pkmn_Six_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[5]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Six_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Six_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Six_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].Name;
-                Pkmn_Six_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].Level;
-                Pkmn_Six_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]]
+                    pk.Name;
+                Pkmn_Six_Level.Content = pk.Level;
+                Pkmn_Six_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Six_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]]
+                Pkmn_Six_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Six_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]].ActualStats.HP;
-                Pkmn_Six_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[5]]
+                    pk.ActualStats.HP;
+                Pkmn_Six_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Six_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[5]].ActualStats.SpecialAttack;
-                Pkmn_Six_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[5]].ActualStats.SpecialDefence;
+                Pkmn_Six_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Six_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Six.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Six.Visibility = Visibility.Hidden;
             }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 6)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(6))));
                 Pkmn_Seven_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].Nickname;
-                Pkmn_Seven_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[6]].PrimaryTypeID);
-                Pkmn_Seven_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[6]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Seven_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Seven_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Seven_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].Name;
-                Pkmn_Seven_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].Level;
-                Pkmn_Seven_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]]
+                    pk.Name;
+                Pkmn_Seven_Level.Content = pk.Level;
+                Pkmn_Seven_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Seven_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]]
+                Pkmn_Seven_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Seven_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]].ActualStats.HP;
-                Pkmn_Seven_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[6]]
+                    pk.ActualStats.HP;
+                Pkmn_Seven_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Seven_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[6]].ActualStats.SpecialAttack;
-                Pkmn_Seven_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[6]].ActualStats.SpecialDefence;
+                Pkmn_Seven_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Seven_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Seven.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Seven.Visibility = Visibility.Hidden;
             }
 
-            if (StaticData.PlayerData.CurrentParty.Count > 7)
+            try
             {
+                TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(7))));
                 Pkmn_Eight_Nickname.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].Nickname;
-                Pkmn_Eight_Primary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[7]].PrimaryTypeID);
-                Pkmn_Eight_Secondary_Type.Source = GetTypeAsset(StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[7]].SecondaryTypeID);
+                    pk.Nickname;
+                Pkmn_Eight_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
+                Pkmn_Eight_Secondary_Type.Source = GetTypeAsset(pk.SecondaryTypeID);
                 Pkmn_Eight_Species.Content =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].Name;
-                Pkmn_Eight_Level.Content = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].Level;
-                Pkmn_Eight_Attack_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]]
+                    pk.Name;
+                Pkmn_Eight_Level.Content = pk.Level;
+                Pkmn_Eight_Attack_Bar.Width = pk
                     .ActualStats.Attack;
-                Pkmn_Eight_Defence_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]]
+                Pkmn_Eight_Defence_Bar.Width = pk
                     .ActualStats.Defence;
                 Pkmn_Eight_HP_Bar.Width =
-                    StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]].ActualStats.HP;
-                Pkmn_Eight_Speed_Bar.Width = StaticData.PlayerData.Pkmnlist[StaticData.PlayerData.CurrentParty[7]]
+                    pk.ActualStats.HP;
+                Pkmn_Eight_Speed_Bar.Width = pk
                     .ActualStats.Speed;
-                Pkmn_Eight_Special_Attack_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[7]].ActualStats.SpecialAttack;
-                Pkmn_Eight_Special_Defence_Bar.Width = StaticData.PlayerData
-                    .Pkmnlist[StaticData.PlayerData.CurrentParty[7]].ActualStats.SpecialDefence;
+                Pkmn_Eight_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
+                Pkmn_Eight_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                 Grid_Pkmn_Eight.Visibility = Visibility.Visible;
             }
-            else
+            catch
             {
                 Grid_Pkmn_Eight.Visibility = Visibility.Hidden;
             }
@@ -286,49 +267,49 @@ namespace PokemonRPG.Windows
         private void Pkmn_One_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[0]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(0)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Two_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[1]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(1)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Three_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[2]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(2)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Four_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[3]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(3)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Five_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[4]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(4)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Six_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[5]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(5)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Seven_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[6]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(6)).PokemonUID);
             pkmnpage.Show();
         }
         private void Pkmn_Eight_Current_HP_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var pkmnpage =
-                new PokemonPage(StaticData.PlayerData.CurrentParty[7]);
+                new PokemonPage(StaticData.PlayerData.CurrentParty.Single(s => s.Slot.Equals(7)).PokemonUID);
             pkmnpage.Show();
         }
     }

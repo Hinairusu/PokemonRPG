@@ -4,6 +4,62 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="TrainerPage" Height="450" Width="800">
-    <Grid />
+        Title="Trainer Management Page" Height="400" Width="600">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="245"/>
+            <ColumnDefinition Width="155*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="1" Header="Active Trainer Controls" Grid.RowSpan="3" Margin="0,0,0,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="76*"/>
+                    <RowDefinition Height="93*"/>
+                    <RowDefinition Height="92*"/>
+                </Grid.RowDefinitions>
+                <Button Content="Create new Trainer" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top"/>
+                <GroupBox Header="Trainer Controls" Margin="0,76,0,0" Grid.RowSpan="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="318*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Add Trainer Feature" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <Button Content="Advance Trainer" HorizontalAlignment="Left" Margin="203,10,0,0" VerticalAlignment="Top" Width="105" Grid.Column="1"/>
+                        <Button Content="Add Trainer Reward" HorizontalAlignment="Left" Margin="88,40,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Pokemon Controls" Grid.Row="1" Margin="0,93,0,0" Grid.RowSpan="2">
+                    <Grid>
+                        <Button Content="Add New Pokemon" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <Button Content="Advance Pokemon" HorizontalAlignment="Left" Margin="228,10,0,0" VerticalAlignment="Top" Width="105"/>
+                        <Button Content="Teach New Move" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top" Width="106"/>
+                    </Grid>
+                </GroupBox>
+                <Label Content="Select Active Trainer" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="117" HorizontalContentAlignment="Center"/>
+                <ComboBox x:Name="cbx_Active_Player" Margin="132,10,10,0" VerticalAlignment="Top" SelectionChanged="cbx_Active_Player_SelectionChanged"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Load and Unload Data" Grid.RowSpan="3" Margin="0,0,0,72">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="41*"/>
+                    <RowDefinition Height="42*"/>
+                </Grid.RowDefinitions>
+                <ComboBox x:Name="cbx_PlayerStubs" HorizontalAlignment="Left" Margin="2,36,0,0" VerticalAlignment="Top" Width="219"/>
+                <Label Content="Select trainers to Load full data for" HorizontalAlignment="Left" Margin="2,7,0,0" VerticalAlignment="Top" Width="219" HorizontalContentAlignment="Center"/>
+                <Button x:Name="btn_Load" Content="Load" HorizontalAlignment="Left" Margin="53,65,0,0" VerticalAlignment="Top" Width="101" Click="btn_Load_Click"/>
+                <Button x:Name="btn_Unload" Content="Unload" HorizontalAlignment="Left" Margin="53,64,0,0" VerticalAlignment="Top" Width="101" Grid.Row="1" Click="btn_Unload_Click"/>
+                <ComboBox x:Name="cbx_Players" HorizontalAlignment="Left" Margin="3,37,0,0" VerticalAlignment="Top" Width="219" Grid.Row="1"/>
+                <Label Content="Select trainers to Unload data" HorizontalAlignment="Left" Margin="2,6,0,0" VerticalAlignment="Top" Width="219" Grid.Row="1" HorizontalContentAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
 </Window>

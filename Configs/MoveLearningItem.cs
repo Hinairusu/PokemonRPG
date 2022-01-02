@@ -3,11 +3,12 @@
 namespace PokemonRPG.Configs
 {
     [Serializable]
-    public class MoveLearningItem : Item
+    public class MoveLearningItem
     {
-        public string Number { get; set; }
-        public string MoveName { get; set; }
+        public int UID { get; set; }
+        public int MoveUID { get; set; }
+        public int ItemUID { get; set; }
+        public string TMNumber { get; set; }
         public bool IsHM { get; set; }
-        public bool isTM { get; set; }
     }
 }

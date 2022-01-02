@@ -10,7 +10,7 @@ namespace PokemonRPG.Configs
         {
             BaseStats = new BaseCharacteristics
                 {HP = 1, Attack = 1, Defence = 1, SpecialAttack = 1, SpecialDefence = 1, Speed = 1};
-            EggGroup = new List<string>();
+            EggGroup = new List<int>();
             Habitats = new List<Habitat>();
             Movements = new Movement();
             PokedexResult = new PokedexEntry();
@@ -21,9 +21,11 @@ namespace PokemonRPG.Configs
             Sex = new Gender();
             EvolutionIDs = new List<int>();
             Capability = new List<int>();
+            LevelUps = new List<Advancements>();
         }
 
         public int UID { get; set; }
+        
         public string Name { get; set; }
         public string Size { get; set; }
         public int WeightClass { get; set; }
@@ -31,7 +33,8 @@ namespace PokemonRPG.Configs
         public Gender Sex { get; set; }
         public int PrimaryTypeID { get; set; }
         public int SecondaryTypeID { get; set; }
-        public List<string> EggGroup { get; set; }
+        public int TertiaryTypeID { get; set; }
+        public List<int> EggGroup { get; set; }
         public List<Habitat> Habitats { get; set; }
         public Movement Movements { get; set; }
         public int Power { get; set; }
@@ -39,7 +42,6 @@ namespace PokemonRPG.Configs
         public List<int> Capability { get; set; }
         public PokedexEntry PokedexResult { get; set; }
         public int HatchRate { get; set; }
-        public int HatchTimeRemaining { get; set; }
         public int CatchRate { get; set; }
         public List<LevelMoves> PossibleLevelupMoves { get; set; }
         public List<int> PossibleTMMoves { get; set; }
@@ -49,7 +51,7 @@ namespace PokemonRPG.Configs
         public BaseCharacteristics BaseStats { get; set; }
         public List<int> EvolutionIDs { get; set; }
         public string PokemonFamily { get; set; }
-
+        public List<Advancements> LevelUps { get; set; }
         #region Overrides
 
         public override string ToString()

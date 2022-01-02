@@ -19,7 +19,7 @@ namespace PokemonRPG.Configs
 
     public class PlayerStub
     {
-        public int UID { get; set; }
+        public int UID { get; set; } = -1;
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PlayerName { get; set; }

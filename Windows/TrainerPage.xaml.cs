@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using PokemonRPG.Configs;
 
 namespace PokemonRPG.Windows
@@ -12,9 +15,10 @@ namespace PokemonRPG.Windows
     /// </summary>
     public partial class TrainerPage : Window
     {
-        public static bool Reload = false;
-        public TrainerPage()
+        private bool Load = false;
+        public TrainerPage(bool Loaded)
         {
+            Load = Loaded;
             InitializeComponent();
             DataBindings();
         }
@@ -24,6 +28,18 @@ namespace PokemonRPG.Windows
             DataBinding.BindThis(cbx_Players, StaticData.ReferenceData.TrainerDex, "LoadedTrainers");
             DataBinding.BindThis(cbx_Active_Player, StaticData.ReferenceData.TrainerDex, "LoadedTrainers");
             DataBinding.BindThis(cbx_PlayerStubs, StaticData.ReferenceData.TrainerDex, "Trainers");
+            DataBinding.BindThis(cbx_BasePokemon, StaticData.ReferenceData.Pokedex, "PokemonDexList");
+            DataBinding.BindThis(cbx_Breeder, StaticData.ReferenceData.TrainerDex, "Trainers");
+            DataBinding.BindThis(cbx_Nature, StaticData.ReferenceData.NatureDex, "Natures");
+            DataBinding.BindThis(cbx_Parent1, StaticData.PlayerData, "OwnedPokemon");
+            DataBinding.BindThis(cbx_Parent2, StaticData.PlayerData, "OwnedPokemon");
+            try
+            {
+                cbx_Active_Player.SelectedIndex =
+                    StaticData.ReferenceData.TrainerDex.LoadedTrainers.FindIndex(s =>
+                        s.UID.Equals(StaticData.PlayerData.UID));
+            }
+            catch{}
         }
 
         private void btn_Unload_Click(object sender, RoutedEventArgs e)
@@ -35,6 +51,7 @@ namespace PokemonRPG.Windows
             }
 
             StaticData.ReferenceData.TrainerDex.LoadedTrainers.RemoveAt(cbx_Players.SelectedIndex);
+            DataBindings();
             
         }
 
@@ -50,7 +67,7 @@ namespace PokemonRPG.Windows
 
             try
             {
-                DataTable CurrentPartyID = SQLData.DatatableFill(MainWindow.TrainerDB,FixedData.CurrentParty, MainWindow.tCnxn,$"[Trainer UID] = {player.UID}");
+                DataTable CurrentPartyID = SQLData.DatatableFill(LoadDex.TrainerDB,FixedData.CurrentParty, LoadDex.tCnxn,$"[Trainer UID] = {player.UID}");
 
                 foreach (DataRow row in CurrentPartyID.Rows)
                 {
@@ -69,8 +86,8 @@ namespace PokemonRPG.Windows
             int PkID = -1;
             try
             {
-                DataTable PokemonList = SQLData.DatatableFill(MainWindow.PokemonDB, FixedData.TrainerPokemon,
-                    MainWindow.tCnxn, $"[Trainer UID] = {player.UID}");
+                DataTable PokemonList = SQLData.DatatableFill(LoadDex.PokemonDB, FixedData.TrainerPokemon,
+                    LoadDex.tCnxn, $"[Trainer UID] = {player.UID}");
 
                 foreach (DataRow row in PokemonList.Rows)
                 {
@@ -98,8 +115,8 @@ namespace PokemonRPG.Windows
 
                     try
                     {
-                        DataTable advancementTable = SQLData.DatatableFill(MainWindow.PokemonDB, FixedData.LevelUp,
-                            MainWindow.tCnxn, $"[Base UID] = {pk.UID}");
+                        DataTable advancementTable = SQLData.DatatableFill(LoadDex.PokemonDB, FixedData.LevelUp,
+                            LoadDex.tCnxn, $"[Base UID] = {pk.UID}");
 
                         foreach (DataRow aRow in advancementTable.Rows)
                         {
@@ -141,14 +158,130 @@ namespace PokemonRPG.Windows
 
         private void cbx_Active_Player_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            if (cbx_Active_Player.SelectedIndex > -1)
+            if (!Load)
             {
-                StaticData.PlayerData =
-                    StaticData.ReferenceData.TrainerDex.LoadedTrainers[cbx_Active_Player.SelectedIndex];
-                if(!Reload)
+                if (cbx_Active_Player.SelectedIndex > -1)
+                {
+                    StaticData.PlayerData =
+                        StaticData.ReferenceData.TrainerDex.LoadedTrainers[cbx_Active_Player.SelectedIndex];
+
                     MessageBox.Show("Please right click on the Trainer card to update the main page");
-                Reload = true;
+
+                    this.Close();
+                }
+            }
+            else
+                Load = false;
+        }
+
+        private void btn_AddNewPlayer_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                List<DataTableFeatures> Columns = new List<DataTableFeatures>();
+                Columns.Add(new DataTableFeatures() {ColumnName = "Player_Name", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Character_Name", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Money", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Strength", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Dexterity", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Constitution", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Intelligence", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Wisdom", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Charisma", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Max_HP", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Current_HP", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Description", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Notes", ColumnType = typeof(string)});
+
+
+                DataTable DT = SQLData.MakeDT(Columns);
+
+                DataRow row = DT.NewRow();
+                row[Columns[0].ColumnName] = tb_PlayerName.Text;
+                row[Columns[1].ColumnName] = tb_CharacterName.Text;
+                row[Columns[2].ColumnName] = 2000;
+                row[Columns[3].ColumnName] = Inud_Strength.Value.Value;
+                row[Columns[4].ColumnName] = Inud_Dexterity.Value.Value;
+                row[Columns[5].ColumnName] = Inud_Constitution.Value.Value;
+                row[Columns[6].ColumnName] = Inud_Intelligence.Value.Value;
+                row[Columns[7].ColumnName] = Inud_Wisdom.Value.Value;
+                row[Columns[8].ColumnName] = Inud_Charisma.Value.Value;
+                row[Columns[9].ColumnName] = (Inud_Constitution.Value.Value * 4) + 4;
+                row[Columns[10].ColumnName] = (Inud_Constitution.Value.Value * 4) + 4;
+                row[Columns[11].ColumnName] = tb_Description.Text;
+                row[Columns[12].ColumnName] = tb_Notes.Text;
+                DT.Rows.Add(row);
+
+                SQLData.SQLInsert(DT, LoadDex.TrainerDB, FixedData.PlayerSummary, LoadDex.tCnxn);
+                LoadDex.LoadTrainerDex();
+                MessageBox.Show("Operation Complete.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Exception thrown trying to make new Trainer:  {Environment.NewLine}{Environment.NewLine}{ex}");
             }
         }
+
+
+       
+
+        private void btn_AddNewPokemon_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<DataTableFeatures> Columns = new List<DataTableFeatures>();
+                Columns.Add(new DataTableFeatures() {ColumnName = "Base Pokemon UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Trainer UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Actual Sex", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Capture Trainer UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Breeder UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Parent 1 UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Parent 2 UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Current HP", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Alive", ColumnType = typeof(bool)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Nature UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Nickname", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Notes", ColumnType = typeof(string)});
+
+
+                DataTable DT = SQLData.MakeDT(Columns);
+
+                DataRow row = DT.NewRow();
+                row[Columns[0].ColumnName] = ((Pokemon) cbx_BasePokemon.SelectionBoxItem).UID;
+                row[Columns[1].ColumnName] = StaticData.PlayerData.UID;
+                row[Columns[2].ColumnName] = ((ComboBoxItem)cbx_Sex.SelectedItem).Content;
+                row[Columns[3].ColumnName] = StaticData.PlayerData.UID;
+                row[Columns[4].ColumnName] = ((PlayerStub)cbx_Breeder.SelectedItem).UID;
+                row[Columns[5].ColumnName] = ((TrainerPokemon) cbx_Parent1.SelectionBoxItem).UID;
+                row[Columns[6].ColumnName] = ((TrainerPokemon) cbx_Parent2.SelectionBoxItem).UID;
+                row[Columns[7].ColumnName] = 1;
+                row[Columns[8].ColumnName] = true;
+                row[Columns[9].ColumnName] = ((InherentNature) cbx_Nature.SelectedItem).UID;
+                row[Columns[10].ColumnName] = tb_PokemonNickname.Text;
+                row[Columns[11].ColumnName] = tb_PokemonNotes.Text;
+                DT.Rows.Add(row);
+
+                SQLData.SQLInsert(DT, LoadDex.PokemonDB, FixedData.TrainerPokemon, LoadDex.pCnxn);
+                LoadDex.LoadTrainerDex();
+                MessageBox.Show("Operation Complete.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Exception thrown trying to make new Pokemon:  {Environment.NewLine}{Environment.NewLine}{ex}");
+            }
+        }
+
+        private void btn_Reload_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Warning, this may take a moment.");
+            LoadDex.LoadSQLData();
+            DataBindings();
+            MessageBox.Show("Operation Complete.");
+        }
     }
+
+    
 }

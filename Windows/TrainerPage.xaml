@@ -110,7 +110,55 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Pokemon Advance">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="79"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="79*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="23*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Width="153" Grid.Column="1"/>
+                    <Label Content="Pokemon to Advance" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Center" Width="125"/>
+                    <GroupBox Header="Level Up Bonus" Margin="0,0,10,0" Grid.ColumnSpan="2" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="149*"/>
+                                <ColumnDefinition Width="173*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="120"/>
+                            <Button Content="Apply Level Up" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Width="103" Height="26" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Move Tutor" Margin="0,0,10,0" Grid.ColumnSpan="2" Grid.Row="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="37*"/>
+                                <ColumnDefinition Width="167*"/>
+                                <ColumnDefinition Width="118*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox VerticalAlignment="Top" Height="22" Margin="37,0,10,0" Grid.Column="1"/>
+                            <Button Content="Tutor Move" VerticalAlignment="Center" Grid.Column="2" Height="20" HorizontalAlignment="Center" Width="102"/>
+                            <ComboBox Margin="37,34,10,0" VerticalAlignment="Top" Height="22" Grid.Column="1"/>
+                            <Label Content="Move" HorizontalAlignment="Left" Margin="29,-2,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                            <Label Content="Slot" HorizontalAlignment="Left" Margin="2,32,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Custom Advancement" Margin="0,5,10,0" Grid.ColumnSpan="2" Grid.Row="3">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="149*"/>
+                                <ColumnDefinition Width="173*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="120"/>
+                            <Button Content="Apply Level Up" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Width="103" Height="26" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
             </TabItem>
         </TabControl>
         <Button x:Name="btn_Reload"  Content="Reload all Data Files" HorizontalAlignment="Left" Margin="10,0,0,42" Grid.Row="3" VerticalAlignment="Bottom" Width="134" Click="btn_Reload_Click"/>

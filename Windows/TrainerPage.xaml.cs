@@ -224,9 +224,6 @@ namespace PokemonRPG.Windows
             }
         }
 
-
-       
-
         private void btn_AddNewPokemon_Click(object sender, RoutedEventArgs e)
         {
             try

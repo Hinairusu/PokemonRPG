@@ -129,7 +129,16 @@ namespace PokemonRPG.Configs
         {
             foreach (var advance in LevelUps)
             {
-                switch (advance.LevelUpUID)
+                Advance(advance);
+            }
+            RecalculateStats();
+            RecalculateCombatStats();
+            
+        }
+
+        public void Advance(Advancements advance)
+        {
+             switch (advance.LevelUpUID)
                 {
                     case 1:
                     {
@@ -818,13 +827,39 @@ namespace PokemonRPG.Configs
                         TrainerID = StaticData.PlayerData.UID;
                         break;
                     }
+                    case 68:
+                    {
+                        LevelUpPoints.HP += advance.ValueAdd ?  advance.Modifier : -advance.Modifier;
+                        break;
+                    }
+                    case 69:
+                    {
+                        LevelUpPoints.Attack += advance.ValueAdd ? advance.Modifier : -advance.Modifier;
+                        break;
+                    }
+                    case 70:
+                    {
+                        LevelUpPoints.SpecialAttack += advance.ValueAdd ? advance.Modifier : -advance.Modifier;
+                        break;
+                    }
+                    case 71:
+                    {
+                        LevelUpPoints.Defence  += advance.ValueAdd ? advance.Modifier : -advance.Modifier;
+                        break;
+                    }
+                    case 72:
+                    {
+                        LevelUpPoints.SpecialDefence += advance.ValueAdd ? advance.Modifier : -advance.Modifier;
+                        break;
+                    }
+                    case 73:
+                    {
+                        LevelUpPoints.Speed += advance.ValueAdd ? advance.Modifier : -advance.Modifier;
+                        break;
+                    }
                     default:
                         break;
                 }
-            }
-            RecalculateStats();
-            RecalculateCombatStats();
-            
         }
     }
 
@@ -838,7 +873,7 @@ namespace PokemonRPG.Configs
         public DateTime DateAdded { get; set; }
         public override string ToString()
         {
-            return $"{StaticData.ReferenceData.TrainerDex.Advances.Single(s => s.UID.Equals(LevelUpUID)).ChangeType}";
+            return $"{StaticData.ReferenceData.TrainerDex.Advances.Single(s => s.UID.Equals(LevelUpUID))}";
         }
     }
 
@@ -846,6 +881,10 @@ namespace PokemonRPG.Configs
     {
         public int UID { get; set; }
         public string ChangeType { get; set; }
+        public override string ToString()
+        {
+            return ChangeType;
+        }
     }
 
     public class PokemonBattleMove

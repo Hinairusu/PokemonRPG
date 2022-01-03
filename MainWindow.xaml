@@ -119,18 +119,7 @@
                VerticalAlignment="Top" Width="350" Height="23" />
         <ListBox x:Name="Lb_PokemonTeam" Grid.Column="4" HorizontalAlignment="Left" Height="434" Margin="9.667,37,0,0"
                  VerticalAlignment="Top" Width="418" Background="{x:Null}" Grid.RowSpan="2">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-
-                        <Label Content="{Binding Name}" />
-                        <Label Content="{Binding Nickname, StringFormat='&quot;{0}&quot;'}" />
-                        <Label Content=" - Level:" />
-                        <Label Content="{Binding Level}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-            <Configs:TrainerPokemon ActualSex="Female" Level="25" Nickname="The IV Bag" Name="Shuckle" />
+            
         </ListBox>
         <Label Content="Pokemon Party" Grid.Column="4" HorizontalAlignment="Left" Margin="9.667,8,0,0"
                VerticalAlignment="Top" Height="23" Width="418" />

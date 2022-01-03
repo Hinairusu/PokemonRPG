@@ -12,13 +12,11 @@ namespace PokemonRPG.Windows
     public partial class PokemonPage : Window
     {
         private readonly TrainerPokemon Pkmn;
-        public int PokemonID;
 
         public PokemonPage(int pkmn)
         {
             InitializeComponent();
-            PokemonID = pkmn;
-            Pkmn = StaticData.PlayerData.Pkmnlist.Where(s => s.PokemonTID.Equals(pkmn)).First();
+            Pkmn = StaticData.PlayerData.OwnedPokemon.Single(s => s.UID.Equals(pkmn));
 
             lbl_Level.Content = Pkmn.Level.ToString();
             lbl_NickName.Content = Pkmn.Nickname;

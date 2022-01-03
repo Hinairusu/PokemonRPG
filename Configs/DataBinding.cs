@@ -81,6 +81,11 @@ namespace PokemonRPG.Configs
                         BindingOperations.SetBinding(Item as ComboBox, ComboBox.TextProperty,
                             MakeBinding(Source, SecondPropertyName));
                 }
+                else if (Item is ListBox)
+                {
+                    BindingOperations.SetBinding(Item as ListBox, ItemsControl.ItemsSourceProperty,
+                            MakeBinding(Source, PropertyName));
+                }
                 else if (Item is DecimalUpDown)
                 {
                     BindingOperations.SetBinding(Item as DecimalUpDown, DecimalUpDown.ValueProperty,

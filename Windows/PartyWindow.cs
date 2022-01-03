@@ -27,8 +27,9 @@ namespace PokemonRPG.Windows
 
             try
             {
+
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(0))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(0)).PokemonUID));
                
                     Pkmn_One_Nickname.Content = pk.Nickname;
                     Pkmn_One_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -42,8 +43,6 @@ namespace PokemonRPG.Windows
                     Pkmn_One_Special_Attack_Bar.Width = pk.ActualStats.SpecialAttack;
                     Pkmn_One_Special_Defence_Bar.Width = pk.ActualStats.SpecialDefence;
                     Grid_Pkmn_One.Visibility = Visibility.Visible;
-               
-                    Grid_Pkmn_One.Visibility = Visibility.Hidden;
                 
             }
             catch{Grid_Pkmn_One.Visibility = Visibility.Hidden;}
@@ -51,7 +50,7 @@ namespace PokemonRPG.Windows
             try{
             
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(1))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(1)).PokemonUID));
                 Pkmn_Two_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Two_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -79,7 +78,7 @@ namespace PokemonRPG.Windows
             try
             {
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(2))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(2)).PokemonUID));
                 Pkmn_Three_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Three_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -107,7 +106,7 @@ namespace PokemonRPG.Windows
             try
             {
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(3))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(3)).PokemonUID));
                 Pkmn_Four_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Four_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -135,7 +134,7 @@ namespace PokemonRPG.Windows
             try
             {
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(4))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(4)).PokemonUID));
                 Pkmn_Five_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Five_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -163,7 +162,7 @@ namespace PokemonRPG.Windows
             try
             {
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(5))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(5)).PokemonUID));
                 Pkmn_Six_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Six_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -191,7 +190,7 @@ namespace PokemonRPG.Windows
             try
             {
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(6))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(6)).PokemonUID));
                 Pkmn_Seven_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Seven_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);
@@ -219,7 +218,7 @@ namespace PokemonRPG.Windows
             try
             {
                 TrainerPokemon pk = StaticData.PlayerData.OwnedPokemon.Single(s =>
-                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(7))));
+                    s.UID.Equals(StaticData.PlayerData.CurrentParty.Single(d => d.Slot.Equals(7)).PokemonUID));
                 Pkmn_Eight_Nickname.Content =
                     pk.Nickname;
                 Pkmn_Eight_Primary_Type.Source = GetTypeAsset(pk.PrimaryTypeID);

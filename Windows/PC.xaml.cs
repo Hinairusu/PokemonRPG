@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
 using System.Xml.Serialization;
@@ -11,67 +14,74 @@ namespace PokemonRPG.Windows
     /// </summary>
     public partial class PC : Window
     {
-        private Player PlayerData;
-        private MasterReferenceClass ReferenceData;
-        private readonly XDocument xmlData;
-
-        public PC(MasterReferenceClass Reference, Player player)
+        public PC()
         {
-            PlayerData = player;
-            ReferenceData = Reference;
+            
             InitializeComponent();
-            xmlData = Serialize(player.Pkmnlist);
-
-            var treeNode = new TreeViewItem
-            {
-                Header = "Pokemon",
-                IsExpanded = true
-            };
-
-            BuildNodes(treeNode, xmlData.Root);
-            Tree_Pkmn.Items.Add(treeNode);
+            DataBindings();
         }
 
-        public static XDocument Serialize(object obj)
+        public void DataBindings()
         {
-            var xmlSerializer = new XmlSerializer(obj.GetType());
-
-            var doc = new XDocument();
-            using (var writer = doc.CreateWriter())
-            {
-                xmlSerializer.Serialize(writer, obj);
-            }
-
-            return doc;
+            DataBinding.BindThis(Lb_PartyPokemon, StaticData.PlayerData, "CurrentParty");
+            DataBinding.BindThis(Lb_PokemonPC, StaticData.PlayerData, "OwnedPokemon");
+            DataBinding.BindThis(cbx_BoxPokemon, StaticData.PlayerData, "OwnedPokemon");
         }
 
-        private void BuildNodes(TreeViewItem treeNode, XElement element)
+        private void btn_PartyAdd_Click(object sender, RoutedEventArgs e)
         {
-            var attributes = "";
-            if (element.HasAttributes)
-                foreach (var att in element.Attributes())
-                    attributes += " " + att.Name + " = " + att.Value;
+            try
+            {
+                List<DataTableFeatures> Columns = new List<DataTableFeatures>();
+                Columns.Add(new DataTableFeatures() {ColumnName = "Trainer UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Party Slot", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Pokemon UID", ColumnType = typeof(int)});
 
-            var childTreeNode = new TreeViewItem
-            {
-                Header = element.Name.LocalName + attributes,
-                IsExpanded = true
-            };
-            if (element.HasElements)
-            {
-                foreach (var childElement in element.Elements()) BuildNodes(childTreeNode, childElement);
-            }
-            else
-            {
-                var childTreeNodeText = new TreeViewItem
-                {
-                    Header = element.Value,
-                    IsExpanded = true
-                };
-                childTreeNode.Items.Add(childTreeNodeText);
-            }
 
-            treeNode.Items.Add(childTreeNode);
+                DataTable DT = SQLData.MakeDT(Columns);
+
+                DataRow row = DT.NewRow();
+                row[Columns[0].ColumnName] = StaticData.PlayerData.UID;
+                row[Columns[1].ColumnName] = cbx_PartySlot.SelectedIndex;
+                row[Columns[2].ColumnName] = ((TrainerPokemon)cbx_BoxPokemon.SelectedItem).UID;
+                DT.Rows.Add(row);
+
+                SQLData.SQLInsert(DT, LoadDex.TrainerDB, FixedData.CurrentParty, LoadDex.tCnxn); ;
+                MessageBox.Show("Operation Complete.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Exception thrown trying to Add Party:  {Environment.NewLine}{Environment.NewLine}{ex}");
+            }
+        }
+
+        private void btn_PartyRemoval_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<DataTableFeatures> Columns = new List<DataTableFeatures>();
+                Columns.Add(new DataTableFeatures() {ColumnName = "Trainer UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Party Slot", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Pokemon UID", ColumnType = typeof(int)});
+
+
+                DataTable DT = SQLData.MakeDT(Columns);
+
+                DataRow row = DT.NewRow();
+                row[Columns[0].ColumnName] = StaticData.PlayerData.UID;
+                row[Columns[1].ColumnName] = ((PartyPokemon)Lb_PartyPokemon.SelectedItem).Slot;
+                row[Columns[2].ColumnName] = ((PartyPokemon)Lb_PartyPokemon.SelectedItem).PokemonUID;
+                DT.Rows.Add(row);
+
+                SQLData.SQLDelete(DT, LoadDex.TrainerDB, FixedData.CurrentParty, LoadDex.tCnxn); ;
+                MessageBox.Show("Operation Complete.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Exception thrown trying to Remove Party:  {Environment.NewLine}{Environment.NewLine}{ex}");
+            }
         }
     }
 }

@@ -270,6 +270,51 @@ namespace PokemonRPG.Configs
             }
         }
 
+          public static void SQLDelete(DataTable DT, string DatabaseName, string TableName, string ConString, bool OutputRowDebug = false)
+            {
+                StringBuilder SQLSTR = new StringBuilder();
+                SQLSTR.Append($"DELETE FROM [{DatabaseName}].[dbo].[{TableName}] WHERE ");
+                int ParameterCount = 1;
+                foreach (DataColumn col in DT.Columns)
+                {
+                    SQLSTR.Append($"[{col.ColumnName}] = @Val{ParameterCount}");
+
+                    if (ParameterCount != DT.Columns.Count)
+                        SQLSTR.Append(" AND ");
+                    ParameterCount++;
+                }
+
+                using (var conn = new SqlConnection(ConString))
+                {
+                    conn.Open();
+                    var SQLString = SQLSTR.ToString();
+
+                    using (var Command = new SqlCommand(SQLString, conn))
+                    {
+                        for (int i = 1; i < ParameterCount; i++)
+                            Command.Parameters.Add($"@Val{i}", GetSqlType(DT.Columns[i - 1].DataType), DT.Columns[i - 1].MaxLength);
+                        foreach (DataRow row in DT.Rows)
+                        {
+                            try
+                            {
+                                for (int i = 1; i < ParameterCount; i++)
+                                {
+                                    Command.Parameters[$"@Val{i}"].Value = row[i - 1];
+                                }
+                                Command.ExecuteNonQuery();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Error: {ex}");
+                                break;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+
           public static SqlDbType GetSqlType(Type type)
           {
               if (type == typeof(string))
@@ -889,7 +934,7 @@ namespace PokemonRPG.Configs
                     
             #endregion
 
-            #region FetchingMoveset
+            #region Fetching Moveset
 
             try
             {
@@ -996,6 +1041,9 @@ namespace PokemonRPG.Configs
             #region Advancement Types
             try
             {
+                List<int> LevelUpUids = new List<int>() {68, 69, 70, 71, 72, 73};
+                
+                
                 StaticData.ReferenceData.TrainerDex.Advances.Clear();
                 DataTable advancementTable = SQLData.DatatableFill(PokemonDB,FixedData.LevelUpList, tCnxn);
 
@@ -1005,7 +1053,12 @@ namespace PokemonRPG.Configs
                     
                     value.UID = (int) row["UID"];
                     value.ChangeType = (string) row["Change Type"];
-                    StaticData.ReferenceData.TrainerDex.Advances.Add(value);
+                    if(LevelUpUids.Contains(value.UID))
+                        StaticData.ReferenceData.TrainerDex.LevelUpAdvancements.Add(value);
+                    else
+                        StaticData.ReferenceData.TrainerDex.Advances.Add(value);
+                    if(value.UID >23 && value.UID < 52)
+                        StaticData.ReferenceData.Pokedex.MoveSlots.Add(value);
                 }
                 
             }

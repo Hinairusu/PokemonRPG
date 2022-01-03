@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -33,11 +34,18 @@ namespace PokemonRPG.Windows
             DataBinding.BindThis(cbx_Nature, StaticData.ReferenceData.NatureDex, "Natures");
             DataBinding.BindThis(cbx_Parent1, StaticData.PlayerData, "OwnedPokemon");
             DataBinding.BindThis(cbx_Parent2, StaticData.PlayerData, "OwnedPokemon");
+            DataBinding.BindThis(cbx_PokemonToAdvance, StaticData.PlayerData, "OwnedPokemon");
+            DataBinding.BindThis(cbx_LevelUpBonus, StaticData.ReferenceData.TrainerDex, "LevelUpAdvancements");
+            DataBinding.BindThis(cbx_NewMove, StaticData.ReferenceData.MoveDex, "AdvancementMoveOptions");
+            DataBinding.BindThis(cbx_CustomAdvancement, StaticData.ReferenceData.TrainerDex, "Advances");
+            DataBinding.BindThis(cbx_NewMoveSlot, StaticData.ReferenceData.Pokedex, "MoveSlots");
+            
             try
             {
                 cbx_Active_Player.SelectedIndex =
                     StaticData.ReferenceData.TrainerDex.LoadedTrainers.FindIndex(s =>
                         s.UID.Equals(StaticData.PlayerData.UID));
+                
             }
             catch{}
         }
@@ -151,6 +159,7 @@ namespace PokemonRPG.Windows
             foreach(var pkmn in player.OwnedPokemon)
                 pkmn.Advance();
 
+           
             StaticData.ReferenceData.TrainerDex.LoadedTrainers.Add(player);
 
 
@@ -277,6 +286,91 @@ namespace PokemonRPG.Windows
             LoadDex.LoadSQLData();
             DataBindings();
             MessageBox.Show("Operation Complete.");
+        }
+
+        private void btn_ApplyLevelUp_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbx_LevelUpBonus.SelectedIndex != -1)
+            {
+                if(PostAdvancementToSQL(((AdvancementTypes) cbx_LevelUpBonus.SelectedItem).UID, 1, true))
+                    if(PostAdvancementToSQL(1, 1, true))
+                        MessageBox.Show("Operation Complete.");
+
+            }
+        }
+
+        private void btn_ApplyNewMove_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbx_NewMove.SelectedIndex != -1 && cbx_NewMoveSlot.SelectedIndex != -1)
+                if(PostAdvancementToSQL(((AdvancementTypes) cbx_NewMoveSlot.SelectedItem).UID, ((PokemonMove)cbx_NewMove.SelectedItem).MoveID, true))
+                    MessageBox.Show("Operation Complete.");
+        }
+
+        private void btn_ApplyCustomAdvancement_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbx_CustomAdvancement.SelectedIndex != -1)
+                if(PostAdvancementToSQL(((AdvancementTypes) cbx_CustomAdvancement.SelectedItem).UID, inud_ModifierValue.Value.Value, cb_AddValue.IsChecked.Value, tb_AdvancementNotes.Text))
+                    MessageBox.Show("Operation Complete.");
+        }
+
+        private bool PostAdvancementToSQL(int AdvancementID, int Modifier, bool AddValue, string Notes = null)
+        {
+            try
+            {
+                List<DataTableFeatures> Columns = new List<DataTableFeatures>();
+                Columns.Add(new DataTableFeatures() {ColumnName = "Base UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Level Up UID", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Modifier", ColumnType = typeof(int)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Add Value", ColumnType = typeof(bool)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Notes", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "Date Added", ColumnType = typeof(DateTime)});
+
+
+                DataTable DT = SQLData.MakeDT(Columns);
+
+                DataRow row = DT.NewRow();
+                row[Columns[0].ColumnName] = ((TrainerPokemon)cbx_PokemonToAdvance.SelectedItem).UID;
+                row[Columns[1].ColumnName] = AdvancementID;
+                row[Columns[2].ColumnName] = Modifier;
+                row[Columns[3].ColumnName] = AddValue;
+                if(!string.IsNullOrWhiteSpace(Notes))
+                    row[Columns[4].ColumnName] = Notes;
+                row[Columns[5].ColumnName] = DateTime.Now;
+                DT.Rows.Add(row);
+
+                SQLData.SQLInsert(DT, LoadDex.PokemonDB, FixedData.LevelUp, LoadDex.pCnxn); ;
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Exception thrown trying to save Advancement:  {Environment.NewLine}{Environment.NewLine}{ex}");
+                return false;
+            }
+        }
+
+        private void cbx_PokemonToAdvance_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            StaticData.ReferenceData.MoveDex.AdvancementMoveOptions.Clear();
+            var Pokemon = (TrainerPokemon) cbx_PokemonToAdvance.SelectedItem;
+            foreach (var move in Pokemon.PossibleLevelupMoves)
+            {
+                StaticData.ReferenceData.MoveDex.AdvancementMoveOptions.Add(StaticData.ReferenceData.MoveDex.MoveList.Single(s => s.MoveID.Equals(move.MoveID)));
+            }
+            foreach (var move in Pokemon.PossibleEggMoves)
+            {
+                StaticData.ReferenceData.MoveDex.AdvancementMoveOptions.Add(StaticData.ReferenceData.MoveDex.MoveList.Single(s => s.MoveID.Equals(move)));
+            }
+            foreach (var move in Pokemon.PossibleTMMoves)
+            {
+                StaticData.ReferenceData.MoveDex.AdvancementMoveOptions.Add(StaticData.ReferenceData.MoveDex.MoveList.Single(s => s.MoveID.Equals(move)));
+            }
+            foreach (var move in Pokemon.PossibleTutorMoves)
+            {
+                StaticData.ReferenceData.MoveDex.AdvancementMoveOptions.Add(StaticData.ReferenceData.MoveDex.MoveList.Single(s => s.MoveID.Equals(move)));
+            }
+            
         }
     }
 

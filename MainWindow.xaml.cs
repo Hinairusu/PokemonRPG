@@ -33,7 +33,7 @@ namespace PokemonRPG
         private bool PartyEnabled = true;
         private bool BagEnabled = false;
         private bool GMModeEnabled = true;
-        private bool PCEnabled = false;
+        private bool PCEnabled = true;
         private bool EncyclopediaEnabled = false;
         private bool SaveEnabled = false;
         private bool LoadEnabled = false;
@@ -177,7 +177,7 @@ namespace PokemonRPG
             DataBinding.BindThis(lbl_CurrentHP, StaticData.PlayerData, "CurrentHP");
             DataBinding.BindThis(tb_User_Notes, StaticData.PlayerData, "Notes");
             DataBinding.BindThis(tb_Description, StaticData.PlayerData, "Description");
-            DataBinding.BindThis(Lb_PokemonTeam, StaticData.PlayerData, "Pkmnlist");
+            DataBinding.BindThis(Lb_PokemonTeam, StaticData.PlayerData, "CurrentParty");
         }
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
@@ -246,7 +246,7 @@ namespace PokemonRPG
         private void btn_PC_Click(object sender, MouseEventArgs e)
         {
             if (!PCEnabled && !DebugMode) return;
-            var pcWindow = new PC(StaticData.ReferenceData, StaticData.PlayerData);
+            var pcWindow = new PC();
             pcWindow.Show();
         }
 

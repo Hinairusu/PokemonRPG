@@ -40,14 +40,18 @@ namespace PokemonRPG.Windows
         {
             if (int.TryParse(tb_PokemonLevel.Text, out int PkmnLevel) && PkmnLevel > 0 && PkmnLevel < 151)
             {
-                if (StaticData.PlayerData.Pkmnlist.Count > 0)
-                    StaticData.PlayerData.Pkmnlist.RemoveAt(0);
-                StaticData.PlayerData.Pkmnlist.Add(StaticData.ReferenceData.GenerateRandomTrainerPokemon(
+                if (StaticData.PlayerData.CurrentParty.Count > 0)
+                    StaticData.PlayerData.CurrentParty.Clear();
+
+                var RandomEncounter = StaticData.ReferenceData.GenerateRandomTrainerPokemon(
                     StaticData.ReferenceData.RandomGenerator.Next(0,
                         StaticData.ReferenceData.Pokedex.PokemonDexList.Count),
-                    PkmnLevel));
-                StaticData.PlayerData.Pkmnlist[0].CurrentHP = StaticData.PlayerData.Pkmnlist[0].MaxHP;
-                var page = new PokemonPage(0);
+                    PkmnLevel);
+                RandomEncounter.CurrentHP = RandomEncounter.MaxHP;
+                StaticData.PlayerData.OwnedPokemon.Add(RandomEncounter);
+                StaticData.PlayerData.CurrentParty.Add(new PartyPokemon(){PokemonUID = RandomEncounter.UID, Slot = 0});
+                
+                var page = new PokemonPage(RandomEncounter.UID);
                 page.Show();
             }
             else

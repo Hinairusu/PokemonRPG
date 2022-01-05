@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Principal;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -202,6 +203,7 @@ namespace PokemonRPG.Windows
                 Columns.Add(new DataTableFeatures() {ColumnName = "Current_HP", ColumnType = typeof(int)});
                 Columns.Add(new DataTableFeatures() {ColumnName = "Description", ColumnType = typeof(string)});
                 Columns.Add(new DataTableFeatures() {ColumnName = "Notes", ColumnType = typeof(string)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "User", ColumnType = typeof(string)});
 
 
                 DataTable DT = SQLData.MakeDT(Columns);
@@ -220,6 +222,7 @@ namespace PokemonRPG.Windows
                 row[Columns[10].ColumnName] = (Inud_Constitution.Value.Value * 4) + 4;
                 row[Columns[11].ColumnName] = tb_Description.Text;
                 row[Columns[12].ColumnName] = tb_Notes.Text;
+                row[Columns[13].ColumnName] = WindowsIdentity.GetCurrent().Name;
                 DT.Rows.Add(row);
 
                 SQLData.SQLInsert(DT, LoadDex.TrainerDB, FixedData.PlayerSummary, LoadDex.tCnxn);
@@ -324,6 +327,8 @@ namespace PokemonRPG.Windows
                 Columns.Add(new DataTableFeatures() {ColumnName = "Add Value", ColumnType = typeof(bool)});
                 Columns.Add(new DataTableFeatures() {ColumnName = "Notes", ColumnType = typeof(string)});
                 Columns.Add(new DataTableFeatures() {ColumnName = "Date Added", ColumnType = typeof(DateTime)});
+                Columns.Add(new DataTableFeatures() {ColumnName = "User", ColumnType = typeof(string)});
+                
 
 
                 DataTable DT = SQLData.MakeDT(Columns);
@@ -336,6 +341,7 @@ namespace PokemonRPG.Windows
                 if(!string.IsNullOrWhiteSpace(Notes))
                     row[Columns[4].ColumnName] = Notes;
                 row[Columns[5].ColumnName] = DateTime.Now;
+                row[Columns[6].ColumnName] = WindowsIdentity.GetCurrent().Name;
                 DT.Rows.Add(row);
 
                 SQLData.SQLInsert(DT, LoadDex.PokemonDB, FixedData.LevelUp, LoadDex.pCnxn); ;

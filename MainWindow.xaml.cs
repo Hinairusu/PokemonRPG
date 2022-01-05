@@ -7,6 +7,7 @@ using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Windows;
@@ -48,6 +49,7 @@ namespace PokemonRPG
             DataContext = this;
             BindData();
             
+
         }
 
        

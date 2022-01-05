@@ -262,9 +262,12 @@ namespace PokemonRPG.Windows
                 row[Columns[1].ColumnName] = StaticData.PlayerData.UID;
                 row[Columns[2].ColumnName] = ((ComboBoxItem)cbx_Sex.SelectedItem).Content;
                 row[Columns[3].ColumnName] = StaticData.PlayerData.UID;
-                row[Columns[4].ColumnName] = ((PlayerStub)cbx_Breeder.SelectedItem).UID;
-                row[Columns[5].ColumnName] = ((TrainerPokemon) cbx_Parent1.SelectionBoxItem).UID;
-                row[Columns[6].ColumnName] = ((TrainerPokemon) cbx_Parent2.SelectionBoxItem).UID;
+                if(cbx_Breeder.SelectedIndex > -1)
+                    row[Columns[4].ColumnName] = ((PlayerStub)cbx_Breeder.SelectedItem).UID;
+                if(cbx_Parent1.SelectedIndex > -1)
+                    row[Columns[5].ColumnName] = ((TrainerPokemon) cbx_Parent1.SelectionBoxItem).UID;
+                if(cbx_Parent2.SelectedIndex > -1)
+                    row[Columns[6].ColumnName] = ((TrainerPokemon) cbx_Parent2.SelectionBoxItem).UID;
                 row[Columns[7].ColumnName] = 1;
                 row[Columns[8].ColumnName] = true;
                 row[Columns[9].ColumnName] = ((InherentNature) cbx_Nature.SelectedItem).UID;

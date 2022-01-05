@@ -1043,7 +1043,8 @@ namespace PokemonRPG.Configs
             {
                 List<int> LevelUpUids = new List<int>() {68, 69, 70, 71, 72, 73};
                 
-                
+                StaticData.ReferenceData.TrainerDex.LevelUpAdvancements.Clear();
+                StaticData.ReferenceData.Pokedex.MoveSlots.Clear();
                 StaticData.ReferenceData.TrainerDex.Advances.Clear();
                 DataTable advancementTable = SQLData.DatatableFill(PokemonDB,FixedData.LevelUpList, tCnxn);
 

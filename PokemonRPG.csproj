@@ -380,5 +380,17 @@
   <ItemGroup>
     <Resource Include="Resources\Image\Status\Skull.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Green%29.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Monochrome%29.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Orange%29.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Pink%29.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Purple%29.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Red%29.png" />
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Yellow%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Menus\Trainer ID %28Blue%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

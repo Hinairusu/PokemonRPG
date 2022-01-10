@@ -132,8 +132,7 @@
                Grid.Row="1" />
         <ListBox x:Name="lv_TrainerLevels" HorizontalAlignment="Left" Height="134" Margin="9.333,109.333,0,0"
                  VerticalAlignment="Top" Width="174" Grid.Column="1" Background="{x:Null}" Grid.Row="1" />
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="223" Margin="0.333,10,0,0" VerticalAlignment="Top"
-               Width="358" Source="Resources/Image/Menus/Trainer ID.png" Grid.ColumnSpan="2" Grid.RowSpan="2" MouseRightButtonDown="Image_MouseRightButtonDown" />
+        <Image Grid.Column="1" Height="204" Margin="0,10,0,0" VerticalAlignment="Top" Source="Resources/Image/Menus/Trainer ID.png" Grid.ColumnSpan="2" MouseRightButtonDown="Image_MouseRightButtonDown" />
         <Grid Grid.Column="1" Height="208" Margin="9.333,10,10.333,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="93*" />

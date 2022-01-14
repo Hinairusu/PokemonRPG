@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace PokemonRPG.Configs
 {
@@ -64,20 +63,6 @@ namespace PokemonRPG.Configs
         public override string ToString()
         {
             return $"{FirstName}";
-        }
-    }
-
-    public class PartyPokemon
-    {
-        public int Slot { get; set; }
-        public int PokemonUID { get; set; }
-
-        public override string ToString()
-        {
-            var pkmn = StaticData.PlayerData.OwnedPokemon.Single(s => s.UID.Equals(PokemonUID));
-            
-
-            return $"{pkmn.Nickname} ({pkmn.Name}) {Environment.NewLine} - Level {pkmn.Level} {Environment.NewLine} HP: {pkmn.CurrentHP} / {pkmn.MaxHP}";
         }
     }
 }

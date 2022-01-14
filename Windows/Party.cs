@@ -9,9 +9,9 @@ namespace PokemonRPG.Windows
     /// <summary>
     ///     Interaction logic for Party.xaml
     /// </summary>
-    public partial class PartyWindow : Window
+    public partial class Party : Window
     {
-        public PartyWindow()
+        public Party()
         {
             InitializeComponent();
             SetAssets();

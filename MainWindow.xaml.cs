@@ -263,7 +263,7 @@ namespace PokemonRPG
         private void btn_Party_Click(object sender, MouseButtonEventArgs e)
         {
             if (!PartyEnabled && !DebugMode) return;
-            var party = new PartyWindow();
+            var party = new Party();
 
             party.Show();
         }

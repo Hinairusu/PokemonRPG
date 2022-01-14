@@ -22,12 +22,4 @@ namespace PokemonRPG.Configs
         public string Notes { get; set; }
         public int Rarity { get; set; }
     }
-
-    public class ItemCategory
-    {
-        public int UID { get; set; }
-        public string Name { get; set; }
-    }
-
-    
 }

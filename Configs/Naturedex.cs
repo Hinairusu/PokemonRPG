@@ -17,25 +17,4 @@ namespace PokemonRPG.Configs
         public List<PkEnvironment> Enviroments { get; set; }
         public List<EggGroup> EggGroups { get; set; }
     }
-
-    public class EggGroup
-    {
-        public int UID { get; set; }
-        public string Name { get; set; }
-        public override string ToString()
-        {
-            return Name;
-        }
-    }
-
-    public class Flavours
-    {
-        public int UID { get; set; }
-        public string Flavour { get; set; }
-
-        public override string ToString()
-        {
-            return Flavour;
-        }
-    }
 }

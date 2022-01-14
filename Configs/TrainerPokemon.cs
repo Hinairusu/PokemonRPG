@@ -862,39 +862,4 @@ namespace PokemonRPG.Configs
                 }
         }
     }
-
-    public class Advancements
-    {
-        public int UID { get; set; }
-        public int LevelUpUID { get; set; }
-        public int Modifier { get; set; }
-        public bool ValueAdd { get; set; }
-        public string Notes { get; set; }
-        public DateTime DateAdded { get; set; }
-        public override string ToString()
-        {
-            return $"{StaticData.ReferenceData.TrainerDex.Advances.Single(s => s.UID.Equals(LevelUpUID))}";
-        }
-    }
-
-    public class AdvancementTypes
-    {
-        public int UID { get; set; }
-        public string ChangeType { get; set; }
-        public override string ToString()
-        {
-            return ChangeType;
-        }
-    }
-
-    public class PokemonBattleMove
-    {
-        public int Slot { get; set; }
-
-        public PokemonMove Move { get; set; }
-        public override string ToString()
-        {
-            return $"{Move}";
-        }
-    }
 }

@@ -59,32 +59,45 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Configs\Ability.cs" />
+    <Compile Include="Configs\Advancements.cs" />
+    <Compile Include="Configs\AdvancementTypes.cs" />
     <Compile Include="Configs\BaseCharacteristics.cs" />
     <Compile Include="Configs\Capabilities.cs" />
     <Compile Include="Configs\ContestCharacteristics.cs" />
     <Compile Include="Configs\ContestMoveStats.cs" />
     <Compile Include="Configs\ContestType.cs" />
     <Compile Include="Configs\DataBinding.cs" />
+    <Compile Include="Configs\DataTableFeatures.cs" />
     <Compile Include="Configs\Dice.cs" />
+    <Compile Include="Configs\EggGroup.cs" />
     <Compile Include="Configs\EvolutionData.cs" />
+    <Compile Include="Configs\FixedData.cs" />
+    <Compile Include="Configs\Flavours.cs" />
     <Compile Include="Configs\Gender.cs" />
     <Compile Include="Configs\Habitat.cs" />
     <Compile Include="Configs\HiddenCharacteristics.cs" />
     <Compile Include="Configs\InherentNature.cs" />
     <Compile Include="Configs\Item.cs" />
     <Compile Include="Configs\ItemBox.cs" />
+    <Compile Include="Configs\ItemCategory.cs" />
     <Compile Include="Configs\Keywords.cs" />
     <Compile Include="Configs\LevelMoves.cs" />
+    <Compile Include="Configs\LoadDex.cs" />
     <Compile Include="Configs\LocationRegion.cs" />
     <Compile Include="Configs\MoveLearningItem.cs" />
     <Compile Include="Configs\Movement.cs" />
     <Compile Include="Configs\Naturedex.cs" />
+    <Compile Include="Configs\PartyPokemon.cs" />
+    <Compile Include="Configs\PkEnvironment.cs" />
     <Compile Include="Configs\PlayerLevels.cs" />
+    <Compile Include="Configs\PlayerStub.cs" />
     <Compile Include="Configs\PokedexEntry.cs" />
     <Compile Include="Configs\Pokemon.cs" />
+    <Compile Include="Configs\PokemonBattleMove.cs" />
     <Compile Include="Configs\PokemonMove.cs" />
     <Compile Include="Configs\PokemonStatus.cs" />
     <Compile Include="Configs\PokeType.cs" />
+    <Compile Include="Configs\SQLData.cs" />
     <Compile Include="Configs\StaticData.cs" />
     <Compile Include="Configs\TrainerClass.cs" />
     <Compile Include="Configs\TrainerClassFeature.cs" />
@@ -102,7 +115,7 @@
     <Compile Include="Windows\GMPage.xaml.cs">
       <DependentUpon>GMPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\PartyWindow.cs">
+    <Compile Include="Windows\Party.cs">
       <DependentUpon>Party.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\PC.xaml.cs">

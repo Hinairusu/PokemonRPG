@@ -392,5 +392,8 @@
   <ItemGroup>
     <Resource Include="Resources\Image\Menus\Trainer ID %28Blue%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Menus\Trainer ID New.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

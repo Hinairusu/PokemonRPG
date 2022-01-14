@@ -13,7 +13,7 @@ namespace PokemonRPG.Configs
 
         public override string ToString()
         {
-            return $"{Rarity} chance in {StaticData.ReferenceData.NatureDex.Enviroments.Single(s => s.UID.Equals(EnvironmentUID))}";
+            return $"{StaticData.ReferenceData.NatureDex.Enviroments.Single(s => s.UID.Equals(EnvironmentUID))} - Rarity {Rarity}";
         }
     }
     public class PkEnvironment

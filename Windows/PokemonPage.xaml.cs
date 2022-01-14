@@ -18,6 +18,7 @@ namespace PokemonRPG.Windows
             InitializeComponent();
             Pkmn = StaticData.PlayerData.OwnedPokemon.Single(s => s.UID.Equals(pkmn));
 
+            this.Title = $"{Pkmn.Nickname} ({Pkmn.Name}) - Level {Pkmn.Level}";
             lbl_Level.Content = Pkmn.Level.ToString();
             lbl_NickName.Content = Pkmn.Nickname;
             lbl_Nature.Content = Pkmn.Nature.Name;

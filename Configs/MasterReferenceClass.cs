@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Documents;
 using System.Xml;
 using AutoMapper;
+using Xceed.Wpf.Toolkit.Core.Converters;
 
 namespace PokemonRPG.Configs
 {
@@ -76,7 +77,7 @@ namespace PokemonRPG.Configs
 
             poke.Level = level;
 
-
+            int Moveslot = 0;
             for (var i = 1; i < level; i++)
             {
                 poke.LevelUps.Add(GenerateRandomAdvancement());
@@ -85,6 +86,7 @@ namespace PokemonRPG.Configs
                 if (level > 75)
                     poke.LevelUps.Add(GenerateRandomAdvancement());
             }
+            poke.NaturalMoves = GenerateMoves(poke.PossibleLevelupMoves, level);
 
             var Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
             if (poke.Sex.FemaleRatio > decimal.Parse(Ratio.ToString()) && poke.Sex.Male)
@@ -100,7 +102,33 @@ namespace PokemonRPG.Configs
             poke.Advance();
             return poke;
         }
-        
+
+
+        public List<PokemonBattleMove> GenerateMoves(List<LevelMoves> poke, int Level)
+        {
+            var moves = poke.Where(s => s.LevelLearned <= Level).ToList();
+
+            var Battlemoves = new List<PokemonBattleMove>();
+            Random rand = new Random();
+            for (int i = 0; i < 7; i++)
+            {
+                var RandMoveNo = rand.Next(0, moves.Count);
+                var MoveIndex = moves[RandMoveNo].MoveID;
+                var move = StaticData.ReferenceData.MoveDex.MoveList.Single( m => m.MoveID.Equals(MoveIndex));
+                Battlemoves.Add(new PokemonBattleMove()
+                    {Move = move, Slot = i});
+                try
+                {
+                    var oldmove = moves.Single(r => r.MoveID.Equals(move.MoveID));
+                    moves.Remove(oldmove);
+                }
+                catch{}
+                if (moves.Count < 1)
+                    break;
+            }
+
+            return Battlemoves;
+        }
 
         public TrainerPokemon GenerateWildPokemon(int UID, int level = 0)
         {
@@ -109,9 +137,13 @@ namespace PokemonRPG.Configs
             var poke = mapper.Map<TrainerPokemon>(Pokedex.PokemonDexList.Find(s => s.UID.Equals(UID)));
             if (level > 0)
             {
+                int Moveslot = 0;
                 poke.Level = level;
                 for (var i = 1; i < level; i++)
+                {
                     poke.LevelUps.Add(GenerateRandomAdvancement());
+                }
+                poke.NaturalMoves = GenerateMoves(poke.PossibleLevelupMoves, level);
             }
 
             var Ratio = StaticData.ReferenceData.RandomGenerator.NextDouble();
